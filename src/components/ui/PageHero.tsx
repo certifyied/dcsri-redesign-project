@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 interface PageHeroProps {
   title: string;
@@ -9,47 +10,92 @@ interface PageHeroProps {
 }
 
 const PageHero = ({ title, subtitle, backgroundImage, children, size = 'default' }: PageHeroProps) => {
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 500], [0, 150]);
+  const opacity = useTransform(scrollY, [0, 300], [1, 0]);
+  const scale = useTransform(scrollY, [0, 500], [1, 1.1]);
+
   return (
     <section
-      className={`relative flex items-center justify-center ${
+      className={`relative flex items-center justify-center overflow-hidden ${
         size === 'large' ? 'min-h-[90vh]' : 'min-h-[50vh]'
       }`}
     >
-      {/* Background */}
-      <div
+      {/* Background with Parallax */}
+      <motion.div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: backgroundImage
             ? `url(${backgroundImage})`
             : 'linear-gradient(135deg, hsl(222 78% 15%) 0%, hsl(222 50% 25%) 100%)',
+          scale,
         }}
       />
       
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/70 to-primary/90" />
       
-      {/* Decorative Elements */}
+      {/* Decorative Elements with Animation */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+        <motion.div 
+          className="absolute top-20 left-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl"
+          animate={{ 
+            x: [0, 30, 0],
+            y: [0, -20, 0],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.div 
+          className="absolute bottom-20 right-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl"
+          animate={{ 
+            x: [0, -20, 0],
+            y: [0, 30, 0],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container-custom mx-auto px-4 md:px-8 text-center">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 animate-fade-up">
+      <motion.div 
+        className="relative z-10 container-custom mx-auto px-4 md:px-8 text-center"
+        style={{ y, opacity }}
+      >
+        <motion.h1 
+          className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
+        >
           {title}
-        </h1>
+        </motion.h1>
         {subtitle && (
-          <p className="text-lg md:text-xl text-primary-foreground/90 max-w-3xl mx-auto mb-8 animate-fade-up delay-100">
+          <motion.p 
+            className="text-lg md:text-xl text-primary-foreground/90 max-w-3xl mx-auto mb-8"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+          >
             {subtitle}
-          </p>
+          </motion.p>
         )}
         {children && (
-          <div className="animate-fade-up delay-200">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+          >
             {children}
-          </div>
+          </motion.div>
         )}
-      </div>
+      </motion.div>
 
       {/* Bottom Wave */}
       <div className="absolute bottom-0 left-0 right-0">

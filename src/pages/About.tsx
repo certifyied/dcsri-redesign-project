@@ -1,7 +1,12 @@
 import { Target, Eye, Award, Users, BookOpen, Heart } from 'lucide-react';
+import { motion } from 'framer-motion';
 import PageHero from '@/components/ui/PageHero';
 import SectionHeading from '@/components/ui/SectionHeading';
 import InfoCard from '@/components/ui/InfoCard';
+import AnimatedSection from '@/components/animations/AnimatedSection';
+import StaggerContainer from '@/components/animations/StaggerContainer';
+import StaggerItem from '@/components/animations/StaggerItem';
+import CountUp from '@/components/animations/CountUp';
 import aboutHero from '@/assets/about-hero.jpg';
 
 const leadership = [
@@ -52,7 +57,7 @@ const values = [
 
 const About = () => {
   return (
-    <main>
+    <main className="overflow-hidden">
       <PageHero
         title="About Us"
         subtitle="Discover our journey of academic excellence and commitment to shaping future leaders"
@@ -63,7 +68,7 @@ const About = () => {
       <section className="section-padding bg-background">
         <div className="container-custom mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <AnimatedSection animation="slideLeft">
               <span className="text-accent font-semibold text-sm uppercase tracking-wider">Our Story</span>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-6">
                 Building Tomorrow's Leaders Today
@@ -82,29 +87,59 @@ const About = () => {
                 With state-of-the-art facilities, experienced faculty, and a student-centric approach, 
                 DCSRI continues to set benchmarks in higher education.
               </p>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-4">
-                <div className="bg-primary text-primary-foreground p-6 rounded-xl">
-                  <p className="text-4xl font-bold">15+</p>
-                  <p className="text-sm text-primary-foreground/80">Years of Excellence</p>
-                </div>
-                <div className="bg-secondary p-6 rounded-xl">
-                  <p className="text-4xl font-bold text-foreground">5000+</p>
-                  <p className="text-sm text-muted-foreground">Alumni Network</p>
-                </div>
+            </AnimatedSection>
+            <AnimatedSection animation="slideRight" delay={0.2}>
+              <div className="grid grid-cols-2 gap-4">
+                <motion.div 
+                  className="space-y-4"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <motion.div 
+                    className="bg-primary text-primary-foreground p-6 rounded-xl"
+                    whileHover={{ scale: 1.02, y: -5 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <p className="text-4xl font-bold"><CountUp value={15} suffix="+" /></p>
+                    <p className="text-sm text-primary-foreground/80">Years of Excellence</p>
+                  </motion.div>
+                  <motion.div 
+                    className="bg-secondary p-6 rounded-xl"
+                    whileHover={{ scale: 1.02, y: -5 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <p className="text-4xl font-bold text-foreground"><CountUp value={5000} suffix="+" /></p>
+                    <p className="text-sm text-muted-foreground">Alumni Network</p>
+                  </motion.div>
+                </motion.div>
+                <motion.div 
+                  className="space-y-4 mt-8"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                >
+                  <motion.div 
+                    className="bg-secondary p-6 rounded-xl"
+                    whileHover={{ scale: 1.02, y: -5 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <p className="text-4xl font-bold text-foreground"><CountUp value={50} suffix="+" /></p>
+                    <p className="text-sm text-muted-foreground">Expert Faculty</p>
+                  </motion.div>
+                  <motion.div 
+                    className="bg-accent text-accent-foreground p-6 rounded-xl"
+                    whileHover={{ scale: 1.02, y: -5 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <p className="text-4xl font-bold"><CountUp value={95} suffix="%" /></p>
+                    <p className="text-sm">Placement Rate</p>
+                  </motion.div>
+                </motion.div>
               </div>
-              <div className="space-y-4 mt-8">
-                <div className="bg-secondary p-6 rounded-xl">
-                  <p className="text-4xl font-bold text-foreground">50+</p>
-                  <p className="text-sm text-muted-foreground">Expert Faculty</p>
-                </div>
-                <div className="bg-accent text-accent-foreground p-6 rounded-xl">
-                  <p className="text-4xl font-bold">95%</p>
-                  <p className="text-sm">Placement Rate</p>
-                </div>
-              </div>
-            </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -112,124 +147,155 @@ const About = () => {
       {/* Vision & Mission */}
       <section className="section-padding bg-secondary">
         <div className="container-custom mx-auto">
-          <div className="grid md:grid-cols-2 gap-8">
+          <StaggerContainer className="grid md:grid-cols-2 gap-8" staggerDelay={0.15}>
             {/* Vision */}
-            <div className="bg-card rounded-2xl p-8 shadow-card border border-border/50">
-              <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mb-6">
-                <Eye className="w-8 h-8 text-primary-foreground" />
-              </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">Our Vision</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                To be a leading institution of higher learning recognized globally for academic excellence, 
-                innovative research, and producing graduates who are ethical, socially responsible, and 
-                capable of contributing positively to the advancement of society.
-              </p>
-            </div>
+            <StaggerItem>
+              <motion.div 
+                className="bg-card rounded-2xl p-8 shadow-card border border-border/50 h-full"
+                whileHover={{ y: -5 }}
+                transition={{ duration: 0.3 }}
+              >
+                <motion.div 
+                  className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mb-6"
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <Eye className="w-8 h-8 text-primary-foreground" />
+                </motion.div>
+                <h3 className="text-2xl font-bold text-foreground mb-4">Our Vision</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  To be a leading institution of higher learning recognized globally for academic excellence, 
+                  innovative research, and producing graduates who are ethical, socially responsible, and 
+                  capable of contributing positively to the advancement of society.
+                </p>
+              </motion.div>
+            </StaggerItem>
             
             {/* Mission */}
-            <div className="bg-card rounded-2xl p-8 shadow-card border border-border/50">
-              <div className="w-16 h-16 bg-accent rounded-xl flex items-center justify-center mb-6">
-                <Target className="w-8 h-8 text-accent-foreground" />
-              </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">Our Mission</h3>
-              <ul className="text-muted-foreground space-y-3">
-                <li className="flex items-start gap-2">
-                  <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
-                  <span>Provide quality education that meets global standards</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
-                  <span>Foster innovation and research excellence</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
-                  <span>Develop ethical and socially responsible citizens</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
-                  <span>Create industry-academia partnerships for practical learning</span>
-                </li>
-              </ul>
-            </div>
-          </div>
+            <StaggerItem>
+              <motion.div 
+                className="bg-card rounded-2xl p-8 shadow-card border border-border/50 h-full"
+                whileHover={{ y: -5 }}
+                transition={{ duration: 0.3 }}
+              >
+                <motion.div 
+                  className="w-16 h-16 bg-accent rounded-xl flex items-center justify-center mb-6"
+                  whileHover={{ scale: 1.1, rotate: -5 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <Target className="w-8 h-8 text-accent-foreground" />
+                </motion.div>
+                <h3 className="text-2xl font-bold text-foreground mb-4">Our Mission</h3>
+                <ul className="text-muted-foreground space-y-3">
+                  {[
+                    'Provide quality education that meets global standards',
+                    'Foster innovation and research excellence',
+                    'Develop ethical and socially responsible citizens',
+                    'Create industry-academia partnerships for practical learning',
+                  ].map((item, index) => (
+                    <motion.li 
+                      key={index}
+                      className="flex items-start gap-2"
+                      initial={{ opacity: 0, x: -10 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.1 }}
+                    >
+                      <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
+                      <span>{item}</span>
+                    </motion.li>
+                  ))}
+                </ul>
+              </motion.div>
+            </StaggerItem>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* Leadership */}
       <section className="section-padding bg-background">
         <div className="container-custom mx-auto">
-          <SectionHeading
-            title="Our Leadership"
-            subtitle="Meet the visionaries guiding our institution towards excellence"
-          />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <AnimatedSection>
+            <SectionHeading
+              title="Our Leadership"
+              subtitle="Meet the visionaries guiding our institution towards excellence"
+            />
+          </AnimatedSection>
+          <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" staggerDelay={0.1}>
             {leadership.map((person, index) => (
-              <div key={index} className="bg-card rounded-xl overflow-hidden shadow-card card-hover border border-border/50 text-center">
-                <div className="aspect-square overflow-hidden">
-                  <img
-                    src={person.image}
-                    alt={person.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-5">
-                  <h3 className="text-lg font-semibold text-foreground">{person.name}</h3>
-                  <p className="text-accent text-sm">{person.role}</p>
-                </div>
-              </div>
+              <StaggerItem key={index} animation="scale">
+                <motion.div 
+                  className="bg-card rounded-xl overflow-hidden shadow-card border border-border/50 text-center"
+                  whileHover={{ y: -8 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="aspect-square overflow-hidden">
+                    <motion.img
+                      src={person.image}
+                      alt={person.name}
+                      className="w-full h-full object-cover"
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ duration: 0.5 }}
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-lg font-semibold text-foreground">{person.name}</h3>
+                    <p className="text-accent text-sm">{person.role}</p>
+                  </div>
+                </motion.div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
-      {/* Accreditation & Values */}
+      {/* Core Values */}
       <section className="section-padding bg-secondary">
         <div className="container-custom mx-auto">
-          <SectionHeading
-            title="Our Core Values"
-            subtitle="The principles that guide everything we do"
-          />
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <AnimatedSection>
+            <SectionHeading
+              title="Our Core Values"
+              subtitle="The principles that guide everything we do"
+            />
+          </AnimatedSection>
+          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-6" staggerDelay={0.1}>
             {values.map((value, index) => (
-              <InfoCard
-                key={index}
-                title={value.title}
-                description={value.description}
-                icon={value.icon}
-              />
+              <StaggerItem key={index}>
+                <InfoCard
+                  title={value.title}
+                  description={value.description}
+                  icon={value.icon}
+                />
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
           
           {/* Accreditations */}
-          <div className="mt-16 bg-card rounded-2xl p-8 shadow-card border border-border/50">
-            <h3 className="text-2xl font-bold text-foreground mb-6 text-center">Accreditations & Recognitions</h3>
-            <div className="flex flex-wrap justify-center gap-8 items-center">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Award className="w-10 h-10 text-primary" />
-                </div>
-                <p className="text-sm font-medium text-foreground">UGC Recognized</p>
-              </div>
-              <div className="text-center">
-                <div className="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Award className="w-10 h-10 text-accent" />
-                </div>
-                <p className="text-sm font-medium text-foreground">NAAC Accredited</p>
-              </div>
-              <div className="text-center">
-                <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Award className="w-10 h-10 text-primary" />
-                </div>
-                <p className="text-sm font-medium text-foreground">ISO Certified</p>
-              </div>
-              <div className="text-center">
-                <div className="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Award className="w-10 h-10 text-accent" />
-                </div>
-                <p className="text-sm font-medium text-foreground">AICTE Approved</p>
-              </div>
-            </div>
-          </div>
+          <AnimatedSection delay={0.3}>
+            <motion.div 
+              className="mt-16 bg-card rounded-2xl p-8 shadow-card border border-border/50"
+              whileHover={{ y: -3 }}
+              transition={{ duration: 0.3 }}
+            >
+              <h3 className="text-2xl font-bold text-foreground mb-6 text-center">Accreditations & Recognitions</h3>
+              <StaggerContainer className="flex flex-wrap justify-center gap-8 items-center" staggerDelay={0.1}>
+                {['UGC Recognized', 'NAAC Accredited', 'ISO Certified', 'AICTE Approved'].map((item, index) => (
+                  <StaggerItem key={index} animation="scale">
+                    <motion.div 
+                      className="text-center"
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <div className={`w-20 h-20 ${index % 2 === 0 ? 'bg-primary/10' : 'bg-accent/10'} rounded-full flex items-center justify-center mx-auto mb-3`}>
+                        <Award className={`w-10 h-10 ${index % 2 === 0 ? 'text-primary' : 'text-accent'}`} />
+                      </div>
+                      <p className="text-sm font-medium text-foreground">{item}</p>
+                    </motion.div>
+                  </StaggerItem>
+                ))}
+              </StaggerContainer>
+            </motion.div>
+          </AnimatedSection>
         </div>
       </section>
     </main>

@@ -1,5 +1,6 @@
-import { Clock, Users, BookOpen } from 'lucide-react';
+import { Clock, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 interface CourseCardProps {
   title: string;
@@ -11,28 +12,39 @@ interface CourseCardProps {
 
 const CourseCard = ({ title, duration, eligibility, description, image }: CourseCardProps) => {
   return (
-    <div className="bg-card rounded-xl overflow-hidden shadow-card card-hover border border-border/50 group">
+    <motion.div 
+      className="bg-card rounded-xl overflow-hidden shadow-card border border-border/50 group"
+      whileHover={{ y: -8 }}
+      transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+    >
       {/* Image */}
       <div className="relative h-48 overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+        <motion.div 
+          className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: image 
               ? `url(${image})` 
               : 'linear-gradient(135deg, hsl(222 78% 15%) 0%, hsl(222 50% 25%) 100%)',
           }}
+          whileHover={{ scale: 1.1 }}
+          transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
         />
-        <div className="absolute inset-0 bg-primary/40" />
+        <div className="absolute inset-0 bg-primary/40 group-hover:bg-primary/30 transition-colors duration-300" />
         <div className="absolute bottom-4 left-4 right-4">
-          <span className="inline-block bg-accent text-accent-foreground text-sm font-medium px-3 py-1 rounded-full">
+          <motion.span 
+            className="inline-block bg-accent text-accent-foreground text-sm font-medium px-3 py-1 rounded-full"
+            whileHover={{ scale: 1.05 }}
+          >
             {duration}
-          </span>
+          </motion.span>
         </div>
       </div>
 
       {/* Content */}
       <div className="p-6">
-        <h3 className="text-xl font-semibold text-foreground mb-3">{title}</h3>
+        <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-accent transition-colors duration-300">
+          {title}
+        </h3>
         <p className="text-muted-foreground text-sm mb-4 line-clamp-2">{description}</p>
         
         <div className="space-y-2 mb-5">
@@ -48,15 +60,22 @@ const CourseCard = ({ title, duration, eligibility, description, image }: Course
 
         <Link 
           to="/admission"
-          className="inline-flex items-center gap-2 text-primary font-medium hover:text-accent transition-colors"
+          className="inline-flex items-center gap-2 text-primary font-medium hover:text-accent transition-colors group/link"
         >
           Learn More
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <motion.svg 
+            className="w-4 h-4" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            stroke="currentColor"
+            whileHover={{ x: 4 }}
+            transition={{ duration: 0.2 }}
+          >
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
+          </motion.svg>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
