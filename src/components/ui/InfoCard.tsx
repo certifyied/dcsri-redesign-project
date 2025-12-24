@@ -11,7 +11,7 @@ interface InfoCardProps {
 const InfoCard = ({ title, description, icon: Icon, className = '' }: InfoCardProps) => {
   return (
     <motion.div 
-      className={`bg-card rounded-xl p-6 shadow-card border border-border/50 group ${className}`}
+      className={`h-full bg-card rounded-xl p-6 shadow-card border border-border/50 group flex flex-col ${className}`}
       whileHover={{ 
         y: -8,
         boxShadow: '0 20px 40px -12px rgba(10, 26, 68, 0.15)',
@@ -19,16 +19,16 @@ const InfoCard = ({ title, description, icon: Icon, className = '' }: InfoCardPr
       transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
     >
       <motion.div 
-        className="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-5"
+        className="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-5 flex-shrink-0"
         whileHover={{ scale: 1.1, rotate: 5 }}
         transition={{ duration: 0.3 }}
       >
         <Icon className="w-7 h-7 text-accent" />
       </motion.div>
-      <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-accent transition-colors duration-300">
+      <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-accent transition-colors duration-300 flex-shrink-0">
         {title}
       </h3>
-      <p className="text-muted-foreground leading-relaxed">{description}</p>
+      <p className="text-muted-foreground leading-relaxed flex-grow">{description}</p>
     </motion.div>
   );
 };

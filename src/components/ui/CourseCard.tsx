@@ -8,9 +8,10 @@ interface CourseCardProps {
   eligibility: string;
   description: string;
   image?: string;
+  badge?: string;
 }
 
-const CourseCard = ({ title, duration, eligibility, description, image }: CourseCardProps) => {
+const CourseCard = ({ title, duration, eligibility, description, image, badge }: CourseCardProps) => {
   return (
     <motion.div 
       className="bg-card rounded-xl overflow-hidden shadow-card border border-border/50 group"
@@ -35,7 +36,7 @@ const CourseCard = ({ title, duration, eligibility, description, image }: Course
             className="inline-block bg-accent text-accent-foreground text-sm font-medium px-3 py-1 rounded-full"
             whileHover={{ scale: 1.05 }}
           >
-            {duration}
+            {badge || duration}
           </motion.span>
         </div>
       </div>

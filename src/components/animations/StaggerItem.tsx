@@ -74,7 +74,7 @@ const StaggerItem = ({
   return (
     <motion.div
       variants={animations[animation]}
-      className={className}
+      className={`h-full ${className}`}
     >
       {children}
     </motion.div>

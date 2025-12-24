@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import dscriLogo from '@/assets/dcsri_logo.png';
 
 const navItems = [
   { name: 'Home', path: '/' },
@@ -45,17 +46,14 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <motion.div 
-              className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center"
+            <motion.img 
+              src={dscriLogo}
+              alt="DCSRI Logo"
+              className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 object-contain"
               whileHover={{ scale: 1.05, rotate: -5 }}
               transition={{ duration: 0.3 }}
-            >
-              <span className="text-primary-foreground font-bold text-xl">D</span>
-            </motion.div>
-            <div className="hidden sm:block">
-              <h1 className="text-lg font-bold text-foreground leading-tight">DCSRI</h1>
-              <p className="text-xs text-muted-foreground">Excellence in Education</p>
-            </div>
+            />
+            
           </Link>
 
           {/* Desktop Navigation */}

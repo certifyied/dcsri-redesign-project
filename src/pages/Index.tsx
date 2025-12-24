@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { GraduationCap, Users, BookOpen, Award, Building, Lightbulb, Target, Heart } from 'lucide-react';
+import { Shield, Cpu, Calendar, GraduationCap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import PageHero from '@/components/ui/PageHero';
 import SectionHeading from '@/components/ui/SectionHeading';
@@ -17,34 +17,24 @@ import { galleryImages } from '@/data/gallery';
 
 const whyChooseUs = [
   {
-    title: 'Experienced Faculty',
-    description: 'Learn from highly qualified professors with years of industry and academic experience.',
-    icon: Users,
+    title: 'Authorized Excellence',
+    description: 'Learn with the confidence of an official Mitsubishi Electric Authorized Channel Partner.',
+    icon: Shield,
   },
   {
-    title: 'Modern Curriculum',
-    description: 'Updated syllabus aligned with industry requirements and global academic standards.',
-    icon: BookOpen,
+    title: 'Industry-Leading Technology',
+    description: 'Get hands-on experience with PLC, HMI, SCADA, VFD, Servo Drives, and IoT solutions used in global manufacturing.',
+    icon: Cpu,
   },
   {
-    title: 'Placement Support',
-    description: 'Dedicated placement cell ensuring excellent career opportunities for graduates.',
-    icon: Award,
+    title: 'The Saturday Lab Advantage',
+    description: 'We believe mastery comes from practice. During your course, you can visit our facility on Saturdays to experiment with components at your own pace.',
+    icon: Calendar,
   },
   {
-    title: 'State-of-Art Infrastructure',
-    description: 'Modern classrooms, labs, and facilities designed for optimal learning environment.',
-    icon: Building,
-  },
-  {
-    title: 'Research Opportunities',
-    description: 'Encouraging innovation and research through dedicated programs and funding.',
-    icon: Lightbulb,
-  },
-  {
-    title: 'Holistic Development',
-    description: 'Focus on overall personality development through extracurricular activities.',
-    icon: Heart,
+    title: 'Expert Mentorship',
+    description: 'Our curriculum is designed and delivered by industry experts who live and breathe factory automation.',
+    icon: GraduationCap,
   },
 ];
 
@@ -53,7 +43,7 @@ const Index = () => {
     <main className="overflow-hidden">
       {/* Hero Section */}
       <PageHero
-        title="Dynamic Centre for Studies & Research Institute"
+        title="Dynamic Centre System Research Institute"
         subtitle="Empowering students through academic excellence and value-based education. Join us in shaping a brighter future."
         backgroundImage={heroCampus}
         size="large"
@@ -79,20 +69,20 @@ const Index = () => {
             <AnimatedSection animation="slideLeft">
               <span className="text-accent font-semibold text-sm uppercase tracking-wider">About DCSRI</span>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-6">
-                Excellence in Education Since Establishment
+              Master the Intelligence Behind the Machines
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Dynamic Centre for Studies & Research Institute (DCSRI) is dedicated to providing quality education 
-                that nurtures intellectual growth, ethical values, and professional skills. Our institution combines 
-                traditional values with modern teaching methodologies to create future leaders.
+              Ever wondered what truly drives the massive, high-speed machines in today's factories?
+              At DCSRI (Dynamic Control Systems Research Institute), we don't just teach you about the future — we help you build it. Stop being a bystander and 
+              start becoming the expert who understands the complex intelligence that powers modern industry.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                With a focus on holistic development, we offer a wide range of undergraduate and postgraduate programs 
-                designed to meet the evolving demands of the industry and society.
+              As an Authorized Channel Partner of Mitsubishi Electric, we bridge the gap between academic theory 
+              and real-world industrial mastery.
               </p>
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <Link to="/about" className="btn-primary inline-flex items-center gap-2">
-                  Learn More About Us
+                  Learn More
                   <motion.svg 
                     className="w-4 h-4" 
                     fill="none" 
@@ -143,14 +133,15 @@ const Index = () => {
               subtitle="Choose from our range of industry-relevant courses designed to shape your future"
             />
           </AnimatedSection>
-          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-6" staggerDelay={0.1}>
+          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" staggerDelay={0.1}>
             {courses.map((course) => (
               <StaggerItem key={course.id}>
                 <CourseCard
-                  title={course.shortName}
+                  title={course.title}
                   duration={course.duration}
                   eligibility={course.eligibility}
                   description={course.description}
+                  badge={course.badge}
                 />
               </StaggerItem>
             ))}
@@ -174,7 +165,7 @@ const Index = () => {
               subtitle="Discover what makes us the preferred choice for quality education"
             />
           </AnimatedSection>
-          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" staggerDelay={0.08}>
+          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch" staggerDelay={0.08}>
             {whyChooseUs.map((item, index) => (
               <StaggerItem key={index}>
                 <InfoCard
