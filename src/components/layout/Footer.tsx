@@ -10,19 +10,12 @@ const quickLinks = [
   { name: 'Contact', path: '/contact' },
 ];
 
-const courses = [
-  { name: 'B.Com', path: '/academics' },
-  { name: 'BBA', path: '/academics' },
-  { name: 'BCA', path: '/academics' },
-  { name: 'M.Com', path: '/academics' },
-];
-
 const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">
       {/* Main Footer */}
       <div className="container-custom mx-auto section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {/* About Section */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
@@ -65,23 +58,6 @@ const Footer = () => {
                     className="text-primary-foreground/80 hover:text-accent transition-colors duration-200 text-sm"
                   >
                     {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Courses */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6">Our Courses</h4>
-            <ul className="space-y-3">
-              {courses.map((course) => (
-                <li key={course.name}>
-                  <Link
-                    to={course.path}
-                    className="text-primary-foreground/80 hover:text-accent transition-colors duration-200 text-sm"
-                  >
-                    {course.name}
                   </Link>
                 </li>
               ))}

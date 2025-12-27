@@ -11,6 +11,7 @@ import StaggerContainer from '@/components/animations/StaggerContainer';
 import StaggerItem from '@/components/animations/StaggerItem';
 import CountUp from '@/components/animations/CountUp';
 import heroCampus from '@/assets/hero-campus.jpg';
+import factoryAutomation from '@/assets/factory_automation.jpg';
 import { courses } from '@/data/courses';
 import { facilities } from '@/data/facilities';
 import { galleryImages } from '@/data/gallery';
@@ -103,8 +104,8 @@ const Index = () => {
                   transition={{ duration: 0.3 }}
                 >
                   <img 
-                    src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&q=80"
-                    alt="Students at DCSRI"
+                    src={factoryAutomation}
+                    alt="Industrial Automation Training Facility"
                     className="w-full h-full object-cover"
                   />
                 </motion.div>
@@ -142,6 +143,7 @@ const Index = () => {
                   eligibility={course.eligibility}
                   description={course.description}
                   badge={course.badge}
+                  image={course.image}
                 />
               </StaggerItem>
             ))}

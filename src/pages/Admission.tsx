@@ -32,13 +32,6 @@ const admissionSteps = [
   },
 ];
 
-const feeStructure = [
-  { course: 'B.Com (Bachelor of Commerce)', tuition: '₹35,000', other: '₹5,000', total: '₹40,000' },
-  { course: 'BBA (Bachelor of Business Administration)', tuition: '₹45,000', other: '₹5,000', total: '₹50,000' },
-  { course: 'BCA (Bachelor of Computer Applications)', tuition: '₹50,000', other: '₹5,000', total: '₹55,000' },
-  { course: 'M.Com (Master of Commerce)', tuition: '₹40,000', other: '₹5,000', total: '₹45,000' },
-];
-
 const Admission = () => {
   return (
     <main className="overflow-hidden">
@@ -101,58 +94,6 @@ const Admission = () => {
               </StaggerItem>
             ))}
           </StaggerContainer>
-        </div>
-      </section>
-
-      {/* Fee Structure */}
-      <section className="section-padding bg-background">
-        <div className="container-custom mx-auto">
-          <AnimatedSection>
-            <SectionHeading
-              title="Fee Structure"
-              subtitle="Transparent and affordable fee structure for all programs"
-            />
-          </AnimatedSection>
-          <AnimatedSection delay={0.2}>
-            <div className="overflow-x-auto">
-              <motion.table 
-                className="w-full bg-card rounded-xl shadow-card border border-border/50 overflow-hidden"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-              >
-                <thead>
-                  <tr className="bg-primary text-primary-foreground">
-                    <th className="px-6 py-4 text-left font-semibold">Course</th>
-                    <th className="px-6 py-4 text-center font-semibold">Tuition Fee</th>
-                    <th className="px-6 py-4 text-center font-semibold">Other Fees</th>
-                    <th className="px-6 py-4 text-center font-semibold">Total (Per Year)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {feeStructure.map((fee, index) => (
-                    <motion.tr 
-                      key={index} 
-                      className="border-t border-border hover:bg-secondary/50 transition-colors"
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.1 }}
-                    >
-                      <td className="px-6 py-4 text-foreground font-medium">{fee.course}</td>
-                      <td className="px-6 py-4 text-center text-muted-foreground">{fee.tuition}</td>
-                      <td className="px-6 py-4 text-center text-muted-foreground">{fee.other}</td>
-                      <td className="px-6 py-4 text-center text-accent font-bold">{fee.total}</td>
-                    </motion.tr>
-                  ))}
-                </tbody>
-              </motion.table>
-            </div>
-            <p className="text-sm text-muted-foreground mt-4 text-center">
-              * Fees are subject to change. Scholarships available for meritorious students.
-            </p>
-          </AnimatedSection>
         </div>
       </section>
 
