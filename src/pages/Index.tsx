@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Shield, Cpu, Calendar, GraduationCap } from 'lucide-react';
+import { Shield, Wrench, Calendar, GraduationCap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import PageHero from '@/components/ui/PageHero';
 import SectionHeading from '@/components/ui/SectionHeading';
@@ -10,7 +10,7 @@ import AnimatedSection from '@/components/animations/AnimatedSection';
 import StaggerContainer from '@/components/animations/StaggerContainer';
 import StaggerItem from '@/components/animations/StaggerItem';
 import CountUp from '@/components/animations/CountUp';
-import heroCampus from '@/assets/hero-campus.jpg';
+import heroBackground from '@/assets/web_images/engaging-hands-robotics-workshop-where-young-students-explore-engineering-concepts-min.jpg';
 import factoryAutomation from '@/assets/factory_automation.jpg';
 import { courses } from '@/data/courses';
 import { facilities } from '@/data/facilities';
@@ -18,23 +18,23 @@ import { galleryImages } from '@/data/gallery';
 
 const whyChooseUs = [
   {
-    title: 'Authorized Excellence',
-    description: 'Learn with the confidence of an official Mitsubishi Electric Authorized Channel Partner.',
+    title: 'Authorized Excellence (ISO Certified & Industry Recognized Certification)',
+    description: 'Train with complete confidence at our ISO-certified institute and Mitsubishi Electric Authorized Channel Partner. Earn a valuable, industry-recognized certification that reflects quality, trust, and global standards—adding real strength to your resume and career growth.',
     icon: Shield,
   },
   {
-    title: 'Industry-Leading Technology',
-    description: 'Get hands-on experience with PLC, HMI, SCADA, VFD, Servo Drives, and IoT solutions used in global manufacturing.',
-    icon: Cpu,
+    title: 'Live Industrial Project Training',
+    description: 'Work on real industrial projects, not just theory. This hands-on approach helps you understand how things actually work on the shop floor.',
+    icon: Wrench,
   },
   {
-    title: 'The Saturday Lab Advantage',
-    description: 'We believe mastery comes from practice. During your course, you can visit our facility on Saturdays to experiment with components at your own pace.',
+    title: 'Flexible Lab Access (Mon–Sat | 10:00 AM – 5:30 PM)',
+    description: 'Practice at your own pace. Our labs are open Monday to Saturday, so you can use the facilities whenever it suits your learning schedule.',
     icon: Calendar,
   },
   {
-    title: 'Expert Mentorship',
-    description: 'Our curriculum is designed and delivered by industry experts who live and breathe factory automation.',
+    title: 'Expert Mentorship & Valuable Certification',
+    description: 'Get guidance from industry experts with over 30 years of experience. Even after your course, our mentors remain accessible for lifelong support. Receive a strong, career-focused certification supported by our Mitsubishi Electric Authorized Channel Partner status, adding real value to your resume.',
     icon: GraduationCap,
   },
 ];
@@ -45,14 +45,14 @@ const Index = () => {
       {/* Hero Section */}
       <PageHero
         title="Dynamic Centre System Research Institute"
-        subtitle="Empowering students through academic excellence and value-based education. Join us in shaping a brighter future."
-        backgroundImage={heroCampus}
+        subtitle="Academic excellence meets industrial automation preparing students for a brighter future."
+        backgroundImage={heroBackground}
         size="large"
       >
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
-            <Link to="/admission" className="btn-accent inline-block">
-              Apply for Admission
+            <Link to="/contact" className="btn-accent inline-block">
+              Get in Touch
             </Link>
           </motion.div>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
@@ -116,7 +116,7 @@ const Index = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.4 }}
                 >
-                  <p className="text-4xl font-bold"><CountUp value={15} suffix="+" /></p>
+                  <p className="text-4xl font-bold"><CountUp value={7} suffix="+" /></p>
                   <p className="text-sm">Years of Excellence</p>
                 </motion.div>
               </div>
@@ -201,13 +201,6 @@ const Index = () => {
               </StaggerItem>
             ))}
           </StaggerContainer>
-          <AnimatedSection delay={0.4} className="text-center mt-10">
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
-              <Link to="/facilities" className="btn-outline inline-block">
-                Explore All Facilities
-              </Link>
-            </motion.div>
-          </AnimatedSection>
         </div>
       </section>
 
@@ -291,8 +284,8 @@ const Index = () => {
           <AnimatedSection animation="fadeUp" delay={0.4}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
-                <Link to="/admission" className="btn-accent inline-block">
-                  Apply Now
+                <Link to="/contact" className="btn-accent inline-block">
+                  Contact Us
                 </Link>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>

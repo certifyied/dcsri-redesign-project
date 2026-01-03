@@ -8,27 +8,25 @@ import StaggerContainer from '@/components/animations/StaggerContainer';
 import StaggerItem from '@/components/animations/StaggerItem';
 import CountUp from '@/components/animations/CountUp';
 import aboutHero from '@/assets/about-hero.jpg';
+import sajiImage from '@/assets/saji.jpg';
+import christoImage from '@/assets/christo.jpg';
+import joeImage from '@/assets/joe.jpg';
 
 const leadership = [
   {
-    name: 'Dr. Rajesh Kumar',
-    role: 'Chairman',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&q=80',
+    name: 'Saji K Philip',
+    role: 'Founder',
+    image: sajiImage,
   },
   {
-    name: 'Dr. Priya Sharma',
-    role: 'Principal',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&q=80',
+    name: 'Cristo S Kayyalakam',
+    role: 'CEO',
+    image: christoImage,
   },
   {
-    name: 'Prof. Anil Mehta',
-    role: 'Dean of Academics',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80',
-  },
-  {
-    name: 'Dr. Sunita Patel',
-    role: 'Head of Research',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&q=80',
+    name: 'Joe',
+    role: 'CTO',
+    image: joeImage,
   },
 ];
 
@@ -102,7 +100,7 @@ const About = () => {
                     whileHover={{ scale: 1.02, y: -5 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <p className="text-4xl font-bold"><CountUp value={15} suffix="+" /></p>
+                    <p className="text-4xl font-bold"><CountUp value={7} suffix="+" /></p>
                     <p className="text-sm text-primary-foreground/80">Years of Excellence</p>
                   </motion.div>
                   <motion.div 
@@ -221,7 +219,7 @@ const About = () => {
               subtitle="Meet the visionaries guiding our institution towards excellence"
             />
           </AnimatedSection>
-          <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" staggerDelay={0.1}>
+          <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" staggerDelay={0.1}>
             {leadership.map((person, index) => (
               <StaggerItem key={index} animation="scale">
                 <motion.div 

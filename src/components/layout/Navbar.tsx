@@ -3,13 +3,13 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import dscriLogo from '@/assets/dcsri_logo.png';
+import dynamicLogo from '@/assets/dynamic_logo.png';
 
 const navItems = [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
   { name: 'Academics', path: '/academics' },
-  { name: 'Admission', path: '/admission' },
-  { name: 'Facilities', path: '/facilities' },
+  { name: 'Testimonials', path: '/testimonials' },
   { name: 'Gallery', path: '/gallery' },
   { name: 'Contact', path: '/contact' },
 ];
@@ -43,21 +43,20 @@ const Navbar = () => {
       transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
     >
       <div className="container-custom mx-auto px-4 md:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
+        <div className="flex items-center justify-between h-20 relative">
+          {/* Left Logo */}
+          <Link to="/" className="flex items-center gap-3 group z-10">
             <motion.img 
               src={dscriLogo}
               alt="DCSRI Logo"
-              className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 object-contain"
+              className="w-32 h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 object-contain scale-110"
               whileHover={{ scale: 1.05, rotate: -5 }}
               transition={{ duration: 0.3 }}
             />
-            
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-1">
+          {/* Centered Desktop Navigation */}
+          <div className="hidden lg:flex items-center gap-1 absolute left-1/2 transform -translate-x-1/2">
             {navItems.map((item, index) => (
               <motion.div
                 key={item.path}
@@ -77,20 +76,17 @@ const Navbar = () => {
                 </Link>
               </motion.div>
             ))}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.4 }}
+          </div>
+
+          {/* Right Dynamic Logo */}
+          <div className="hidden lg:flex items-center z-10">
+            <motion.img 
+              src={dynamicLogo}
+              alt="Dynamic Logo"
+              className="w-32 h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 object-contain scale-110"
               whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <Link
-                to="/admission"
-                className="ml-4 bg-accent text-accent-foreground px-5 py-2.5 rounded-lg font-medium text-sm transition-all duration-200 hover:opacity-90 hover:shadow-medium"
-              >
-                Apply Now
-              </Link>
-            </motion.div>
+              transition={{ duration: 0.3 }}
+            />
           </div>
 
           {/* Mobile Menu Button */}
@@ -156,18 +152,6 @@ const Navbar = () => {
                     </Link>
                   </motion.div>
                 ))}
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: navItems.length * 0.05 }}
-                >
-                  <Link
-                    to="/admission"
-                    className="block mt-4 bg-accent text-accent-foreground px-4 py-3 rounded-lg font-medium text-center transition-all duration-200 hover:opacity-90"
-                  >
-                    Apply Now
-                  </Link>
-                </motion.div>
               </div>
             </motion.div>
           )}

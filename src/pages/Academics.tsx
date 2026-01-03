@@ -211,8 +211,8 @@ const Academics = () => {
               Join DCSRI and take the first step towards a successful career in your chosen field.
             </p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
-              <Link to="/admission" className="btn-accent inline-block">
-                Apply for Admission
+              <Link to="/contact" className="btn-accent inline-block">
+                Contact Us
               </Link>
             </motion.div>
           </AnimatedSection>

@@ -60,7 +60,7 @@ const CourseCard = ({ title, duration, eligibility, description, image, badge }:
         </div>
 
         <Link 
-          to="/admission"
+          to="/contact"
           className="inline-flex items-center gap-2 text-primary font-medium hover:text-accent transition-colors group/link"
         >
           Learn More

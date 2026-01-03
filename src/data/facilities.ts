@@ -1,3 +1,7 @@
+// Import images from web_images folder
+import controlPanelImage from '@/assets/web_images/electronics-technicians-team-working-computer-parts-min.jpg';
+import realTimeProjectImage from '@/assets/web_images/robotics-lab-students-assembling-electronic-circuits-min.jpg';
+
 export interface Facility {
   id: string;
   title: string;
@@ -14,9 +18,9 @@ export const facilities: Facility[] = [
   },
   {
     id: 'iot-embedded-lab',
-    title: 'IoT & Embedded Systems Lab',
+    title: 'control panel live lab',
     description: 'State-of-the-art facility equipped with sensors, microcontrollers, and IoT development boards. Build and deploy real-world IoT solutions with industry-standard equipment.',
-    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80',
+    image: controlPanelImage,
   },
   {
     id: 'plc-scada-hmi',
@@ -25,16 +29,10 @@ export const facilities: Facility[] = [
     image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
   },
   {
-    id: 'robotics-control-systems',
-    title: 'Robotics & Control Systems Lab',
-    description: 'Advanced robotics laboratory featuring industrial robots, control systems, and automation solutions. Hands-on experience with cutting-edge robotic technologies and motion control.',
-    image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&q=80',
-  },
-  {
     id: 'real-time-project-development',
     title: 'Real-Time Industrial Project Development',
     description: 'Dedicated workspace for developing real-time industrial automation projects. Access to industry-grade equipment, tools, and mentorship for comprehensive project implementation.',
-    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80',
+    image: realTimeProjectImage,
   },
   {
     id: 'research-innovation-center',

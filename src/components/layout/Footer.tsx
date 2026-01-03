@@ -4,8 +4,7 @@ import { MapPin, Phone, Mail, Clock, Facebook, Twitter, Instagram, Linkedin } fr
 const quickLinks = [
   { name: 'About Us', path: '/about' },
   { name: 'Academics', path: '/academics' },
-  { name: 'Admission', path: '/admission' },
-  { name: 'Facilities', path: '/facilities' },
+  { name: 'Testimonials', path: '/testimonials' },
   { name: 'Gallery', path: '/gallery' },
   { name: 'Contact', path: '/contact' },
 ];
