@@ -277,7 +277,7 @@ const About = () => {
             >
               <h3 className="text-2xl font-bold text-foreground mb-6 text-center">Accreditations & Recognitions</h3>
               <StaggerContainer className="flex flex-wrap justify-center gap-8 items-center" staggerDelay={0.1}>
-                {['UGC Recognized', 'NAAC Accredited', 'ISO Certified', 'AICTE Approved'].map((item, index) => (
+                {['ISO Certified', 'Mitsubishi Electric Authorized'].map((item, index) => (
                   <StaggerItem key={index} animation="scale">
                     <motion.div 
                       className="text-center"
