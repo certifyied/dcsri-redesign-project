@@ -70,7 +70,7 @@ const Footer = () => {
               <li className="flex gap-3">
                 <MapPin className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
                 <span className="text-primary-foreground/80 text-sm">
-                  123 Education Street, Academic City, State - 123456
+                  52/3105, Near SBI Bank, NH Bypass, Vyttila, Kochi, Ernakulam Dist., Kerala, 682019
                 </span>
               </li>
               <li className="flex gap-3">

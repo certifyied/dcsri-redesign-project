@@ -11,7 +11,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Address',
-    details: ['123 Education Street', 'Academic City, State - 123456', 'India'],
+    details: ['52/3105, Near SBI Bank, NH Bypass, Vyttila', 'Kochi, Ernakulam Dist., Kerala, 682019'],
   },
   {
     icon: Phone,
