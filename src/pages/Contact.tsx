@@ -16,7 +16,7 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'Phone',
-    details: ['+91 98765 43210', '+91 12345 67890'],
+    details: ['+91 85473 27855', '94977 07855'],
   },
   {
     icon: Mail,
@@ -61,11 +61,26 @@ const Contact = () => {
                       </motion.div>
                       <div>
                         <h3 className="font-semibold text-foreground mb-2">{info.title}</h3>
-                        {info.details.map((detail, idx) => (
-                          <p key={idx} className="text-muted-foreground text-sm">
-                            {detail}
-                          </p>
-                        ))}
+                        {info.details.map((detail, idx) => {
+                          // Make phone numbers clickable
+                          const isPhone = info.title === 'Phone';
+                          const phoneNumber = detail.replace(/\s+/g, '');
+                          const telLink = isPhone ? (phoneNumber.startsWith('+91') ? `tel:${phoneNumber}` : `tel:+91${phoneNumber}`) : null;
+                          
+                          return isPhone && telLink ? (
+                            <a 
+                              key={idx} 
+                              href={telLink}
+                              className="text-muted-foreground text-sm hover:text-accent transition-colors block"
+                            >
+                              {detail}
+                            </a>
+                          ) : (
+                            <p key={idx} className="text-muted-foreground text-sm">
+                              {detail}
+                            </p>
+                          );
+                        })}
                       </div>
                     </div>
                   </motion.div>

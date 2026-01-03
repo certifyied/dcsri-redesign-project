@@ -95,7 +95,7 @@ const ContactForm = ({ showCourse = false }: ContactFormProps) => {
             onChange={handleChange}
             required
             className={inputClasses}
-            placeholder="+91 98765 43210"
+            placeholder="+91 85473 27855"
           />
         </div>
         {showCourse ? (
