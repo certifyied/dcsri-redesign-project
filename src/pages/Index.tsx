@@ -44,7 +44,7 @@ const Index = () => {
     <main className="overflow-hidden">
       {/* Hero Section */}
       <PageHero
-        title="Dynamic Centre System Research Institute"
+        title="Dynamic Control Systems Research Institute"
         subtitle="Academic excellence meets industrial automation preparing students for a brighter future."
         backgroundImage={heroBackground}
         size="large"
