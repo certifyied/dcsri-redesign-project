@@ -6,6 +6,12 @@ import SectionHeading from '@/components/ui/SectionHeading';
 import AnimatedSection from '@/components/animations/AnimatedSection';
 import StaggerContainer from '@/components/animations/StaggerContainer';
 import StaggerItem from '@/components/animations/StaggerItem';
+import basilImage from '@/assets/testimonial/basil.jpeg';
+import jeswinImage from '@/assets/testimonial/Jeswin K. Abraham .jpeg';
+import georgeImage from '@/assets/testimonial/George Mathew.jpeg';
+import jerinImage from '@/assets/testimonial/Jerin Mathew.jpeg';
+import jossyImage from '@/assets/testimonial/Jossy Varghese.jpeg';
+import nidhinImage from '@/assets/testimonial/Nidhin Niby.jpg';
 
 interface Testimonial {
   id: string;
@@ -14,56 +20,63 @@ interface Testimonial {
   company?: string;
   text: string;
   rating: number;
+  image: string;
 }
 
 const testimonials: Testimonial[] = [
   {
     id: '1',
-    name: 'Rajesh Kumar',
-    designation: 'Automation Engineer',
-    company: 'Tech Industries Ltd.',
-    text: 'The hands-on training at DCSRI transformed my career. The PLC and SCADA training was exceptional, and I landed my dream job immediately after completing the program.',
+    name: 'Basil Varghese',
+    designation: 'Electrical Maintenance Supervisor',
+    company: 'ALSTEF Group',
+    text: 'Responsible for overseeing electrical systems and maintenance operations.',
     rating: 5,
+    image: basilImage,
   },
   {
     id: '2',
-    name: 'Priya Sharma',
-    designation: 'Industrial Automation Specialist',
-    company: 'Automation Solutions Inc.',
-    text: 'The 3-month professional program gave me real-world experience with industrial automation systems. The instructors are industry experts who truly care about student success.',
+    name: 'Jeswin K. Abraham',
+    designation: 'Automation Engineer',
+    company: 'MMT, Ireland',
+    text: 'With expertise in industrial automation and control systems.',
     rating: 5,
+    image: jeswinImage,
   },
   {
     id: '3',
-    name: 'Amit Patel',
-    designation: 'Control Systems Engineer',
-    company: 'Manufacturing Corp.',
-    text: 'Best investment in my career! The IoT and embedded systems lab is state-of-the-art. I learned practical skills that I use every day in my job.',
+    name: 'George Mathew',
+    designation: 'Engineering Professional',
+    company: 'Auburn Engineering, Doha, Qatar',
+    text: 'Bringing expertise in engineering and technical solutions.',
     rating: 5,
+    image: georgeImage,
   },
   {
     id: '4',
-    name: 'Sneha Reddy',
-    designation: 'Robotics Engineer',
-    company: 'Advanced Robotics Systems',
-    text: 'The robotics and control systems training exceeded my expectations. The Saturday lab access was a game-changer for my learning journey.',
+    name: 'Jerin Mathew',
+    designation: 'Senior DevOps Engineer',
+    company: 'Experion Technologies, Trivandrum',
+    text: 'Contributing to high-performance technology platforms and automation.',
     rating: 5,
+    image: jerinImage,
   },
   {
     id: '5',
-    name: 'Vikram Singh',
-    designation: 'SCADA Systems Developer',
-    company: 'Industrial Automation Group',
-    text: 'DCSRI\'s project-based approach helped me build a strong portfolio. The real-time industrial project development facility is outstanding.',
+    name: 'Jossy Varghese',
+    designation: 'Sales & Automation Engineer',
+    company: 'General Tech Services L.L.C., Dubai',
+    text: 'Specializing in automation solutions and technical sales initiatives.',
     rating: 5,
+    image: jossyImage,
   },
   {
     id: '6',
-    name: 'Anjali Mehta',
-    designation: 'Automation Consultant',
-    company: 'Smart Factory Solutions',
-    text: 'The comprehensive curriculum and industry-grade equipment made all the difference. I highly recommend DCSRI to anyone serious about automation careers.',
+    name: 'Nidhin Niby',
+    designation: 'Assistant Engineer',
+    company: 'OEN India Ltd.',
+    text: 'Contributing to engineering operations and technical excellence.',
     rating: 5,
+    image: nidhinImage,
   },
 ];
 
@@ -92,19 +105,34 @@ const Testimonials = () => {
                   whileHover={{ y: -5, boxShadow: '0 20px 40px -12px rgba(10, 26, 68, 0.15)' }}
                   transition={{ duration: 0.3 }}
                 >
-                  {/* Quote Icon */}
-                  <div className="mb-4">
-                    <Quote className="w-8 h-8 text-accent/30" />
-                  </div>
-
-                  {/* Rating */}
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className="w-4 h-4 fill-accent text-accent"
+                  {/* Profile Image and Quote Icon */}
+                  <div className="flex items-start gap-4 mb-4">
+                    <motion.div
+                      className="relative flex-shrink-0"
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <img
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        className="w-16 h-16 rounded-full object-cover border-2 border-accent/20 group-hover:border-accent transition-colors duration-300"
                       />
-                    ))}
+                      <div className="absolute -top-1 -right-1 bg-accent rounded-full p-1">
+                        <Quote className="w-3 h-3 text-accent-foreground" />
+                      </div>
+                    </motion.div>
+                    <div className="flex-1">
+                      <Quote className="w-8 h-8 text-accent/30 mb-2" />
+                      {/* Rating */}
+                      <div className="flex gap-1">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className="w-4 h-4 fill-accent text-accent"
+                          />
+                        ))}
+                      </div>
+                    </div>
                   </div>
 
                   {/* Testimonial Text */}
