@@ -13,6 +13,7 @@ import georgeImage from '@/assets/testimonial/George Mathew.jpeg';
 import jerinImage from '@/assets/testimonial/Jerin Mathew.jpeg';
 import jossyImage from '@/assets/testimonial/Jossy Varghese.jpeg';
 import nidhinImage from '@/assets/testimonial/Nidhin Niby.jpg';
+import melvinImage from '@/assets/testimonial/Melvin P. Stanley.jpeg';
 
 interface Testimonial {
   id: string;
@@ -30,7 +31,7 @@ const testimonials: Testimonial[] = [
     name: 'Basil Varghese',
     designation: 'Electrical Maintenance Supervisor',
     company: 'ALSTEF Group',
-    text: 'Responsible for overseeing electrical systems and maintenance operations.',
+    text: 'Overseeing electrical systems and maintenance operations. Trained with the best automation training in Kochi, enabling efficient management of advanced industrial automation systems.',
     rating: 5,
     image: basilImage,
   },
@@ -39,7 +40,7 @@ const testimonials: Testimonial[] = [
     name: 'Jeswin K. Abraham',
     designation: 'Automation Engineer',
     company: 'MMT, Ireland',
-    text: 'With expertise in industrial automation and control systems.',
+    text: 'With strong expertise in industrial automation and control systems, backed by the best automation training in Kochi.',
     rating: 5,
     image: jeswinImage,
   },
@@ -48,7 +49,7 @@ const testimonials: Testimonial[] = [
     name: 'George Mathew',
     designation: 'Engineering Professional',
     company: 'Auburn Engineering, Doha, Qatar',
-    text: 'Bringing expertise in engineering and technical solutions.',
+    text: 'Bringing strong expertise in engineering and technical solutions, supported by the best automation training in Kochi.',
     rating: 5,
     image: georgeImage,
   },
@@ -57,7 +58,7 @@ const testimonials: Testimonial[] = [
     name: 'Jerin Mathew',
     designation: 'Senior DevOps Engineer',
     company: 'Experion Technologies, Trivandrum',
-    text: 'Contributing to high-performance technology platforms and automation.',
+    text: 'Contributing to high-performance technology platforms and automation, strengthened by the best automation training in Kochi.',
     rating: 5,
     image: jerinImage,
   },
@@ -66,7 +67,7 @@ const testimonials: Testimonial[] = [
     name: 'Jossy Varghese',
     designation: 'Sales & Automation Engineer',
     company: 'General Tech Services L.L.C., Dubai',
-    text: 'Specializing in automation solutions and technical sales initiatives.',
+    text: 'Specializing in advanced automation solutions and technical sales initiatives, supported by the best automation training in Kochi.',
     rating: 5,
     image: jossyImage,
   },
@@ -75,9 +76,18 @@ const testimonials: Testimonial[] = [
     name: 'Nidhin Niby',
     designation: 'Assistant Engineer',
     company: 'OEN India Ltd.',
-    text: 'Contributing to engineering operations and technical excellence.',
+    text: 'Contributing to engineering operations and technical excellence, strengthened by the best automation training in Kochi.',
     rating: 5,
     image: nidhinImage,
+  },
+  {
+    id: '7',
+    name: 'Melvin P. Stanley',
+    designation: 'Project Engineer',
+    company: 'Hanoch Automation Pvt. Ltd., Kottayam',
+    text: 'Delivering automation projects with technical precision, supported by the best automation training in Kochi.',
+    rating: 5,
+    image: melvinImage,
   },
 ];
 
