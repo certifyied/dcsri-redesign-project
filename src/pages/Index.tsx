@@ -19,22 +19,22 @@ import { galleryImages } from '@/data/gallery';
 const whyChooseUs = [
   {
     title: 'Authorized Excellence (ISO Certified & Industry Recognized Certification)',
-    description: 'Train with complete confidence at our ISO-certified institute and Mitsubishi Electric Authorized Channel Partner. Earn a valuable, industry-recognized certification that reflects quality, trust, and global standards—adding real strength to your resume and career growth.',
+    description: 'Train with complete confidence at our ISO-certified institute and Mitsubishi Electric Authorized Channel Partner, offering the Best Automation Training in Kochi. Earn an industry-recognized certification that reflects quality, trust, and global standards—adding real value to your resume and career growth.',
     icon: Shield,
   },
   {
     title: 'Live Industrial Project Training',
-    description: 'Work on real industrial projects, not just theory. This hands-on approach helps you understand how things actually work on the shop floor.',
+    description: 'Work on real industrial projects—not just theory—and gain practical shop-floor exposure through the Best Automation Training in Kochi.',
     icon: Wrench,
   },
   {
     title: 'Flexible Lab Access (Mon–Sat | 10:00 AM – 5:30 PM)',
-    description: 'Practice at your own pace. Our labs are open Monday to Saturday, so you can use the facilities whenever it suits your learning schedule.',
+    description: 'Practice at your own pace with lab access from Monday to Saturday, offering flexible learning through the Best Automation Training in Kochi.',
     icon: Calendar,
   },
   {
     title: 'Expert Mentorship & Valuable Certification',
-    description: 'Get guidance from industry experts with over 30 years of experience. Even after your course, our mentors remain accessible for lifelong support. Receive a strong, career-focused certification supported by our Mitsubishi Electric Authorized Channel Partner status, adding real value to your resume.',
+    description: 'Experience the Best Automation Training in Kochi with mentorship from industry professionals with 30+ years of expertise. Enjoy lifelong guidance and receive a trusted certification supported by our Mitsubishi Electric Authorized Channel Partner credentials.',
     icon: GraduationCap,
   },
 ];
@@ -45,7 +45,7 @@ const Index = () => {
       {/* Hero Section */}
       <PageHero
         title="Dynamic Control Systems Research Institute"
-        subtitle="Academic excellence meets industrial automation preparing students for a brighter future."
+        subtitle="Academic excellence meets industrial automation, preparing students for a brighter future with the Best Automation Training in Kochi."
         backgroundImage={heroBackground}
         size="large"
       >
@@ -70,16 +70,13 @@ const Index = () => {
             <AnimatedSection animation="slideLeft">
               <span className="text-accent font-semibold text-sm uppercase tracking-wider">About DCSRI</span>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-6">
-              Master the Intelligence Behind the Machines
+              Master the intelligence behind modern machines with the Best Automation Training in Kochi.
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-              Ever wondered what truly drives the massive, high-speed machines in today's factories?
-              At DCSRI (Dynamic Control Systems Research Institute), we don't just teach you about the future — we help you build it. Stop being a bystander and 
-              start becoming the expert who understands the complex intelligence that powers modern industry.
+              Ever wondered what truly powers the massive, high-speed machines in today's factories? At DCSRI (Dynamic Control Systems Research Institute), we don't just teach the future of automation—we empower you to build it. Move beyond being a bystander and become an industry-ready expert who understands the intelligent systems driving modern manufacturing through the Best Automation Training in Kochi.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
-              As an Authorized Channel Partner of Mitsubishi Electric, we bridge the gap between academic theory 
-              and real-world industrial mastery.
+              As an Authorized Channel Partner of Mitsubishi Electric, we seamlessly bridge the gap between academic theory and hands-on industrial expertise, delivering the Best Automation Training in Kochi for future-focused professionals.
               </p>
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <Link to="/about" className="btn-primary inline-flex items-center gap-2">
@@ -131,7 +128,7 @@ const Index = () => {
           <AnimatedSection>
             <SectionHeading
               title="Our Academic Programs"
-              subtitle="Choose from our range of industry-relevant courses designed to shape your future"
+              subtitle="Choose from our range of industry-relevant courses crafted to shape your future with the Best Automation Training in Kochi."
             />
           </AnimatedSection>
           <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" staggerDelay={0.1}>
@@ -187,7 +184,7 @@ const Index = () => {
           <AnimatedSection>
             <SectionHeading
               title="Our Facilities"
-              subtitle="World-class infrastructure supporting your academic journey"
+              subtitle="World-class infrastructure supporting your academic journey through the Best Automation Training in Kochi."
             />
           </AnimatedSection>
           <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-6" staggerDelay={0.1}>
@@ -210,7 +207,7 @@ const Index = () => {
           <AnimatedSection>
             <SectionHeading
               title="Campus Gallery"
-              subtitle="A glimpse into life at DCSRI"
+              subtitle="A glimpse into life at DCSRI with the Best Automation Training in Kochi."
             />
           </AnimatedSection>
           <StaggerContainer className="grid grid-cols-2 md:grid-cols-3 gap-4" staggerDelay={0.08}>

@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { motion } from 'framer-motion';
 import PageHero from '@/components/ui/PageHero';
@@ -31,11 +32,44 @@ const contactInfo = [
 ];
 
 const Contact = () => {
+  useEffect(() => {
+    // Update document title
+    document.title = 'Contact DCSRI | Best Automation Training in Kochi | Support & Queries';
+    
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Get in touch with DCSRI for automation course details, career guidance, and support. Trusted for the Best Automation Training in Kochi with industry-focused learning.');
+    }
+    
+    // Update Open Graph tags
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', 'Contact DCSRI | Best Automation Training in Kochi | Support & Queries');
+    }
+    
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) {
+      ogDescription.setAttribute('content', 'Get in touch with DCSRI for automation course details, career guidance, and support. Trusted for the Best Automation Training in Kochi with industry-focused learning.');
+    }
+    
+    // Update Twitter tags
+    const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+    if (twitterTitle) {
+      twitterTitle.setAttribute('content', 'Contact DCSRI | Best Automation Training in Kochi | Support & Queries');
+    }
+    
+    const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+    if (twitterDescription) {
+      twitterDescription.setAttribute('content', 'Get in touch with DCSRI for automation course details, career guidance, and support. Trusted for the Best Automation Training in Kochi with industry-focused learning.');
+    }
+  }, []);
+
   return (
     <main className="overflow-hidden">
       <PageHero
         title="Contact Us"
-        subtitle="Get in touch with us for any queries or information"
+        subtitle="Get in touch with us for any queries or information — your trusted destination for Best Automation Training in Kochi."
       />
 
       {/* Contact Info & Form */}
@@ -112,7 +146,7 @@ const Contact = () => {
           <AnimatedSection>
             <SectionHeading
               title="Find Us"
-              subtitle="Visit our campus and experience the DCSRI environment"
+              subtitle="Visit our campus and experience the DCSRI training environment — trusted for the Best Automation Training in Kochi."
             />
           </AnimatedSection>
           <AnimatedSection delay={0.2}>

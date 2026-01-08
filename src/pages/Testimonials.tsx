@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Star, Quote } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -81,6 +82,39 @@ const testimonials: Testimonial[] = [
 ];
 
 const Testimonials = () => {
+  useEffect(() => {
+    // Update document title
+    document.title = 'Best Automation Training in Kochi | DCSRI Testimonials';
+    
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Read real success stories from learners who advanced their careers with DCSRI, recognized for providing the Best Automation Training in Kochi and industry-focused support.');
+    }
+    
+    // Update Open Graph tags
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', 'Best Automation Training in Kochi | DCSRI Testimonials');
+    }
+    
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) {
+      ogDescription.setAttribute('content', 'Read real success stories from learners who advanced their careers with DCSRI, recognized for providing the Best Automation Training in Kochi and industry-focused support.');
+    }
+    
+    // Update Twitter tags
+    const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+    if (twitterTitle) {
+      twitterTitle.setAttribute('content', 'Best Automation Training in Kochi | DCSRI Testimonials');
+    }
+    
+    const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+    if (twitterDescription) {
+      twitterDescription.setAttribute('content', 'Read real success stories from learners who advanced their careers with DCSRI, recognized for providing the Best Automation Training in Kochi and industry-focused support.');
+    }
+  }, []);
+
   return (
     <main className="overflow-hidden">
       <PageHero
@@ -167,7 +201,7 @@ const Testimonials = () => {
               Ready to Start Your Journey?
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">
-              Join hundreds of successful professionals who transformed their careers with DCSRI's industry-focused training programs.
+              Learn, build, and transform your career with DCSRI, the hub for the Best Automation Training in Kochi.
             </p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
               <Link

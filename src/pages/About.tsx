@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Target, Eye, Award, Users, BookOpen, Heart } from 'lucide-react';
 import { motion } from 'framer-motion';
 import PageHero from '@/components/ui/PageHero';
@@ -33,27 +34,60 @@ const leadership = [
 const values = [
   {
     title: 'Academic Excellence',
-    description: 'Commitment to providing the highest quality education through innovative teaching methods.',
+    description: 'World-class education through innovative, industry-driven teaching and the Best Automation Training in Kochi',
     icon: Award,
   },
   {
     title: 'Integrity & Ethics',
-    description: 'Upholding moral values and ethical conduct in all aspects of education and administration.',
+    description: 'Upholding ethical standards across education and administration',
     icon: Heart,
   },
   {
     title: 'Innovation',
-    description: 'Encouraging creative thinking and research to solve real-world challenges.',
+    description: 'Research-driven creativity addressing real-world challenges',
     icon: BookOpen,
   },
   {
     title: 'Inclusivity',
-    description: 'Creating an inclusive environment where every student can thrive and succeed.',
+    description: 'A supportive learning environment where every student thrives',
     icon: Users,
   },
 ];
 
 const About = () => {
+  useEffect(() => {
+    // Update document title
+    document.title = 'About DCSRI Institute | Best Automation Training in Kochi';
+    
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Learn about DCSRI, a trusted institute offering the Best Automation Training in Kochi with industry-focused courses, expert trainers, and career support.');
+    }
+    
+    // Update Open Graph tags
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', 'About DCSRI Institute | Best Automation Training in Kochi');
+    }
+    
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) {
+      ogDescription.setAttribute('content', 'Learn about DCSRI, a trusted institute offering the Best Automation Training in Kochi with industry-focused courses, expert trainers, and career support.');
+    }
+    
+    // Update Twitter tags
+    const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+    if (twitterTitle) {
+      twitterTitle.setAttribute('content', 'About DCSRI Institute | Best Automation Training in Kochi');
+    }
+    
+    const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+    if (twitterDescription) {
+      twitterDescription.setAttribute('content', 'Learn about DCSRI, a trusted institute offering the Best Automation Training in Kochi with industry-focused courses, expert trainers, and career support.');
+    }
+  }, []);
+
   return (
     <main className="overflow-hidden">
       <PageHero
@@ -69,21 +103,16 @@ const About = () => {
             <AnimatedSection animation="slideLeft">
               <span className="text-accent font-semibold text-sm uppercase tracking-wider">Our Story</span>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-6">
-                Building Tomorrow's Leaders Today
+                Building tomorrow's leaders today with the Best Automation Training in Kochi.
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Dynamic Centre for Studies & Research Institute (DCSRI) was established with a vision to 
-                provide world-class education accessible to all. Over the years, we have grown into a 
-                premier institution known for academic rigor, innovative research, and holistic development.
+                Dynamic Centre for Studies & Research Institute (DCSRI) was founded with a clear vision to deliver world-class education that is accessible, practical, and future-focused. Over the years, DCSRI has evolved into a premier institution recognized for academic excellence, cutting-edge research, and comprehensive skill development.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Our institution combines the best of traditional values with modern pedagogical approaches. 
-                We believe in nurturing not just academically proficient individuals but well-rounded 
-                personalities ready to make meaningful contributions to society.
+                Blending strong traditional values with modern, industry-oriented teaching methodologies, DCSRI emphasizes both academic mastery and real-world readiness. Our programs are designed to nurture confident, skilled professionals who are prepared to make meaningful contributions to society and the global workforce.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                With state-of-the-art facilities, experienced faculty, and a student-centric approach, 
-                DCSRI continues to set benchmarks in higher education.
+                With state-of-the-art infrastructure, highly experienced faculty, and a student-centric learning environment, DCSRI has earned its reputation as a trusted destination for higher education and professional training. We are especially proud to be recognized for offering the Best Automation Training in Kochi, equipping learners with in-demand skills aligned with current industry standards.
               </p>
             </AnimatedSection>
             <AnimatedSection animation="slideRight" delay={0.2}>
@@ -162,9 +191,7 @@ const About = () => {
                 </motion.div>
                 <h3 className="text-2xl font-bold text-foreground mb-4">Our Vision</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  To be a leading institution of higher learning recognized globally for academic excellence, 
-                  innovative research, and producing graduates who are ethical, socially responsible, and 
-                  capable of contributing positively to the advancement of society.
+                  To become a globally recognized institution of higher learning known for academic excellence, innovative research, and industry-aligned education, while producing ethical, socially responsible graduates. Through a strong focus on advanced technologies and skill-based learning, including delivering the Best Automation Training in Kochi, we aim to empower learners to contribute positively to societal progress and global development.
                 </p>
               </motion.div>
             </StaggerItem>
@@ -186,10 +213,10 @@ const About = () => {
                 <h3 className="text-2xl font-bold text-foreground mb-4">Our Mission</h3>
                 <ul className="text-muted-foreground space-y-3">
                   {[
-                    'Provide quality education that meets global standards',
-                    'Foster innovation and research excellence',
-                    'Develop ethical and socially responsible citizens',
-                    'Create industry-academia partnerships for practical learning',
+                    'Deliver high-quality education aligned with global academic and industry standards',
+                    'Promote a culture of innovation, research, and continuous learning',
+                    'Nurture ethical, socially responsible, and career-ready professionals',
+                    'Strengthen industry–academia collaborations to provide hands-on, practical learning experiences, including offering the Best Automation Training in Kochi',
                   ].map((item, index) => (
                     <motion.li 
                       key={index}
@@ -216,7 +243,7 @@ const About = () => {
           <AnimatedSection>
             <SectionHeading
               title="Our Leadership"
-              subtitle="Meet the visionaries guiding our institution towards excellence"
+              subtitle="Meet the visionaries shaping our journey toward excellence and industry leadership, driven by a passion for innovation and the Best Automation Training in Kochi."
             />
           </AnimatedSection>
           <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" staggerDelay={0.1}>

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Clock, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import dcsriLogo from '@/assets/dcsri_logo.png';
 
 const quickLinks = [
   { name: 'About Us', path: '/about' },
@@ -18,13 +19,13 @@ const Footer = () => {
           {/* About Section */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center">
-                <span className="text-accent-foreground font-bold text-xl">D</span>
-              </div>
-              <div>
-                <h3 className="text-lg font-bold">DCSRI</h3>
-                <p className="text-sm text-primary-foreground/70">Excellence in Education</p>
-              </div>
+              <Link to="/" className="flex items-center">
+                <img 
+                  src={dcsriLogo}
+                  alt="DCSRI Logo"
+                  className="w-32 h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 object-contain scale-110"
+                />
+              </Link>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
               Dynamic Centre for Studies & Research Institute is committed to providing quality education 
@@ -37,10 +38,20 @@ const Footer = () => {
               <a href="#" className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-200">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-200">
+              <a 
+                href="https://www.instagram.com/dcs_research_institute?igsh=MTV3bXdha3k1dnljeA==" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-200"
+              >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-200">
+              <a 
+                href="https://www.linkedin.com/company/110916597/admin/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3B4zfSZZBgR6ub8Fnn0osTMw%3D%3D" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-200"
+              >
                 <Linkedin className="w-5 h-5" />
               </a>
             </div>
@@ -101,7 +112,7 @@ const Footer = () => {
       <div className="border-t border-primary-foreground/10">
         <div className="container-custom mx-auto px-4 md:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60">
-            <p>© {new Date().getFullYear()} DCSRI. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} DCSRI. All rights reserved. Designed and developed by Fawas A Shemeer</p>
             <div className="flex gap-6">
               <a href="#" className="hover:text-accent transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-accent transition-colors">Terms of Service</a>

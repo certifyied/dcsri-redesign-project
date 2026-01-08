@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Download, BookOpen, Users, Award, Lightbulb } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -13,27 +14,60 @@ import { courses } from '@/data/courses';
 const academicApproach = [
   {
     title: 'Industry-Aligned Curriculum',
-    description: 'Our programs are designed in collaboration with industry experts to ensure relevance and employability.',
+    description: 'Developed with industry experts for strong employability',
     icon: BookOpen,
   },
   {
     title: 'Experienced Faculty',
-    description: 'Learn from professors with extensive academic credentials and real-world industry experience.',
+    description: 'Highly qualified professors with real-world expertise',
     icon: Users,
   },
   {
     title: 'Research Focus',
-    description: 'Emphasis on research-based learning and opportunities to contribute to academic publications.',
+    description: 'Opportunities for academic research and publications',
     icon: Lightbulb,
   },
   {
     title: 'Skill Development',
-    description: 'Practical training and workshops to develop soft skills and technical competencies.',
+    description: 'Hands-on training, workshops, and soft-skill enhancement',
     icon: Award,
   },
 ];
 
 const Academics = () => {
+  useEffect(() => {
+    // Update document title
+    document.title = 'Academics at DCSRI | Best Automation Training in Kochi';
+    
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Explore DCSRI\'s academic programs, industry-aligned courses, and expert faculty while experiencing the best automation training in Kochi for career success.');
+    }
+    
+    // Update Open Graph tags
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', 'Academics at DCSRI | Best Automation Training in Kochi');
+    }
+    
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) {
+      ogDescription.setAttribute('content', 'Explore DCSRI\'s academic programs, industry-aligned courses, and expert faculty while experiencing the best automation training in Kochi for career success.');
+    }
+    
+    // Update Twitter tags
+    const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+    if (twitterTitle) {
+      twitterTitle.setAttribute('content', 'Academics at DCSRI | Best Automation Training in Kochi');
+    }
+    
+    const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+    if (twitterDescription) {
+      twitterDescription.setAttribute('content', 'Explore DCSRI\'s academic programs, industry-aligned courses, and expert faculty while experiencing the best automation training in Kochi for career success.');
+    }
+  }, []);
+
   return (
     <main className="overflow-hidden">
       <PageHero
@@ -47,13 +81,14 @@ const Academics = () => {
         <div className="container-custom mx-auto">
           <AnimatedSection className="max-w-3xl mx-auto text-center mb-12">
             <span className="text-accent font-semibold text-sm uppercase tracking-wider">Our Programs</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-6">
-              Shaping Careers Through Quality Education
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-4">
+              Explore career-focused programs with the Best Automation Training in Kochi for a successful future.
             </h2>
+            <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-6">
+              Shaping Careers Through Quality Education
+            </h3>
             <p className="text-muted-foreground leading-relaxed">
-              DCSRI offers a diverse range of undergraduate and postgraduate programs in Commerce, 
-              Business Administration, and Computer Applications. Each program is designed to provide 
-              a strong foundation of theoretical knowledge combined with practical skills.
+              DCSRI offers a diverse range of undergraduate and postgraduate programs with a strong focus on industry relevance, delivering the Best Automation Training in Kochi through a blend of in-depth theoretical knowledge and hands-on practical skills.
             </p>
           </AnimatedSection>
         </div>
@@ -142,8 +177,7 @@ const Academics = () => {
                     Download Academic Resources
                   </h3>
                   <p className="text-muted-foreground mb-6">
-                    Access our detailed syllabus, academic calendar, and other important documents 
-                    to help you plan your academic journey effectively.
+                    Access our detailed syllabus, academic calendar, and essential resources to plan your academic journey with the Best Automation Training in Kochi.
                   </p>
                   <div className="flex flex-wrap gap-4">
                     <motion.button 

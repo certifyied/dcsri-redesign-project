@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import PageHero from '@/components/ui/PageHero';
 import GalleryGrid from '@/components/ui/GalleryGrid';
@@ -10,6 +10,39 @@ const categories = ['All', 'Events', 'Campus', 'Academics', 'Activities', 'Sport
 const Gallery = () => {
   const [activeCategory, setActiveCategory] = useState('All');
 
+  useEffect(() => {
+    // Update document title
+    document.title = 'Automation Training Gallery | Best Automation Training in Kochi | DCSRI';
+    
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Explore DCSRI\'s automation labs, live project setups, and industry-grade training environment. Trusted for the best automation training in Kochi, shaping successful automation careers.');
+    }
+    
+    // Update Open Graph tags
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', 'Automation Training Gallery | Best Automation Training in Kochi | DCSRI');
+    }
+    
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) {
+      ogDescription.setAttribute('content', 'Explore DCSRI\'s automation labs, live project setups, and industry-grade training environment. Trusted for the best automation training in Kochi, shaping successful automation careers.');
+    }
+    
+    // Update Twitter tags
+    const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+    if (twitterTitle) {
+      twitterTitle.setAttribute('content', 'Automation Training Gallery | Best Automation Training in Kochi | DCSRI');
+    }
+    
+    const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+    if (twitterDescription) {
+      twitterDescription.setAttribute('content', 'Explore DCSRI\'s automation labs, live project setups, and industry-grade training environment. Trusted for the best automation training in Kochi, shaping successful automation careers.');
+    }
+  }, []);
+
   const filteredImages = activeCategory === 'All'
     ? galleryImages
     : galleryImages.filter(img => img.category === activeCategory);
@@ -18,7 +51,7 @@ const Gallery = () => {
     <main className="overflow-hidden">
       <PageHero
         title="Gallery"
-        subtitle="Explore moments and memories from campus life at DCSRI"
+        subtitle="Explore moments and memories from campus life at DCSRI — the hub for Best Automation Training in Kochi, where learning meets real industry experience."
       />
 
       {/* Gallery Section */}
