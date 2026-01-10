@@ -1,3 +1,8 @@
+// Import PDF files
+import oneDayProspectus from '@/assets/1 Day Industrial Visit  Prospectus.pdf';
+import twoWeekProspectus from '@/assets/2 Week Advanced 9K Offline Course Prospectus.pdf';
+import threeMonthProspectus from '@/assets/3 Month Offline Course Prospectus 11.pdf';
+
 export interface Course {
   id: string;
   title: string;
@@ -7,6 +12,7 @@ export interface Course {
   description: string;
   image?: string;
   badge?: string;
+  prospectusPdf?: string;
 }
 
 export const courses: Course[] = [
@@ -19,6 +25,7 @@ export const courses: Course[] = [
     description: 'Overall exposure to automation, control systems, and career possibilities. See PLCs, HMIs, VFDs, and Servo drives in action. Price: ₹500 per head',
     badge: 'Program 1',
     image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80',
+    prospectusPdf: oneDayProspectus,
   },
   {
     id: 'program-1-week',
@@ -39,6 +46,7 @@ export const courses: Course[] = [
     description: 'Architecture, wiring logic, and real-time implementation.',
     badge: 'Program 2',
     image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    prospectusPdf: twoWeekProspectus,
   },
   {
     id: 'program-3',
@@ -49,6 +57,7 @@ export const courses: Course[] = [
     description: '2 weeks of intensive classroom training + 10 weeks of hands-on project work. Control panels, industrial robots, and advanced communication protocols.',
     badge: 'Program 3',
     image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80',
+    prospectusPdf: threeMonthProspectus,
   },
   {
     id: 'program-online',

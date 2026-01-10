@@ -1,22 +1,22 @@
-// Import all images from web_images folder
-import img1 from '@/assets/web_images/central-processor-chip-circuit-board-technology-concept-min.jpg';
-import img2 from '@/assets/web_images/checking-current-laptop-circuit-board-min.jpg';
-import img3 from '@/assets/web_images/electronics-technicians-team-working-computer-parts-min.jpg';
-import img4 from '@/assets/web_images/engaging-hands-robotics-workshop-where-young-students-explore-engineering-concepts-min.jpg';
-import img5 from '@/assets/web_images/factory-workers-white-lab-suits-face-masks-sitting-chairs-are-producing-tv-sets-with-soldering-irons-bright-lamps-min.jpg';
-import img6 from '@/assets/web_images/father-sons-making-robot-min.jpg';
-import img7 from '@/assets/web_images/glowing-neon-ai-chip-technology-background-min.jpg';
-import img8 from '@/assets/web_images/group-young-people-doing-experiments-robotics-laboratory-robot-tools-table-min.jpg';
-import img9 from '@/assets/web_images/group-young-teens-celebrating-world-youth-day-by-doing-activities-together-min.jpg';
-import img10 from '@/assets/web_images/metal-worker-using-machinery-industrial-workshop-generated-by-ai-min.jpg';
-import img11 from '@/assets/web_images/modern-laboratory-interior (1)-min.jpg';
-import img12 from '@/assets/web_images/modern-laboratory-interior-min.jpg';
-import img13 from '@/assets/web_images/portrait-female-working-min.jpg';
-import img14 from '@/assets/web_images/portrait-group-engineers-corporate-managers-standing-factory-looking-camera-min-min.jpg';
-import img16 from '@/assets/web_images/portrait-male-engineer-working-field-engineers-day-celebration-min.jpg';
-import img17 from '@/assets/web_images/production-electronic-components-high-tech-factory-min.jpg';
-import img18 from '@/assets/web_images/robotic-arm-placing-chip-circuit-board-min.jpg';
-import img19 from '@/assets/web_images/robotics-lab-students-assembling-electronic-circuits-min.jpg';
+// Import all images from c folder
+import img1 from '@/assets/c/c1.jpeg';
+import img2 from '@/assets/c/c2.jpeg';
+import img3 from '@/assets/c/c3.jpeg';
+import img4 from '@/assets/c/c4.jpeg';
+import img5 from '@/assets/c/c5.jpeg';
+import img6 from '@/assets/c/c6.jpeg';
+import img7 from '@/assets/c/c7.jpeg';
+import img8 from '@/assets/c/c8.jpeg';
+import img9 from '@/assets/c/c9.jpeg';
+import img10 from '@/assets/c/c10.jpeg';
+import img11 from '@/assets/c/c11.jpeg';
+import img12 from '@/assets/c/c12.jpeg';
+import img13 from '@/assets/c/c13.jpeg';
+import img14 from '@/assets/c/c14.jpeg';
+import img16 from '@/assets/c/c15.jpeg';
+import img17 from '@/assets/c/c16.jpeg';
+import img18 from '@/assets/c/c17.jpeg';
+import img19 from '@/assets/c/c18.jpeg';
 
 export interface GalleryImage {
   src: string;

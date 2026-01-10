@@ -1,6 +1,8 @@
-// Import images from web_images folder
-import controlPanelImage from '@/assets/web_images/electronics-technicians-team-working-computer-parts-min.jpg';
-import realTimeProjectImage from '@/assets/web_images/robotics-lab-students-assembling-electronic-circuits-min.jpg';
+// Import images from DCSRI folder
+import industrialAutomationImage from '@/assets/DCSRI/Industrial_Automation.jpg';
+import controlPanelImage from '@/assets/DCSRI/control panel.jpg';
+import plcScadaHmiImage from '@/assets/DCSRI/PLC, SCADA & HMI Project Training.jpg';
+import realTimeProjectImage from '@/assets/DCSRI/Real-Time_Industrial.jpg';
 
 export interface Facility {
   id: string;
@@ -14,7 +16,7 @@ export const facilities: Facility[] = [
     id: 'industrial-automation-lab',
     title: 'Industrial Automation Training Lab',
     description: 'Hands-on training with industry-grade PLCs, VFDs, and servo drives. Real-time industrial automation systems for comprehensive practical learning and skill development.',
-    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80',
+    image: industrialAutomationImage,
   },
   {
     id: 'iot-embedded-lab',
@@ -26,7 +28,7 @@ export const facilities: Facility[] = [
     id: 'plc-scada-hmi',
     title: 'PLC, SCADA & HMI Project Training',
     description: 'Comprehensive project-based training on Programmable Logic Controllers, SCADA systems, and Human Machine Interfaces. Work on real-time industrial control panel projects.',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
+    image: plcScadaHmiImage,
   },
   {
     id: 'real-time-project-development',

@@ -10,8 +10,8 @@ import AnimatedSection from '@/components/animations/AnimatedSection';
 import StaggerContainer from '@/components/animations/StaggerContainer';
 import StaggerItem from '@/components/animations/StaggerItem';
 import CountUp from '@/components/animations/CountUp';
-import heroBackground from '@/assets/web_images/engaging-hands-robotics-workshop-where-young-students-explore-engineering-concepts-min.jpg';
-import factoryAutomation from '@/assets/factory_automation.jpg';
+import heroBackground from '@/assets/DCSRI/banner.jpg';
+import aboutDCSRIImage from '@/assets/DCSRI/new1.jpg';
 import { courses } from '@/data/courses';
 import { facilities } from '@/data/facilities';
 import { galleryImages } from '@/data/gallery';
@@ -44,10 +44,11 @@ const Index = () => {
     <main className="overflow-hidden">
       {/* Hero Section */}
       <PageHero
-        title="Dynamic Control Systems Research Institute"
+        title="DCSRI"
         subtitle="Academic excellence meets industrial automation, preparing students for a brighter future with the Best Automation Training in Kochi."
         backgroundImage={heroBackground}
         size="large"
+        titleClassName="text-7xl md:text-8xl lg:text-9xl font-extrabold text-primary-foreground mb-6"
       >
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
@@ -101,7 +102,7 @@ const Index = () => {
                   transition={{ duration: 0.3 }}
                 >
                   <img 
-                    src={factoryAutomation}
+                    src={aboutDCSRIImage}
                     alt="Industrial Automation Training Facility"
                     className="w-full h-full object-cover"
                   />
@@ -141,6 +142,7 @@ const Index = () => {
                   description={course.description}
                   badge={course.badge}
                   image={course.image}
+                  prospectusPdf={course.prospectusPdf}
                 />
               </StaggerItem>
             ))}
@@ -279,14 +281,9 @@ const Index = () => {
             </p>
           </AnimatedSection>
           <AnimatedSection animation="fadeUp" delay={0.4}>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                 <Link to="/contact" className="btn-accent inline-block">
-                  Contact Us
-                </Link>
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
-                <Link to="/contact" className="border-2 border-primary-foreground text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-primary-foreground hover:text-primary transition-all duration-200 inline-block">
                   Contact Us
                 </Link>
               </motion.div>

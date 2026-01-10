@@ -7,9 +7,10 @@ interface PageHeroProps {
   backgroundImage?: string;
   children?: ReactNode;
   size?: 'default' | 'large';
+  titleClassName?: string;
 }
 
-const PageHero = ({ title, subtitle, backgroundImage, children, size = 'default' }: PageHeroProps) => {
+const PageHero = ({ title, subtitle, backgroundImage, children, size = 'default', titleClassName }: PageHeroProps) => {
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, 150]);
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
@@ -69,7 +70,7 @@ const PageHero = ({ title, subtitle, backgroundImage, children, size = 'default'
         style={{ y, opacity }}
       >
         <motion.h1 
-          className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6"
+          className={titleClassName || "text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6"}
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
