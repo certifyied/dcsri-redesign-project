@@ -14,6 +14,9 @@ import jerinImage from '@/assets/testimonial/Jerin Mathew.jpeg';
 import jossyImage from '@/assets/testimonial/Jossy Varghese.jpeg';
 import nidhinImage from '@/assets/testimonial/Nidhin Niby.jpg';
 import melvinImage from '@/assets/testimonial/Melvin P. Stanley.jpeg';
+import maheshImage from '@/assets/testimonial/Mahesh Kumar P. R.jpeg';
+import ajeshImage from '@/assets/testimonial/Ajesh A.jpeg';
+import ashinImage from '@/assets/testimonial/ashin shibu.jpeg';
 
 interface Testimonial {
   id: string;
@@ -88,6 +91,33 @@ const testimonials: Testimonial[] = [
     text: 'Delivering automation projects with technical precision, supported by the best automation training in Kochi.',
     rating: 5,
     image: melvinImage,
+  },
+  {
+    id: '8',
+    name: 'Mahesh Kumar P. R.',
+    designation: 'Electrical Design Engineer',
+    company: 'Complete Automation Solutions (CPS), Ireland',
+    text: 'Mahesh Kumar P. R. is an Electrical Design Engineer based in Ireland, associated with Complete Automation Solutions (CPS), specializing in electrical design and automation systems, strengthened by the best automation training in Kochi.',
+    rating: 5,
+    image: maheshImage,
+  },
+  {
+    id: '9',
+    name: 'Ajesh A.',
+    designation: 'Maintenance Manager',
+    company: 'Perfect Flexible, Cherthala',
+    text: 'Ajesh A. is serving as Maintenance Manager at Perfect Flexible, Cherthala, overseeing maintenance operations and ensuring optimal plant performance, supported by the best automation training in Kochi.',
+    rating: 5,
+    image: ajeshImage,
+  },
+  {
+    id: '10',
+    name: 'Ashin Shibu',
+    designation: 'Automation Engineer',
+    company: 'Master Systems, Dubai',
+    text: 'Ashin Shibu works as an Automation Engineer at Master Systems, Dubai, with strong expertise in industrial automation and control systems, backed by training from one of the best automation training institutes.',
+    rating: 5,
+    image: ashinImage,
   },
 ];
 
