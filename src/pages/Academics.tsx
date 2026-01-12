@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Download, BookOpen, Users, Award, Lightbulb } from 'lucide-react';
+import { BookOpen, Users, Award, Lightbulb } from 'lucide-react';
 import { motion } from 'framer-motion';
 import PageHero from '@/components/ui/PageHero';
 import SectionHeading from '@/components/ui/SectionHeading';
@@ -159,73 +159,6 @@ const Academics = () => {
               </StaggerItem>
             ))}
           </StaggerContainer>
-        </div>
-      </section>
-
-      {/* Academic Calendar & Syllabus */}
-      <section className="section-padding bg-secondary">
-        <div className="container-custom mx-auto">
-          <AnimatedSection>
-            <motion.div 
-              className="bg-card rounded-2xl p-8 md:p-12 shadow-card border border-border/50"
-              whileHover={{ y: -3 }}
-              transition={{ duration: 0.3 }}
-            >
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <AnimatedSection animation="slideLeft">
-                  <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-                    Download Academic Resources
-                  </h3>
-                  <p className="text-muted-foreground mb-6">
-                    Access our detailed syllabus, academic calendar, and essential resources to plan your academic journey with the Best Automation Training in Kochi.
-                  </p>
-                  <div className="flex flex-wrap gap-4">
-                    <motion.button 
-                      className="btn-primary inline-flex items-center gap-2"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.98 }}
-                    >
-                      <Download className="w-5 h-5" />
-                      Download Syllabus
-                    </motion.button>
-                    <motion.button 
-                      className="btn-outline inline-flex items-center gap-2"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.98 }}
-                    >
-                      <Download className="w-5 h-5" />
-                      Academic Calendar
-                    </motion.button>
-                  </div>
-                </AnimatedSection>
-                <AnimatedSection animation="slideRight" delay={0.2}>
-                  <div className="bg-primary/5 rounded-xl p-6">
-                    <h4 className="font-semibold text-foreground mb-4">Quick Information</h4>
-                    <ul className="space-y-3 text-sm text-muted-foreground">
-                      {[
-                        { label: 'Academic Year Begins', value: 'July' },
-                        { label: 'First Semester Exams', value: 'November' },
-                        { label: 'Second Semester Exams', value: 'April' },
-                        { label: 'Summer Vacation', value: 'May - June' },
-                      ].map((item, index) => (
-                        <motion.li 
-                          key={index}
-                          className="flex justify-between"
-                          initial={{ opacity: 0, x: 20 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ delay: index * 0.1 }}
-                        >
-                          <span>{item.label}</span>
-                          <span className="text-foreground font-medium">{item.value}</span>
-                        </motion.li>
-                      ))}
-                    </ul>
-                  </div>
-                </AnimatedSection>
-              </div>
-            </motion.div>
-          </AnimatedSection>
         </div>
       </section>
 
