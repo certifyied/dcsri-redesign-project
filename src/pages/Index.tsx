@@ -19,22 +19,22 @@ import { galleryImages } from '@/data/gallery';
 const whyChooseUs = [
   {
     title: 'Authorized Excellence (ISO Certified & Industry Recognized Certification)',
-    description: 'Train with complete confidence at our ISO-certified institute and Mitsubishi Electric Authorized Channel Partner, offering the Best Automation Training in Kochi. Earn an industry-recognized certification that reflects quality, trust, and global standards—adding real value to your resume and career growth.',
+    description: 'DCSRI is your ISO-certified, authorized Mitsubishi Electric channel partner, delivering world-class industrial automation solutions with expert technical support, genuine products, and proven reliability across all sectors.',
     icon: Shield,
   },
   {
     title: 'Live Industrial Project Training',
-    description: 'Work on real industrial projects—not just theory—and gain practical shop-floor exposure through the Best Automation Training in Kochi.',
+    description: 'Work on real industrial projects—not just theory—and gain hands-on shop-floor experience with live automation systems, preparing you for immediate industry readiness.',
     icon: Wrench,
   },
   {
     title: 'Flexible Lab Access (Mon–Sat | 10:00 AM – 5:30 PM)',
-    description: 'Practice at your own pace with lab access from Monday to Saturday, offering flexible learning through the Best Automation Training in Kochi.',
+    description: 'Practice at your own pace with dedicated lab access from Monday to Saturday—master panel wiring techniques and develop IoT-based automation projects with hands-on equipment and real-time guidance.',
     icon: Calendar,
   },
   {
-    title: 'Expert Mentorship & Valuable Certification',
-    description: 'Experience the Best Automation Training in Kochi with mentorship from industry professionals with 30+ years of expertise. Enjoy lifelong guidance and receive a trusted certification supported by our Mitsubishi Electric Authorized Channel Partner credentials.',
+    title: 'Expert Mentorship and Support',
+    description: 'Learn from industry professionals with 10+ years of hands-on expertise and receive comprehensive post-training support for career guidance, technical queries, and live project assistance.',
     icon: GraduationCap,
   },
 ];
