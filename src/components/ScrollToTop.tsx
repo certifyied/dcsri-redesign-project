@@ -2,12 +2,14 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    // Scroll to top on route change and initial page load
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    // Don't scroll to top if there's a hash (let the page handle anchor scrolling)
+    if (!hash) {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
 
   return null;
 };

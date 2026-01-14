@@ -9,10 +9,9 @@ interface CourseCardProps {
   description: string;
   image?: string;
   badge?: string;
-  prospectusPdf?: string;
 }
 
-const CourseCard = ({ title, duration, eligibility, description, image, badge, prospectusPdf }: CourseCardProps) => {
+const CourseCard = ({ title, duration, eligibility, description, image, badge }: CourseCardProps) => {
   return (
     <motion.div 
       className="bg-card rounded-xl overflow-hidden shadow-card border border-border/50 group"
@@ -60,43 +59,22 @@ const CourseCard = ({ title, duration, eligibility, description, image, badge, p
           </div>
         </div>
 
-        {prospectusPdf ? (
-          <a 
-            href={prospectusPdf}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-primary font-medium hover:text-accent transition-colors group/link"
+        <Link 
+          to="/academics#courses"
+          className="inline-flex items-center gap-2 text-primary font-medium hover:text-accent transition-colors group/link"
+        >
+          Learn More
+          <motion.svg 
+            className="w-4 h-4" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            stroke="currentColor"
+            whileHover={{ x: 4 }}
+            transition={{ duration: 0.2 }}
           >
-            Learn More
-            <motion.svg 
-              className="w-4 h-4" 
-              fill="none" 
-              viewBox="0 0 24 24" 
-              stroke="currentColor"
-              whileHover={{ x: 4 }}
-              transition={{ duration: 0.2 }}
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </motion.svg>
-          </a>
-        ) : (
-          <Link 
-            to="/contact"
-            className="inline-flex items-center gap-2 text-primary font-medium hover:text-accent transition-colors group/link"
-          >
-            Learn More
-            <motion.svg 
-              className="w-4 h-4" 
-              fill="none" 
-              viewBox="0 0 24 24" 
-              stroke="currentColor"
-              whileHover={{ x: 4 }}
-              transition={{ duration: 0.2 }}
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </motion.svg>
-          </Link>
-        )}
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </motion.svg>
+        </Link>
       </div>
     </motion.div>
   );

@@ -36,6 +36,27 @@ const academicApproach = [
 
 const Academics = () => {
   useEffect(() => {
+    // Handle smooth scroll to anchor if hash is present
+    const hash = window.location.hash;
+    if (hash) {
+      // Wait for page to render, then scroll to element
+      const scrollToHash = () => {
+        const element = document.querySelector(hash);
+        if (element) {
+          // Account for fixed navbar height
+          const yOffset = -80;
+          const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+      };
+      
+      // Try immediately, then with a delay to handle async rendering
+      scrollToHash();
+      const timeoutId = setTimeout(scrollToHash, 300);
+      
+      return () => clearTimeout(timeoutId);
+    }
+
     // Update document title
     document.title = 'Academics at DCSRI | Best Automation Training in Kochi';
     
@@ -95,7 +116,7 @@ const Academics = () => {
       </section>
 
       {/* Courses List */}
-      <section className="section-padding bg-secondary">
+      <section id="courses" className="section-padding bg-secondary">
         <div className="container-custom mx-auto">
           <AnimatedSection>
             <SectionHeading

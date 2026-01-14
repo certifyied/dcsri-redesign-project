@@ -83,7 +83,7 @@ const Navbar = () => {
             <motion.img 
               src={dynamicLogo}
               alt="Dynamic Logo"
-              className="w-40 h-24 md:w-48 md:h-28 lg:w-56 lg:h-32 object-contain"
+              className="w-56 h-32 md:w-64 md:h-36 lg:w-72 lg:h-40 object-contain"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             />

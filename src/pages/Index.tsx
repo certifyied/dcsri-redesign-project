@@ -142,7 +142,6 @@ const Index = () => {
                   description={course.description}
                   badge={course.badge}
                   image={course.image}
-                  prospectusPdf={course.prospectusPdf}
                 />
               </StaggerItem>
             ))}
