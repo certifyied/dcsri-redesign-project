@@ -80,13 +80,21 @@ const Navbar = () => {
 
           {/* Right Dynamic Logo */}
           <div className="hidden lg:flex items-center z-10">
-            <motion.img 
-              src={dynamicLogo}
-              alt="Dynamic Logo"
-              className="w-56 h-32 md:w-64 md:h-36 lg:w-72 lg:h-40 object-contain"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
-            />
+            <a 
+              href="https://www.dynamiccontrolsystems.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+              aria-label="Visit Dynamic Control Systems website"
+            >
+              <motion.img 
+                src={dynamicLogo}
+                alt="Dynamic Logo"
+                className="w-56 h-32 md:w-64 md:h-36 lg:w-72 lg:h-40 object-contain"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              />
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
