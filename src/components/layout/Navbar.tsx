@@ -100,7 +100,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <motion.button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-lg hover:bg-secondary transition-colors"
+            className="lg:hidden p-2 rounded-lg bg-background/90 backdrop-blur-sm border border-border/50 hover:bg-background hover:border-border transition-colors shadow-sm"
             aria-label="Toggle menu"
             whileTap={{ scale: 0.95 }}
           >
@@ -138,9 +138,9 @@ const Navbar = () => {
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
-              className="lg:hidden overflow-hidden"
+              className="lg:hidden overflow-hidden bg-background/98 backdrop-blur-md border-t border-border/50 shadow-medium -mx-4 md:-mx-8 px-4 md:px-8"
             >
-              <div className="pb-6 space-y-1">
+              <div className="pb-6 pt-4 space-y-1">
                 {navItems.map((item, index) => (
                   <motion.div
                     key={item.path}
@@ -152,8 +152,8 @@ const Navbar = () => {
                       to={item.path}
                       className={`block px-4 py-3 rounded-lg font-medium transition-all duration-200 ${
                         location.pathname === item.path
-                          ? 'bg-primary text-primary-foreground'
-                          : 'text-foreground hover:bg-secondary'
+                          ? 'bg-primary text-accent shadow-sm'
+                          : 'text-accent hover:bg-secondary hover:text-accent'
                       }`}
                     >
                       {item.name}

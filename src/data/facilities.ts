@@ -1,6 +1,7 @@
 // Import images from DCSRI folder
 import industrialAutomationImage from '@/assets/DCSRI/Industrial_Automation.jpg';
 import controlPanelImage from '@/assets/DCSRI/control panel.jpg';
+import newControlPanelImage from '@/assets/DCSRI/new control panel.jpg';
 import plcScadaHmiImage from '@/assets/DCSRI/PLC, SCADA & HMI Project Training.jpg';
 import realTimeProjectImage from '@/assets/DCSRI/Real-Time_Industrial.jpg';
 
@@ -22,7 +23,7 @@ export const facilities: Facility[] = [
     id: 'iot-embedded-lab',
     title: 'control panel live lab',
     description: 'State-of-the-art facility equipped with sensors, microcontrollers, and IoT development boards. Build and deploy real-world IoT solutions with industry-standard equipment.',
-    image: controlPanelImage,
+    image: newControlPanelImage,
   },
   {
     id: 'plc-scada-hmi',
