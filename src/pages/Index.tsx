@@ -71,7 +71,11 @@ const Index = () => {
             <AnimatedSection animation="slideLeft">
               <span className="text-accent font-semibold text-sm uppercase tracking-wider">About DCSRI</span>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-6">
+<<<<<<< HEAD
               Master the intelligence behind modern machines with the Best Automation Training in Kochi.
+=======
+              Master the intelligence behind modern machines with the Best Automation Training in Kochi, Kerala
+>>>>>>> 62c9502 (initial commit)
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
               Ever wondered what truly powers the massive, high-speed machines in today's factories? At DCSRI (Dynamic Control Systems Research Institute), we don't just teach the future of automation—we empower you to build it. Move beyond being a bystander and become an industry-ready expert who understands the intelligent systems driving modern manufacturing through the Best Automation Training in Kochi.
