@@ -11,7 +11,7 @@ import StaggerContainer from '@/components/animations/StaggerContainer';
 import StaggerItem from '@/components/animations/StaggerItem';
 import CountUp from '@/components/animations/CountUp';
 import heroBackground from '@/assets/DCSRI/banner.jpg';
-import aboutDCSRIImage from '@/assets/DCSRI/8.jpg';
+import aboutDCSRIImage from '@/assets/DCSRI/industrial-training-scaled.jpeg';
 import { courses } from '@/data/courses';
 import { facilities } from '@/data/facilities';
 import { galleryImages } from '@/data/gallery';

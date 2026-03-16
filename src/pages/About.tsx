@@ -129,7 +129,7 @@ const About = () => {
                     whileHover={{ scale: 1.02, y: -5 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <p className="text-4xl font-bold"><CountUp value={7} suffix="+" /></p>
+                    <p className="text-4xl font-bold"><CountUp value={13} suffix="+" /></p>
                     <p className="text-sm text-primary-foreground/80">Years of Excellence</p>
                   </motion.div>
                   <motion.div
