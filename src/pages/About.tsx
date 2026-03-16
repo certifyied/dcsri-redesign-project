@@ -161,7 +161,7 @@ const About = () => {
                     whileHover={{ scale: 1.02, y: -5 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <p className="text-4xl font-bold"><CountUp value={95} suffix="%" /></p>
+                    <p className="text-4xl font-bold"><CountUp value={99} suffix="%" /></p>
                     <p className="text-sm">Placement Rate</p>
                   </motion.div>
                 </motion.div>
@@ -304,7 +304,7 @@ const About = () => {
             >
               <h3 className="text-2xl font-bold text-foreground mb-6 text-center">Accreditations & Recognitions</h3>
               <StaggerContainer className="flex flex-wrap justify-center gap-8 items-center" staggerDelay={0.1}>
-                {['ISO Certified', 'Mitsubishi Electric Authorized'].map((item, index) => (
+                {['ISO Certified', 'Mitsubishi Electric Authorized', 'MSME Certified'].map((item, index) => (
                   <StaggerItem key={index} animation="scale">
                     <motion.div
                       className="text-center"

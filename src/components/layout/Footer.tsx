@@ -20,7 +20,7 @@ const Footer = () => {
           <div className="space-y-6">
             <div className="flex items-center gap-3">
               <Link to="/" className="flex items-center">
-                <img 
+                <img
                   src={dcsriLogo}
                   alt="DCSRI Logo"
                   className="w-32 h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 object-contain scale-110"
@@ -28,7 +28,7 @@ const Footer = () => {
               </Link>
             </div>
             <p className="text-blue-600 text-sm leading-relaxed">
-              Dynamic Centre for Studies & Research Institute is committed to providing quality education 
+              Dynamic Centre for Studies & Research Institute is committed to providing quality education
               and nurturing future leaders through academic excellence and value-based learning.
             </p>
             <div className="flex gap-3">
@@ -38,17 +38,17 @@ const Footer = () => {
               <a href="#" className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center hover:bg-blue-200 transition-all duration-200 text-blue-700">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a 
-                href="https://www.instagram.com/dcs_research_institute?igsh=MTV3bXdha3k1dnljeA==" 
-                target="_blank" 
+              <a
+                href="https://www.instagram.com/dcs_research_institute?igsh=MTV3bXdha3k1dnljeA=="
+                target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center hover:bg-blue-200 transition-all duration-200 text-blue-700"
               >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a 
-                href="https://www.linkedin.com/company/110916597/admin/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3B4zfSZZBgR6ub8Fnn0osTMw%3D%3D" 
-                target="_blank" 
+              <a
+                href="https://www.linkedin.com/company/110916597/admin/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3B4zfSZZBgR6ub8Fnn0osTMw%3D%3D"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center hover:bg-blue-200 transition-all duration-200 text-blue-700"
               >
@@ -87,11 +87,11 @@ const Footer = () => {
               <li className="flex gap-3">
                 <Phone className="w-5 h-5 text-blue-600 flex-shrink-0" />
                 <div className="flex flex-col gap-1">
-                  <a href="tel:+918547327855" className="text-blue-600 text-sm hover:text-blue-800 transition-colors">
-                    +91 85473 27855
+                  <a href="tel:+919249502162" className="text-blue-600 text-sm hover:text-blue-800 transition-colors">
+                    +91 92495 02162
                   </a>
-                  <a href="tel:+919497707855" className="text-blue-600 text-sm hover:text-blue-800 transition-colors">
-                    94977 07855
+                  <a href="tel:+917306311472" className="text-blue-600 text-sm hover:text-blue-800 transition-colors">
+                    +91 73063 11472
                   </a>
                 </div>
               </li>

@@ -11,10 +11,15 @@ import StaggerContainer from '@/components/animations/StaggerContainer';
 import StaggerItem from '@/components/animations/StaggerItem';
 import CountUp from '@/components/animations/CountUp';
 import heroBackground from '@/assets/DCSRI/banner.jpg';
-import aboutDCSRIImage from '@/assets/DCSRI/new1.jpg';
+import aboutDCSRIImage from '@/assets/DCSRI/8.jpg';
 import { courses } from '@/data/courses';
 import { facilities } from '@/data/facilities';
 import { galleryImages } from '@/data/gallery';
+import cristo from "@/assets/team/cristo.jpeg";
+import jestin from "@/assets/team/jestin.jpeg";
+import joseph from "@/assets/team/joseph.jpeg";
+import saji from "@/assets/team/saji.jpg";
+import joe from "@/assets/team/joe.jpg";
 
 const whyChooseUs = [
   {
@@ -36,6 +41,39 @@ const whyChooseUs = [
     title: 'Expert Mentorship and Support',
     description: 'Learn from industry professionals with 10+ years of hands-on expertise and receive comprehensive post-training support for career guidance, technical queries, and live project assistance.',
     icon: GraduationCap,
+  },
+  {
+    title: 'Expert Mentorship and Support',
+    description: 'Learn from industry professionals with 10+ years of hands-on expertise and receive comprehensive post-training support for career guidance, technical queries, and live project assistance.',
+    icon: GraduationCap,
+  },
+];
+
+const teamMembers = [
+  {
+    name: "CRISTO S KAYYALAKAM",
+    designation: "CEO",
+    image: cristo,
+  },
+  {
+    name: "SAJI PHILIP",
+    designation: "Managing director",
+    image: saji,
+  },
+  {
+    name: "JOE ALEX PHILIP",
+    designation: "Chief Technical Officer",
+    image: joe,
+  },
+  {
+    name: "JESTIN BENNY",
+    designation: "Project manager",
+    image: jestin,
+  },
+  {
+    name: "JOSEPH K BABU",
+    designation: "project engineer",
+    image: joseph,
   },
 ];
 
@@ -71,21 +109,21 @@ const Index = () => {
             <AnimatedSection animation="slideLeft">
               <span className="text-accent font-semibold text-sm uppercase tracking-wider">About DCSRI</span>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-6">
-              Master the intelligence behind modern machines with the Best Automation Training in Kochi, Kerala
+                Master the intelligence behind modern machines with the Best Automation Training in Kochi, Kerala
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-              Ever wondered what truly powers the massive, high-speed machines in today's factories? At DCSRI (Dynamic Control Systems Research Institute), we don't just teach the future of automation—we empower you to build it. Move beyond being a bystander and become an industry-ready expert who understands the intelligent systems driving modern manufacturing through the Best Automation Training in Kochi.
+                Ever wondered what truly powers the massive, high-speed machines in today's factories? At DCSRI (Dynamic Control Systems Research Institute), we don't just teach the future of automation—we empower you to build it. Move beyond being a bystander and become an industry-ready expert who understands the intelligent systems driving modern manufacturing through the Best Automation Training in Kochi.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
-              As an Authorized Channel Partner of Mitsubishi Electric, we seamlessly bridge the gap between academic theory and hands-on industrial expertise, delivering the Best Automation Training in Kochi for future-focused professionals.
+                As an Authorized Channel Partner of Mitsubishi Electric, we seamlessly bridge the gap between academic theory and hands-on industrial expertise, delivering the Best Automation Training in Kochi for future-focused professionals.
               </p>
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <Link to="/about" className="btn-primary inline-flex items-center gap-2">
                   Learn More
-                  <motion.svg 
-                    className="w-4 h-4" 
-                    fill="none" 
-                    viewBox="0 0 24 24" 
+                  <motion.svg
+                    className="w-4 h-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
                     stroke="currentColor"
                     whileHover={{ x: 4 }}
                   >
@@ -96,25 +134,25 @@ const Index = () => {
             </AnimatedSection>
             <AnimatedSection animation="slideRight" delay={0.2}>
               <div className="relative">
-                <motion.div 
+                <motion.div
                   className="aspect-[4/3] rounded-2xl overflow-hidden shadow-hover"
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <img 
+                  <img
                     src={aboutDCSRIImage}
                     alt="Industrial Automation Training Facility"
                     className="w-full h-full object-cover"
                   />
                 </motion.div>
-                <motion.div 
+                <motion.div
                   className="absolute -bottom-6 -left-6 bg-accent text-accent-foreground p-6 rounded-xl shadow-medium"
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.4 }}
                 >
-                  <p className="text-4xl font-bold"><CountUp value={7} suffix="+" /></p>
+                  <p className="text-4xl font-bold"><CountUp value={13} suffix="+" /></p>
                   <p className="text-sm">Years of Excellence</p>
                 </motion.div>
               </div>
@@ -239,13 +277,65 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Our Team */}
+      <section className="section-padding bg-secondary">
+        <div className="container-custom mx-auto">
+          <AnimatedSection>
+            <SectionHeading
+              title="Our Team"
+              subtitle="Meet the industry experts who guide and mentor students at DCSRI."
+            />
+          </AnimatedSection>
+
+          <StaggerContainer
+            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+            staggerDelay={0.1}
+          >
+            {teamMembers.map((member, index) => (
+              <StaggerItem key={index}>
+                <motion.div
+                  className="bg-background rounded-2xl overflow-hidden shadow-md text-center"
+                  whileHover={{ y: -6 }}
+                >
+                  <div className="h-96 overflow-hidden">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+
+                  <div className="p-5">
+                    <h3 className="text-lg font-semibold text-foreground">
+                      {member.name}
+                    </h3>
+
+                    {/* <p className="text-sm text-muted-foreground mt-1">
+                      {member.qualification} certified in Mitsubishi Electric Automation
+                    </p>
+
+                    <p className="text-accent text-sm font-medium mt-2">
+                      {member.experience}
+                    </p> */}
+
+                    <p className="text-accent text-sm font-medium mt-2">
+                      {member.designation}
+                    </p>
+                  </div>
+                </motion.div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-primary" />
         <div className="absolute inset-0">
-          <motion.div 
+          <motion.div
             className="absolute top-0 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl"
-            animate={{ 
+            animate={{
               x: [0, 50, 0],
               y: [0, -30, 0],
             }}
@@ -255,9 +345,9 @@ const Index = () => {
               ease: "easeInOut",
             }}
           />
-          <motion.div 
+          <motion.div
             className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl"
-            animate={{ 
+            animate={{
               x: [0, -30, 0],
               y: [0, 40, 0],
             }}
