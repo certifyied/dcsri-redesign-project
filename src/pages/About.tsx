@@ -12,22 +12,34 @@ import aboutHero from '@/assets/about-hero.jpg';
 import sajiImage from '@/assets/saji.jpg';
 import christoImage from '@/assets/christo.jpg';
 import joeImage from '@/assets/joe.jpg';
+import jestin from "@/assets/team/jestin.jpeg";
+import joseph from "@/assets/team/joseph.jpeg";
 
 const leadership = [
   {
-    name: 'Saji K Philip',
+    name: 'SAJI K PHILIP',
     role: 'Founder',
     image: sajiImage,
   },
   {
-    name: 'Cristo S Kayyalakam',
+    name: 'CRISTO S KAYYALAKAM',
     role: 'CEO',
     image: christoImage,
   },
   {
-    name: 'Joe',
+    name: 'JOE',
     role: 'CTO',
     image: joeImage,
+  },
+  {
+    name: 'JESTIN BENNY',
+    role: 'Project manager',
+    image: jestin,
+  },
+  {
+    name: 'JOSEPH K BABU',
+    role: 'project engineer',
+    image: joseph,
   },
 ];
 

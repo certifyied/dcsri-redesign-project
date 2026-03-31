@@ -41,12 +41,7 @@ const whyChooseUs = [
     title: 'Expert Mentorship and Support',
     description: 'Learn from industry professionals with 10+ years of hands-on expertise and receive comprehensive post-training support for career guidance, technical queries, and live project assistance.',
     icon: GraduationCap,
-  },
-  {
-    title: 'Expert Mentorship and Support',
-    description: 'Learn from industry professionals with 10+ years of hands-on expertise and receive comprehensive post-training support for career guidance, technical queries, and live project assistance.',
-    icon: GraduationCap,
-  },
+  }
 ];
 
 const teamMembers = [
@@ -278,56 +273,51 @@ const Index = () => {
       </section>
 
       {/* Our Team */}
-      <section className="section-padding bg-secondary">
-        <div className="container-custom mx-auto">
-          <AnimatedSection>
-            <SectionHeading
-              title="Our Team"
-              subtitle="Meet the industry experts who guide and mentor students at DCSRI."
-            />
-          </AnimatedSection>
+      {/* Our Team */}
+      {/*
+<section className="section-padding bg-secondary">
+  <div className="container-custom mx-auto">
+    <AnimatedSection>
+      <SectionHeading
+        title="Our Team"
+        subtitle="Meet the industry experts who guide and mentor students at DCSRI."
+      />
+    </AnimatedSection>
 
-          <StaggerContainer
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
-            staggerDelay={0.1}
+    <StaggerContainer
+      className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+      staggerDelay={0.1}
+    >
+      {teamMembers.map((member, index) => (
+        <StaggerItem key={index}>
+          <motion.div
+            className="bg-background rounded-2xl overflow-hidden shadow-md text-center"
+            whileHover={{ y: -6 }}
           >
-            {teamMembers.map((member, index) => (
-              <StaggerItem key={index}>
-                <motion.div
-                  className="bg-background rounded-2xl overflow-hidden shadow-md text-center"
-                  whileHover={{ y: -6 }}
-                >
-                  <div className="h-96 overflow-hidden">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+            <div className="h-96 overflow-hidden">
+              <img
+                src={member.image}
+                alt={member.name}
+                className="w-full h-full object-cover"
+              />
+            </div>
 
-                  <div className="p-5">
-                    <h3 className="text-lg font-semibold text-foreground">
-                      {member.name}
-                    </h3>
+            <div className="p-5">
+              <h3 className="text-lg font-semibold text-foreground">
+                {member.name}
+              </h3>
 
-                    {/* <p className="text-sm text-muted-foreground mt-1">
-                      {member.qualification} certified in Mitsubishi Electric Automation
-                    </p>
-
-                    <p className="text-accent text-sm font-medium mt-2">
-                      {member.experience}
-                    </p> */}
-
-                    <p className="text-accent text-sm font-medium mt-2">
-                      {member.designation}
-                    </p>
-                  </div>
-                </motion.div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
-      </section>
+              <p className="text-accent text-sm font-medium mt-2">
+                {member.designation}
+              </p>
+            </div>
+          </motion.div>
+        </StaggerItem>
+      ))}
+    </StaggerContainer>
+  </div>
+</section>
+*/}
 
       {/* CTA Section */}
       <section className="relative py-20 overflow-hidden">

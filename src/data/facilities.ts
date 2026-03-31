@@ -1,9 +1,9 @@
 // Import images from DCSRI folder
-import industrialAutomationImage from '@/assets/DCSRI/automation-systems-training-lab.png';
+import industrialAutomationImage from '@/assets/DCSRI/Image1.jpeg';
 import controlPanelImage from '@/assets/DCSRI/control panel.jpg';
-import newControlPanelImage from '@/assets/DCSRI/new control panel.jpg';
-import plcScadaHmiImage from '@/assets/DCSRI/training6.webp';
-import realTimeProjectImage from '@/assets/DCSRI/Industria-4-0-a-través-AR-VR-1060x596.jpg';
+import newControlPanelImage from '@/assets/DCSRI/Image4.jpeg';
+import plcScadaHmiImage from '@/assets/DCSRI/Image3.jpeg';
+import realTimeProjectImage from '@/assets/DCSRI/Image2.jpeg';
 
 export interface Facility {
   id: string;
