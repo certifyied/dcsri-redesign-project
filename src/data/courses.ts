@@ -2,7 +2,7 @@ import acadamic1 from "@/assets/acadamic/new.jpeg";
 import acadamic2 from "@/assets/acadamic/L4P3826Q.jpg";
 import acadamic3 from "@/assets/acadamic/acadamimage.jpeg";
 import acadamic4 from "@/assets/acadamic/acadamic.jpeg";
-import acadamic5 from "@/assets/acadamic/An-Online-session-on-Coding-being-attended-by-students-at-Sajhe-1724823929.webp";
+import acadamic5 from "@/assets/acadamic/aHtmcFOz-Ofiice-Image-Alligator-Automations-India-Pvt-1200x903.jpg";
 
 export interface Course {
   id: string;
@@ -33,7 +33,7 @@ The program highlights real-world applications, industry use cases, and project 
   },
   {
     id: 'program-1-week',
-    title: 'Industrial Automation Foundation Program(1-Week)',
+    title: 'Industrial Automation Foundation Program',
     shortName: 'Internship',
     duration: '1 Week (30 Hours)',
     eligibility: 'Who It\'s For: Students and early-stage professionals',
@@ -60,7 +60,7 @@ Outcome: Practical exposure to PLC fundamentals, control panel wiring, industria
   },
   {
     id: 'program-3',
-    title: 'Advanced Industrial Automation Training Program (AIATP)(3-Month)',
+    title: 'Advanced Industrial Automation Training Program (AIATP)',
     shortName: 'Program 3',
     duration: '3 Months (2 Weeks Classroom + 10 Weeks Project Work)',
     eligibility: 'Who It\'s For: Students and professionals seeking long-term career growth',
