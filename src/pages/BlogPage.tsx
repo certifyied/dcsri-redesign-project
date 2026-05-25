@@ -86,31 +86,326 @@ import blogImage85 from "@/assets/blog/how-does-plc-work.webp";
 import blogImage86 from "@/assets/blog/MVS-blog-12-cover-1024x573.webp";
 import blogImage87 from "@/assets/blog/gmr-group-launches-robotics-coe-for-airports-at-hyderabad.jpg";
 import blogImage88 from "@/assets/blog/1744053982854.jpg";
-import React, { useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 
-const blogPosts = [
+export const blogPosts = [
+    {
+        id: 92,
+        title: "Top Benefits of Working with a Robotics Automation Company in Kerala",
+        excerpt: "Explore the significant benefits of partnering with a leading robotics automation firm and a trusted VFD supplier for your industrial needs.",
+        content: `
+Growth of Smart Manufacturing in Kerala
+
+Industries across Kerala are rapidly embracing smart manufacturing technologies to improve productivity, efficiency, and long-term business growth. From manufacturing plants and food processing units to marine industries and packaging companies, businesses are increasingly investing in automation systems to remain competitive in modern industrial markets. The rise of every leading Robotics automation company in Kerala and every trusted VFD supplier in Kochi is helping industries transition toward intelligent and energy-efficient manufacturing environments.
+
+Industrial automation is no longer limited to large factories alone. Today, even small and medium-sized industries are adopting robotics and advanced automation technologies to improve operational performance and reduce production costs. Companies like DCSRI are supporting this transformation by delivering innovative automation solutions tailored to the needs of modern industries in Kerala. (dcsri.org)
+
+Key Benefits of Robotics Automation
+
+One of the biggest advantages of working with a professional Robotics automation company in Kerala is improved productivity. Automated systems can perform repetitive and time-consuming tasks with high precision and consistency. Unlike manual operations, robotic systems can work continuously with minimal interruptions, allowing industries to increase production output while maintaining product quality standards.
+
+Automation also reduces human error in manufacturing processes. In industries where precision is critical, even small mistakes can lead to production losses and increased operational costs. Robotics systems improve process accuracy and ensure consistent production quality, helping businesses meet customer expectations more effectively.
+
+Energy Efficiency and Motor Optimization
+
+Another major benefit is energy efficiency. Modern automation systems often integrate advanced motor control technologies provided by a reliable VFD supplier in Kochi. Variable Frequency Drives (VFDs) help industries optimize motor speed and reduce unnecessary power consumption. Industrial motors consume large amounts of electricity when operated inefficiently in:
+- Pumps and industrial water circulation
+- Compressors and pneumatic networks
+- Conveyors and sorting lines
+- HVAC systems and ventilation units
+
+By integrating VFD technology into automated systems, industries can regulate motor speed based on actual process requirements. This reduces energy waste, lowers electricity bills, and improves overall machine performance. In many industrial applications, VFD systems can significantly reduce operational costs while supporting sustainable manufacturing practices.
+
+Workplace Safety and Operations
+
+Improved workplace safety is another important advantage of industrial automation. Robots can safely handle hazardous tasks:
+- Industrial welding and metal fabrication
+- Dangerous chemical handling and distribution
+- Heavy lift sorting and material lifting
+- High-temperature casting and operations
+
+This minimizes the risk of workplace accidents and creates a safer environment for employees. A trusted Robotics automation company in Kerala designs intelligent automation systems that improve industrial safety standards while maintaining smooth production operations.
+
+Mechanical Durability and Lower Maintenance
+
+Reduced maintenance costs are also a key benefit of automation. Advanced robotic systems and VFD-controlled motors operate more smoothly than conventional machinery. Features such as controlled acceleration and deceleration reduce mechanical stress on:
+- Electric motors and drive gears
+- Belts, chains, and linkages
+- Bearings, shafts, and couplings
+- Heavy structural machinery components
+
+This extends machine lifespan and minimizes wear and tear, helping industries reduce downtime and avoid costly repairs.
+
+Real-Time Monitoring and SCADA Integration
+
+Modern automation systems also support real-time monitoring and predictive maintenance. Smart factories use smart digital monitoring technologies:
+- Industrial IoT sensors and components
+- SCADA systems and remote control panels
+- Advanced photoelectric and pressure sensors
+- Cloud-based operational analytics
+
+This enables industries to identify potential issues early and schedule maintenance before major equipment failures occur. A reliable Robotics automation company in Kerala helps industries implement these intelligent systems for better operational control and efficiency.
+
+Scalability and Flexibility
+
+Scalability is another major reason industries invest in automation technologies. As businesses grow, production requirements increase. Automated systems can be upgraded and expanded easily to meet changing industrial demands. This flexibility allows companies to improve productivity without major operational disruptions.
+
+Kerala’s industrial sectors including food processing, marine engineering, textiles, pharmaceuticals, packaging, and renewable energy are rapidly adopting automation technologies to improve competitiveness in national and global markets. A professional VFD supplier in Kochi combined with an experienced automation provider helps industries modernize their production systems with advanced energy-efficient solutions.
+
+Product Uniformity and Brand Reputation
+
+Automation also enhances product consistency and customer satisfaction. Robotics systems follow programmed instructions with high accuracy, ensuring uniform product quality across production batches. This is especially valuable in industries where quality control is essential for maintaining brand reputation and customer trust.
+
+As Industry 4.0 technologies continue transforming manufacturing worldwide, businesses in Kerala are recognizing the long-term value of smart automation. Investing in robotic systems, intelligent control panels, and advanced VFD solutions enables industries to improve productivity, reduce operational expenses, and achieve sustainable growth.
+
+Conclusion
+
+Partnering with a trusted Robotics automation company in Kerala provides industries with access to expert technical support, customized automation solutions, and future-ready manufacturing technologies. Combined with the expertise of a reliable VFD supplier in Kochi, businesses can successfully transition toward efficient, intelligent, and digitally connected industrial operations.
+
+The future of manufacturing in Kerala depends on innovation, automation, and energy-efficient technologies. Industries that embrace robotics automation today will gain significant advantages in productivity, operational efficiency, safety, and long-term business success.
+`,
+        image: blogImage3,
+        date: "May 25, 2026",
+    },
+    {
+        id: 91,
+        title: "The Role of Robotics Automation in Kerala’s Industrial Revolution",
+        excerpt: "Learn how the integration of robotics, Industry 4.0, and energy-efficient motor control is transforming Kerala's manufacturing landscape.",
+        content: `
+Growth of Robotics in Kerala's Industry
+
+Kerala is witnessing a major transformation in its industrial sector as businesses increasingly adopt smart manufacturing technologies to improve productivity, efficiency, and sustainability. Industries that once relied heavily on manual operations are now embracing robotics, automation systems, and intelligent motor control technologies to remain competitive in a rapidly evolving market. The rise of every innovative Robotics automation company in Kerala and every trusted VFD supplier in Kochi is playing a significant role in shaping the state’s modern industrial revolution.
+
+Industrial automation has become one of the key drivers of economic growth across manufacturing sectors worldwide. Kerala is no exception. With increasing demand for precision manufacturing, energy efficiency, and faster production cycles, industries are investing heavily in robotic systems and automated technologies. Companies like DCSRI are helping industries modernize operations through advanced automation, robotics integration, and intelligent industrial solutions. (dcsri.org)
+
+Robotic Automation Tasks and Applications
+
+A modern Robotics automation company in Kerala provides advanced solutions designed to automate repetitive, time-consuming, and high-risk industrial processes:
+- Material handling and smart sorting
+- Precision industrial welding
+- High-speed product packaging
+- Component assembly and alignment
+- Automated quality inspection
+- Dynamic machine operations
+
+These systems improve production speed and consistency while reducing human errors and operational downtime.
+
+One of the biggest advantages of robotics automation is increased productivity. Unlike manual labor, robotic systems can operate continuously with high precision and minimal interruptions. This allows industries to meet growing production demands while maintaining consistent product quality. Automation also helps manufacturers reduce waste, improve operational accuracy, and optimize resource utilization.
+
+Energy-Efficient Motor Control Integration
+
+Another major factor driving Kerala’s industrial revolution is energy-efficient motor control technology. A professional VFD supplier in Kochi supports industries by providing advanced Variable Frequency Drive (VFD) systems that optimize motor performance and reduce power consumption. Electric motors are widely used in industrial machinery such as:
+- Production conveyor lines
+- High-pressure compressors
+- Industrial pumps and water systems
+- Exhaust fans and blowers
+- Commercial HVAC systems
+
+Without proper motor control, these systems consume excessive energy and increase operational costs.
+
+VFD technology allows industries to control motor speed according to actual process requirements rather than operating equipment continuously at full capacity. This intelligent energy management system significantly reduces electricity usage while improving machine performance and lifespan. In many industries, integrating VFDs with automation systems can reduce energy consumption by up to 50%, making them essential for sustainable manufacturing practices. (automationworld.com)
+
+Industry 4.0 and Smart Factories
+
+Kerala’s manufacturing sector is expanding rapidly in industries such as food processing, marine engineering, pharmaceuticals, packaging, textiles, and renewable energy. These sectors require advanced automation technologies to manage complex operations efficiently. A reliable Robotics automation company in Kerala helps businesses implement customized automation solutions that improve operational control and production efficiency.
+
+The integration of robotics with Industry 4.0 technologies is also accelerating industrial growth in Kerala. Smart factories now use smart digital assets:
+- Industrial Internet of Things (IIoT) sensors
+- Cloud-based real-time monitoring systems
+- Centralized SCADA platforms
+- AI-driven predictive maintenance analytics
+
+These technologies help industries detect machine issues early, reduce downtime, and improve maintenance planning through predictive analysis.
+
+Workplace Safety and Dangerous Operations
+
+Automation is also improving workplace safety across industrial environments. Robots can safely perform high-risk tasks:
+- Industrial welding and metal fusion
+- Dangerous chemical handling and distribution
+- Heavy load lifting and palette shifting
+- High-temperature operations and casting
+
+This reduces the risk of workplace accidents while creating safer working conditions for employees.
+
+Accessibility for Small and Medium Enterprises
+
+Small and medium-sized industries in Kerala are increasingly realizing that automation is no longer limited to large manufacturing corporations. Affordable robotic systems, intelligent control panels, and energy-efficient VFD technologies have made automation accessible to a wider range of businesses. As a result, industries across Kerala are investing in modern automation solutions to improve competitiveness and long-term profitability.
+
+A trusted VFD supplier in Kochi combined with an experienced automation partner enables industries to build efficient, scalable, and future-ready manufacturing systems. These technologies not only reduce operational costs but also support environmental sustainability through lower energy consumption and reduced industrial waste.
+
+Conclusion
+
+The future of Kerala’s industrial growth depends heavily on smart manufacturing and intelligent automation systems. Businesses that embrace robotics and advanced automation today will gain significant advantages in productivity, efficiency, quality control, and market competitiveness.
+
+As the industrial revolution continues to evolve, the role of a leading Robotics automation company in Kerala will remain crucial in helping industries transition toward fully automated and digitally connected manufacturing environments. With continuous innovation in robotics, automation, and motor control technologies, Kerala is steadily moving toward a smarter and more sustainable industrial future.
+`,
+        image: blogImage2,
+        date: "May 25, 2026",
+    },
+    {
+        id: 90,
+        title: "Advanced Motor Control Solutions from a Trusted VFD Supplier in Kochi",
+        excerpt: "Discover how advanced Variable Frequency Drives (VFDs) optimize motor performance, reduce energy consumption, and extend industrial machinery life.",
+        content: `
+Growth of Advanced Motor Control Systems
+
+Modern industries rely heavily on efficient motor control systems to maintain productivity, reduce energy consumption, and improve operational performance. From manufacturing plants and water treatment facilities to food processing units and packaging industries, electric motors power almost every industrial process. As industries in Kerala continue adopting smart manufacturing technologies, the demand for advanced automation and energy-efficient motor control solutions is increasing rapidly. This is where a trusted VFD supplier in Kochi becomes an essential partner for industrial growth and operational efficiency.
+
+Variable Frequency Drives (VFDs) have become one of the most important technologies in modern industrial automation. A VFD is designed to control the speed and torque of electric motors by adjusting the motor’s input frequency and voltage. Instead of operating motors continuously at full speed, industries can optimize performance according to actual production requirements. Companies like DCSRI are helping industries across Kerala implement advanced automation and motor control systems for sustainable industrial operations. (dcsri.org)
+
+Benefits of Variable Frequency Drives
+
+One of the biggest advantages of working with a professional VFD supplier in Kochi is improved energy efficiency. Industrial motors account for a major portion of electricity consumption in factories:
+- Pumps and water treatment facilities
+- Compressors and industrial pneumatics
+- Conveyor systems and heavy loaders
+- Blowers, fans, and ventilation
+- HVAC equipment and refrigeration
+
+By integrating VFD technology, businesses can regulate motor speed according to load demand, reducing power usage and lowering electricity costs.
+
+In many industrial applications, even a small reduction in motor speed can lead to substantial energy savings. For example, pump and fan systems equipped with VFDs consume significantly less power during low-demand periods. This makes VFD solutions highly valuable for industries aiming to reduce operational expenses while supporting sustainable manufacturing practices.
+
+Reducing Mechanical Wear and Stress
+
+Another major benefit of advanced motor control systems is reduced mechanical stress on industrial equipment. Traditional motor starting methods often create sudden electrical surges and mechanical shocks that increase wear and tear on machinery. VFDs provide smooth acceleration and deceleration, minimizing stress on:
+- Motors and electrical components
+- Belts and drive chains
+- Bearings and shafts
+- Connected mechanical systems
+
+This improves machine lifespan, reduces maintenance costs, and prevents unexpected equipment failures.
+
+Integrated Automation and Smart Factories
+
+The growth of smart manufacturing has also increased the demand for integrated automation solutions. A leading Robotics automation company in Kerala combines VFD technology with PLC systems, SCADA platforms, robotics, and industrial sensors to create intelligent production environments. These integrated systems allow industries to monitor machine performance in real time, automate repetitive tasks, and optimize production workflows efficiently.
+
+Industries across Kerala are increasingly adopting automation technologies in sectors such as food processing, marine engineering, textiles, packaging, pharmaceuticals, water treatment, and renewable energy. Automated motor control solutions help businesses maintain production consistency, improve safety, and achieve better process control. Advanced VFD systems also support predictive maintenance by providing real-time operational data that helps identify potential issues before they become major problems.
+
+Role of a Reliable VFD Supplier
+
+A reliable VFD supplier in Kochi not only supplies high-quality motor control systems but also provides technical services:
+- Customized consultation and motor capacity evaluation
+- On-site installation and panel integration
+- VFD programming and commissioning
+- Scheduled maintenance and technical support
+
+Selecting the right VFD requires careful evaluation of motor capacity, load conditions, application requirements, and future scalability. Experienced automation professionals ensure industries receive customized solutions designed for maximum efficiency and long-term reliability.
+
+Workplace Safety and Diagnostics
+
+Workplace safety is another important reason industries invest in advanced automation systems. Intelligent motor control technologies reduce manual intervention and improve safe machine operation. Features such as overload protection, controlled acceleration, emergency stop integration, and fault diagnostics help industries maintain safer working environments.
+
+Future of Industrial Automation in Kerala
+
+The future of industrial automation in Kerala is strongly connected to energy-efficient motor control and smart manufacturing technologies. As businesses continue modernizing their operations, the role of a trusted Robotics automation company in Kerala and an experienced VFD supplier in Kochi becomes increasingly important in supporting industrial transformation.
+
+Industries that adopt advanced motor control systems gain long-term advantages in productivity, operational efficiency, energy savings, and machine reliability. With rising electricity costs and growing demand for sustainable manufacturing, VFD-based automation solutions are helping Kerala’s industries move toward a smarter, more efficient future.
+
+By investing in intelligent automation and advanced motor control technologies, businesses can improve competitiveness while building sustainable industrial operations ready for the next generation of smart manufacturing.
+`,
+        image: blogImage1,
+        date: "May 25, 2026",
+    },
+    {
+        id: 89,
+        title: "Why Industrial Automation Is Growing Rapidly in Kerala",
+        excerpt: "Explore the key factors driving the rapid growth of smart industrial automation, robotics, and energy-efficient VFD systems across Kerala.",
+        content: `
+Growth of Industrial Automation in Kerala
+
+Industrial automation is transforming the manufacturing landscape across India, and Kerala is emerging as one of the fastest-growing regions embracing smart industrial technologies. From manufacturing plants and food processing units to marine industries and packaging sectors, businesses are rapidly adopting automation to improve productivity, reduce operational costs, and stay competitive in the modern market. The increasing demand for intelligent manufacturing solutions has created significant opportunities for every leading Robotics automation company in Kerala and every trusted VFD supplier in Kochi.
+
+Kerala’s industrial growth is being driven by the need for higher efficiency and sustainable production systems. Traditional manufacturing methods often involve higher labor costs, inconsistent production quality, and increased machine downtime. Industrial automation helps solve these challenges by integrating advanced technologies such as robotics, PLC systems, SCADA, sensors, and Variable Frequency Drives (VFDs) into industrial operations. Companies like DCSRI are supporting industries with innovative automation and energy management solutions tailored to modern manufacturing requirements. (dcsri.org)
+
+Key Drivers of Automation Growth
+
+One of the primary reasons automation is growing rapidly in Kerala is the rising focus on productivity and precision. Industries today require faster production cycles while maintaining consistent quality standards. A professional Robotics automation company in Kerala provides smart robotic systems capable of handling repetitive and high-speed tasks with greater accuracy than manual labor. This improves production efficiency while reducing operational errors.
+
+Energy Efficiency and Motor Performance
+
+Another major factor driving automation growth is energy efficiency. Industries are increasingly looking for ways to reduce electricity consumption and lower operational expenses. A reliable VFD supplier in Kochi helps businesses achieve this by providing advanced Variable Frequency Drive systems that optimize motor performance. Industrial motors consume a large portion of factory electricity, especially in:
+- Pumps and water treatment systems
+- Compressors and pneumatic controls
+- Conveyors and materials handling systems
+- HVAC systems and ventilation
+
+VFD technology allows industries to control motor speed according to actual process requirements rather than running machines continuously at full speed. This results in significant power savings, reduced equipment wear, and improved machine lifespan. In many applications, industries can reduce energy consumption by up to 50% through proper VFD integration and automation strategies. (automationindiaexpo.com)
+
+Expanding Industrial Infrastructure
+
+Kerala’s growing industrial infrastructure is also contributing to the rise of automation. The state is witnessing expansion in sectors such as food processing, pharmaceuticals, marine engineering, packaging, textiles, water treatment, and renewable energy. These industries require modern automation systems to manage complex production operations efficiently. Automation helps manufacturers maintain production consistency, improve safety, and reduce manual dependency.
+
+Labor Optimization and Workplace Safety
+
+Labor challenges are another important reason for the shift toward industrial automation. Many industries face shortages of skilled labor and increasing labor costs. Automated systems help businesses overcome these challenges by improving operational efficiency with minimal human intervention. Robots and automated machines can work continuously with high precision, making them ideal for repetitive industrial tasks.
+
+Workplace safety has become a critical priority for modern industries. Automation technologies reduce human exposure to dangerous environments and heavy machinery:
+- Hazardous manufacturing machinery and conveyor lines
+- Chemical exposure and dangerous processing areas
+- Heavy lifting, sorting, and material handling
+- High-temperature industrial environments and welding
+
+A trusted Robotics automation company in Kerala designs intelligent systems that improve worker safety while ensuring smooth industrial operations.
+
+Industry 4.0 and Smart Technologies
+
+The adoption of Industry 4.0 technologies is also accelerating automation growth in Kerala. Smart factories now use IoT-enabled devices, cloud monitoring, predictive maintenance systems, and real-time data analytics to improve manufacturing performance. Automated systems provide valuable production insights that help industries reduce downtime and optimize machine efficiency.
+
+Government initiatives promoting digital transformation and industrial modernization are further encouraging automation investments in Kerala. Businesses are becoming more aware of the long-term benefits of smart manufacturing, including higher productivity, reduced operational costs, energy savings, and improved competitiveness in national and global markets.
+
+Transitioning to Advanced Manufacturing
+
+As industries continue to evolve, the demand for automation solutions will grow even stronger. Partnering with an experienced VFD supplier in Kochi and a reliable Robotics automation company in Kerala enables businesses to successfully transition toward advanced manufacturing systems built for the future.
+
+Industrial automation is no longer limited to large factories alone. Small and medium-sized industries across Kerala are now embracing smart technologies to improve efficiency and achieve sustainable growth. With continuous advancements in robotics, energy-efficient motor control systems, and intelligent manufacturing solutions, Kerala is rapidly becoming a hub for modern industrial automation and smart manufacturing innovation.
+`,
+        image: blogImage23,
+        date: "May 25, 2026",
+    },
     {
         id: 1,
         title: "The Future of Industrial Automation in Kerala: Opportunities for Engineers",
         excerpt: "Explore the growing opportunities for engineers in Kerala's industrial automation sector.",
         content: `
+Growth of Industrial Automation in Kerala
+
 The growth of Industrial automation in Kerala is changing the way industries operate and creating exciting career opportunities for engineers. With rapid technological advancements and increasing industrial demand, automation has become a key part of modern manufacturing, production, and process industries. As companies aim to improve efficiency, reduce human error, and increase productivity, automation technologies are becoming essential across Kerala. For aspiring engineers, gaining the right skills through the Best Automation Training in Kochi Kerala can open doors to a promising and rewarding career.
 
-Industrial automation involves the use of advanced technologies such as Programmable Logic Controllers (PLC), Supervisory Control and Data Acquisition (SCADA), robotics, sensors, and Variable Frequency Drives (VFD). These technologies help industries automate their processes, monitor systems in real time, and maintain high levels of productivity and safety. Because of this transformation, many students and professionals are now enrolling in PLC training in Kerala and SCADA training in Kerala to gain the knowledge needed to work in automation-driven industries.
+Key Automation Technologies
+
+Industrial automation involves the use of advanced technologies. These technologies help industries automate their processes, monitor systems in real time, and maintain high levels of productivity and safety:
+- Programmable Logic Controllers (PLC) to automate control operations and execution logic.
+- Supervisory Control and Data Acquisition (SCADA) for centralized monitoring and real-time process observation.
+- Robotics and sensors to automate physical tasks and detect machinery status.
+- Variable Frequency Drives (VFD) to regulate motor speeds and optimize energy usage.
+
+Because of this transformation, many students and professionals are now enrolling in PLC training in Kerala and SCADA training in Kerala to gain the knowledge needed to work in automation-driven industries.
+
+Emerging Automation Hub in Kerala
 
 Kerala is gradually becoming a hub for automation-based industries. Manufacturing units, food processing companies, power plants, and oil and gas industries are increasingly adopting automation systems to remain competitive. This shift has created a growing demand for professionals who understand industrial automation technologies. Many organizations are looking for engineers trained in PLC programming, SCADA systems, robotics automation, and industrial networking.
+
+Role of Specialized Automation Solution Providers
 
 Another important factor driving the growth of Industrial automation in Kerala is the rise of specialized companies providing automation solutions. Today, there are several firms recognized as the Best industrial automation company in Kerala, offering services such as factory automation, robotics integration, and control system design. These companies play a crucial role in helping industries upgrade their infrastructure and adopt smart manufacturing technologies.
 
 Automation service providers also function as Factory automation system integrators in Kerala, designing and implementing automated production lines and intelligent control systems. These system integrators work closely with industries to analyze production needs and install automation equipment that improves efficiency and reduces downtime. This creates multiple career opportunities for engineers specializing in automation technologies.
 
+Supply of Automation Components and Panels
+
 Another important sector within industrial automation is the supply of components such as Variable Frequency Drives and control panels. Many companies operate as a VFD supplier in Kochi, providing essential automation components used in motors, pumps, and industrial machines. In addition, there are several businesses functioning as Control panel manufacturer in Kerala and Panel Manufacturer in Kochi, designing electrical panels that control automated machinery and industrial systems. Engineers with knowledge of panel design, PLC programming, and automation control systems are highly valued in these industries.
+
+Industry 4.0 and Advanced Manufacturing
 
 The demand for automation engineers is expected to increase significantly in the coming years as industries move toward Industry 4.0 and smart manufacturing. Technologies such as robotics, artificial intelligence, and IoT-based monitoring systems are becoming more common in modern factories. Because of this trend, the role of a Robotics automation company in Kerala is also expanding, creating more opportunities for engineers who specialize in robotics and advanced automation systems.
 
 To take advantage of these opportunities, engineers need proper training and hands-on experience with automation tools and technologies. This is where professional training institutes play an important role. Enrolling in the Best Automation Training in Kochi Kerala helps students gain practical skills in PLC programming, SCADA systems, robotics automation, and industrial control systems. These training programs often include real-time projects and industrial exposure, helping students become job-ready.
 
 Programs like PLC training in Kerala and SCADA training in Kerala are especially important because PLC and SCADA systems form the backbone of most industrial automation processes. Engineers who understand these technologies can work in a wide range of industries including manufacturing, energy, infrastructure, and process automation.
+
+Conclusion
 
 In conclusion, the future of Industrial automation in Kerala is extremely promising. As industries continue to modernize and adopt advanced technologies, the demand for skilled automation professionals will continue to grow. With proper technical training, practical experience, and knowledge of automation systems, engineers can build successful careers in this rapidly expanding field. For those who are passionate about technology and innovation, automation offers one of the most exciting career paths in the modern industrial world.
     `,
@@ -4208,8 +4503,6 @@ import PageHero from "@/components/ui/PageHero";
 import heroImage from "@/assets/2021_1121_002.jpg";
 
 export default function BlogPage() {
-    const [selectedPost, setSelectedPost] = useState(null);
-
     return (
         <main className="overflow-hidden">
             <PageHero
@@ -4218,9 +4511,9 @@ export default function BlogPage() {
                 backgroundImage={heroImage}
             />
 
-            <div className="min-h-screen py-12 px-6">
+            <div className="min-h-screen py-12 px-6 bg-gray-50">
                 <div className="max-w-7xl mx-auto">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-12 text-center">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-12 text-center text-gray-900">
                         Blog
                     </h1>
 
@@ -4229,72 +4522,40 @@ export default function BlogPage() {
                         {blogPosts.map((post) => (
                             <div
                                 key={post.id}
-                                className="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1"
+                                className="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 flex flex-col h-full border border-gray-100"
                             >
-                                <img
-                                    src={post.image}
-                                    alt={post.title}
-                                    className="w-full h-64 md:h-72 object-cover"
-                                />
-                                <div className="p-6">
+                                <Link to={`/blogs/${post.id}`}>
+                                    <div className="overflow-hidden h-64 md:h-72">
+                                        <img
+                                            src={post.image}
+                                            alt={post.title}
+                                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                        />
+                                    </div>
+                                </Link>
+                                <div className="p-6 flex flex-col flex-grow">
                                     <p className="text-sm text-gray-500 mb-2">{post.date}</p>
-                                    <h2 className="text-2xl font-semibold mb-3">
-                                        {post.title}
-                                    </h2>
-                                    <p className="text-gray-600 mb-5">{post.excerpt}</p>
-                                    <button
-                                        onClick={() => setSelectedPost(post)}
-                                        className="text-blue-600 font-medium hover:underline"
-                                    >
-                                        Read More →
-                                    </button>
+                                    <Link to={`/blogs/${post.id}`}>
+                                        <h2 className="text-xl font-bold mb-3 text-gray-900 hover:text-blue-600 transition-colors line-clamp-2">
+                                            {post.title}
+                                        </h2>
+                                    </Link>
+                                    <p className="text-gray-600 text-sm mb-5 flex-grow line-clamp-3">
+                                        {post.excerpt}
+                                    </p>
+                                    <div>
+                                        <Link
+                                            to={`/blogs/${post.id}`}
+                                            className="text-blue-600 font-semibold hover:underline inline-flex items-center gap-1"
+                                        >
+                                            Read More →
+                                        </Link>
+                                    </div>
                                 </div>
                             </div>
                         ))}
                     </div>
                 </div>
-
-                {/* ✅ Updated Modal */}
-                {selectedPost && (
-                    <div
-                        className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4 md:p-8 rounded-2xl overflow-hidden"
-                        onClick={() => setSelectedPost(null)}
-                    >
-                        {/* Modal Container */}
-                        <div
-                            className="bg-white rounded-3xl w-full md:max-w-4xl max-h-[90vh] overflow-y-auto p-8 relative shadow-xl animate-fadeIn"
-                            onClick={(e) => e.stopPropagation()}
-                        >
-                            {/* Close Button */}
-                            <button
-                                onClick={() => setSelectedPost(null)}
-                                className="absolute top-5 right-5 text-gray-500 hover:text-black text-2xl font-bold"
-                            >
-                                ✕
-                            </button>
-
-                            {/* Image */}
-                            <img
-                                src={selectedPost.image}
-                                alt={selectedPost.title}
-                                className="w-full h-64 md:h-80 object-cover rounded-xl mb-6"
-                            />
-
-                            {/* Content */}
-                            <p className="text-sm text-gray-500 mb-3">
-                                {selectedPost.date}
-                            </p>
-
-                            <h2 className="text-3xl md:text-4xl font-bold mb-5">
-                                {selectedPost.title}
-                            </h2>
-
-                            <p className="text-gray-700 leading-relaxed whitespace-pre-line">
-                                {selectedPost.content}
-                            </p>
-                        </div>
-                    </div>
-                )}
             </div>
         </main>
     );

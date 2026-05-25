@@ -14,6 +14,7 @@ import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import BlogPage from "./pages/BlogPage";
+import BlogPost from "./pages/BlogPost";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,7 @@ const App = () => (
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/blogs" element={<BlogPage />} />
+              <Route path="/blogs/:id" element={<BlogPost />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </div>

@@ -27,7 +27,7 @@ const PageHero = ({ title, subtitle, backgroundImage, children, size = 'default'
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: backgroundImage
-            ? `url(${backgroundImage})`
+            ? `url("${backgroundImage}")`
             : 'linear-gradient(135deg, hsl(222 78% 15%) 0%, hsl(222 50% 25%) 100%)',
           scale,
         }}

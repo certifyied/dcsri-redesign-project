@@ -112,7 +112,7 @@ const Footer = () => {
       <div className="border-t border-blue-200">
         <div className="container-custom mx-auto px-4 md:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-blue-500">
-            <p>© {new Date().getFullYear()} DCSRI. All rights reserved. Designed and developed by Fawas A Shemeer</p>
+            <p>© {new Date().getFullYear()} DCSRI. All rights reserved. Designed and developed by Certifyied</p>
             <div className="flex gap-6">
               <a href="#" className="hover:text-blue-700 transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-blue-700 transition-colors">Terms of Service</a>
