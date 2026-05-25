@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate, useParams } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import ScrollToTop from "./components/ScrollToTop";
@@ -17,12 +17,6 @@ import BlogPage from "./pages/BlogPage";
 import BlogPost from "./pages/BlogPost";
 
 const queryClient = new QueryClient();
-
-// Redirect helper component for trailing slash blog routes
-const BlogRedirect = () => {
-  const { id } = useParams<{ id: string }>();
-  return <Navigate to={`/blogs/${id}`} replace />;
-};
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -43,7 +37,6 @@ const App = () => (
               <Route path="/contact" element={<Contact />} />
               <Route path="/blogs" element={<BlogPage />} />
               <Route path="/blogs/:id" element={<BlogPost />} />
-              <Route path="/blogs/:id/" element={<BlogRedirect />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </div>

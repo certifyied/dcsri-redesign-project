@@ -11,6 +11,12 @@ export default function BlogPost() {
     const post = blogPosts.find((p) => p.id === parseInt(id || ""));
 
     useEffect(() => {
+        // Redirect trailing slash routes (e.g. /blogs/91/ -> /blogs/91) to avoid routing loop
+        if (window.location.pathname.endsWith("/")) {
+            navigate(window.location.pathname.slice(0, -1), { replace: true });
+            return;
+        }
+
         if (!post) return;
 
         // Save original metadata
@@ -56,7 +62,7 @@ export default function BlogPost() {
                 metaDescription.setAttribute('content', originalDescription);
             }
         };
-    }, [post]);
+    }, [post, navigate]);
 
     if (!post) {
         return (
