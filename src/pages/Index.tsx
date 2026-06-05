@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Shield, Wrench, Calendar, GraduationCap } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -73,6 +74,22 @@ const teamMembers = [
 ];
 
 const Index = () => {
+  useEffect(() => {
+    const oldScript = document.getElementById('certifyied-blog-script');
+    if (oldScript) oldScript.remove();
+    
+    const script = document.createElement('script');
+    script.id = 'certifyied-blog-script';
+    script.src = 'https://bloggfeature.certifyied.workers.dev/adminApiBlog/api/embed?color=1d4ed8';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+        const existing = document.getElementById('certifyied-blog-script');
+        if (existing) existing.remove();
+    };
+  }, []);
+
   return (
     <main className="overflow-hidden">
       {/* Hero Section */}
@@ -318,6 +335,34 @@ const Index = () => {
   </div>
 </section>
 */}
+
+      {/* Latest Blogs Section */}
+      <section className="section-padding bg-background">
+        <div className="container-custom mx-auto">
+          <AnimatedSection>
+            <SectionHeading
+              title="Latest Updates"
+              subtitle="Insights, tutorials, and updates from our latest work."
+            />
+          </AnimatedSection>
+          
+          <AnimatedSection delay={0.2}>
+            {/* Container where the 3x3 blog grid will load */}
+            <div 
+              id="certifyied-blog-container" 
+              data-project-id="670e2135-e070-4b9c-b284-5778e361077e" 
+              data-limit="3" 
+              data-redirect-url="/blogs"
+            ></div>
+            
+            <div className="text-center mt-12">
+                <Link to="/blogs" className="btn-primary inline-flex items-center justify-center">
+                    View All Blogs
+                </Link>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="relative py-20 overflow-hidden">
