@@ -47,7 +47,7 @@ const Footer = () => {
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="https://www.linkedin.com/company/110916597/admin/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3B4zfSZZBgR6ub8Fnn0osTMw%3D%3D"
+                href="https://www.linkedin.com/company/dynamic-centre-system-research-institute/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center hover:bg-blue-200 transition-all duration-200 text-blue-700"
@@ -97,7 +97,9 @@ const Footer = () => {
               </li>
               <li className="flex gap-3">
                 <Mail className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                <span className="text-blue-600 text-sm">info@dcsri.org</span>
+                <a href="mailto:info@dcsri.org" className="text-blue-600 text-sm hover:text-blue-800 transition-colors">
+                  info@dcsri.org
+                </a>
               </li>
               <li className="flex gap-3">
                 <Clock className="w-5 h-5 text-blue-600 flex-shrink-0" />

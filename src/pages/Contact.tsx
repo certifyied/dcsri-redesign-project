@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Linkedin, Instagram } from 'lucide-react';
 import { motion } from 'framer-motion';
 import PageHero from '@/components/ui/PageHero';
 import SectionHeading from '@/components/ui/SectionHeading';
@@ -25,9 +25,21 @@ const contactInfo = [
     details: ['info@dcsri.org', 'admissions@dcsri.org'],
   },
   {
+    icon: Linkedin,
+    title: 'LinkedIn',
+    details: ['DCSRI Official LinkedIn'],
+    link: 'https://www.linkedin.com/company/dynamic-centre-system-research-institute/',
+  },
+  {
+    icon: Instagram,
+    title: 'Instagram',
+    details: ['@dcs_research_institute'],
+    link: 'https://www.instagram.com/dcs_research_institute',
+  },
+  {
     icon: Clock,
     title: 'Office Hours',
-    details: ['Monday - Friday: 9:00 AM - 5:00 PM', 'Saturday: 9:00 AM - 1:00 PM'],
+    details: ['Mon - Fri: 9:00 AM - 5:00 PM', 'Sat: 9:00 AM - 1:00 PM'],
   },
 ];
 
@@ -75,58 +87,87 @@ const Contact = () => {
       {/* Contact Info & Form */}
       <section className="section-padding bg-background">
         <div className="container-custom mx-auto">
-          <div className="grid lg:grid-cols-3 gap-8">
-            {/* Contact Info Cards */}
-            <StaggerContainer className="lg:col-span-1 space-y-6" staggerDelay={0.1}>
-              {contactInfo.map((info, index) => (
-                <StaggerItem key={index}>
-                  <motion.div
-                    className="bg-card rounded-xl p-6 shadow-card border border-border/50"
-                    whileHover={{ y: -5, boxShadow: '0 20px 40px -12px rgba(10, 26, 68, 0.15)' }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <div className="flex items-start gap-4">
-                      <motion.div
-                        className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0"
-                        whileHover={{ scale: 1.1, rotate: 5 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <info.icon className="w-6 h-6 text-accent" />
-                      </motion.div>
-                      <div>
-                        <h3 className="font-semibold text-foreground mb-2">{info.title}</h3>
-                        {info.details.map((detail, idx) => {
-                          // Make phone numbers clickable
-                          const isPhone = info.title === 'Phone';
-                          const phoneNumber = detail.replace(/\s+/g, '');
-                          const telLink = isPhone ? (phoneNumber.startsWith('+91') ? `tel:${phoneNumber}` : `tel:+91${phoneNumber}`) : null;
+          <div className="grid lg:grid-cols-12 gap-8 items-start">
+            {/* Left Column: Contact Cards Grid */}
+            <div className="lg:col-span-5 flex flex-col justify-between h-full">
+              <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-1 gap-4" staggerDelay={0.08}>
+                {contactInfo.map((info, index) => (
+                  <StaggerItem key={index}>
+                    <motion.div
+                      className="bg-card rounded-xl p-5 shadow-card border border-border/50 h-full flex items-center"
+                      whileHover={{ y: -3, boxShadow: '0 12px 24px -8px rgba(10, 26, 68, 0.12)' }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <div className="flex items-center gap-4 w-full">
+                        <motion.div
+                          className="w-11 h-11 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0"
+                          whileHover={{ scale: 1.08 }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          <info.icon className="w-5 h-5 text-accent" />
+                        </motion.div>
+                        <div className="flex-1 min-w-0">
+                          <h3 className="text-xs uppercase tracking-wider font-semibold text-muted-foreground mb-1">{info.title}</h3>
+                          {info.details.map((detail, idx) => {
+                            const isPhone = info.title === 'Phone';
+                            const isEmail = info.title === 'Email';
+                            const isExternalLink = info.title === 'LinkedIn' || info.title === 'Instagram';
+                            const phoneNumber = detail.replace(/\s+/g, '');
+                            const telLink = isPhone ? (phoneNumber.startsWith('+91') ? `tel:${phoneNumber}` : `tel:+91${phoneNumber}`) : null;
 
-                          return isPhone && telLink ? (
-                            <a
-                              key={idx}
-                              href={telLink}
-                              className="text-muted-foreground text-sm hover:text-accent transition-colors block"
-                            >
-                              {detail}
-                            </a>
-                          ) : (
-                            <p key={idx} className="text-muted-foreground text-sm">
-                              {detail}
-                            </p>
-                          );
-                        })}
+                            if (isEmail) {
+                              return (
+                                <a
+                                  key={idx}
+                                  href={`mailto:${detail}`}
+                                  className="text-foreground text-sm font-medium hover:text-accent transition-colors block truncate"
+                                >
+                                  {detail}
+                                </a>
+                              );
+                            }
+
+                            if (isExternalLink && info.link) {
+                              return (
+                                <a
+                                  key={idx}
+                                  href={info.link}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-primary text-sm font-medium hover:text-accent transition-colors block truncate"
+                                >
+                                  {detail}
+                                </a>
+                              );
+                            }
+
+                            return isPhone && telLink ? (
+                              <a
+                                key={idx}
+                                href={telLink}
+                                className="text-foreground text-sm font-medium hover:text-accent transition-colors block"
+                              >
+                                {detail}
+                              </a>
+                            ) : (
+                              <p key={idx} className="text-foreground text-sm font-medium leading-snug">
+                                {detail}
+                              </p>
+                            );
+                          })}
+                        </div>
                       </div>
-                    </div>
-                  </motion.div>
-                </StaggerItem>
-              ))}
-            </StaggerContainer>
+                    </motion.div>
+                  </StaggerItem>
+                ))}
+              </StaggerContainer>
+            </div>
 
-            {/* Contact Form */}
-            <AnimatedSection animation="slideRight" delay={0.2} className="lg:col-span-2">
+            {/* Right Column: Contact Form */}
+            <AnimatedSection animation="slideRight" delay={0.2} className="lg:col-span-7">
               <motion.div
-                className="bg-card rounded-2xl p-6 md:p-8 shadow-card border border-border/50"
-                whileHover={{ y: -3 }}
+                className="bg-card rounded-2xl p-6 md:p-8 shadow-card border border-border/50 h-full"
+                whileHover={{ y: -2 }}
                 transition={{ duration: 0.3 }}
               >
                 <h3 className="text-2xl font-bold text-foreground mb-2">Send Us a Message</h3>

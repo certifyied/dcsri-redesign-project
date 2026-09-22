@@ -58,7 +58,7 @@ Outcome: Practical exposure to PLC fundamentals, control panel wiring, industria
     title: 'One-Day Industry Exposure (IV)',
     shortName: 'Program 1',
     duration: '1 Day',
-    eligibility: '',
+    eligibility: 'Who It\'s For: Students and professionals seeking long-term career growth',
     description: `This 1-day industrial visit is designed to give participants a comprehensive introduction to the world of industrial automation, control systems, and career opportunities in the automation industry. The session combines theoretical insights with practical demonstrations, helping participants understand how modern industries operate using advanced automation technologies. Conducted in association with a leading Control panel manufacturer in Kerala and an experienced Panel Manufacturer in Kochi, the program offers direct exposure to real-time industrial environments and manufacturing practices.
 
 During the visit, participants will gain hands-on exposure to key automation components such as Programmable Logic Controllers (PLCs), Human Machine Interfaces (HMIs), Variable Frequency Drives (VFDs), and Servo drives. Live demonstrations will showcase how these systems work together to control, monitor, and optimize industrial processes. Participants will also explore how industrial control panels are designed, assembled, and tested to meet safety and performance standards.
