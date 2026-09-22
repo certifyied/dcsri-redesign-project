@@ -146,7 +146,7 @@ const Contact = () => {
           <AnimatedSection>
             <SectionHeading
               title="Find Us"
-              subtitle="Visit our campus at Viale Monte Grappa, 3/5, 20124 Milano MI"
+              subtitle="Visit our campus at 52/3105, Near SBI Bank, NH Bypass, Vyttila, Kochi, Kerala 682019"
             />
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
@@ -156,13 +156,13 @@ const Contact = () => {
               transition={{ duration: 0.3 }}
             >
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5956947080564!2d77.58095661482186!3d12.934889090877793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15c8b0b0b0b0%3A0x0!2zMTLCsDU2JzA1LjYiTiA3N8KwMzUnMDEuNiJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.606594635048!2d76.3177194!3d9.9666521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b08730a57710bd7%3A0xf0c2f13466853ca9!2sIndustrial%20Automation%20Training%20Institute%20%7C%20DCSRI!5e0!3m2!1sen!2sin!4v1790057365420!5m2!1sen!2sin"
                 width="100%"
                 height="450"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
+                referrerPolicy="strict-origin-when-cross-origin"
                 title="DCSRI Location"
                 className="w-full"
               />

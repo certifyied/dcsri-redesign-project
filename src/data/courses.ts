@@ -17,18 +17,14 @@ export interface Course {
 
 export const courses: Course[] = [
   {
-    id: 'program-1',
-    title: 'One-Day Industry Exposure (IV)',
-    shortName: 'Program 1',
-    duration: '1 Day',
-    eligibility: '',
-    description: `This 1-day industrial visit is designed to give participants a comprehensive introduction to the world of industrial automation, control systems, and career opportunities in the automation industry. The session combines theoretical insights with practical demonstrations, helping participants understand how modern industries operate using advanced automation technologies. Conducted in association with a leading Control panel manufacturer in Kerala and an experienced Panel Manufacturer in Kochi, the program offers direct exposure to real-time industrial environments and manufacturing practices.
-
-During the visit, participants will gain hands-on exposure to key automation components such as Programmable Logic Controllers (PLCs), Human Machine Interfaces (HMIs), Variable Frequency Drives (VFDs), and Servo drives. Live demonstrations will showcase how these systems work together to control, monitor, and optimize industrial processes. Participants will also explore how industrial control panels are designed, assembled, and tested to meet safety and performance standards.
-
-The program highlights real-world applications, industry use cases, and project discussions to help students and professionals connect classroom knowledge with practical industrial requirements. This visit is ideal for building foundational awareness and understanding career possibilities in automation, panel design, and system integration.`,
-    badge: 'Program 1',
-    image: acadamic1,
+    id: 'program-3',
+    title: 'Advanced Industrial Automation Training Program (AIATP)',
+    shortName: 'Program 3',
+    duration: '3 Months (2 Weeks Classroom + 10 Weeks Project Work)',
+    eligibility: 'Who It\'s For: Students and professionals seeking long-term career growth',
+    description: 'This 3-month professional job-oriented program is designed to develop industry-ready automation engineers through a structured blend of classroom training and extensive hands-on project work. Recognized for delivering high-quality PLC and SCADA training in Kochi Kerala, the program ensures participants gain both strong theoretical foundations and practical industrial expertise. The course includes 2 weeks of intensive classroom sessions followed by 10 weeks of practical, project-based industrial training. Participants work on live projects involving control panels, PLCs, HMIs, VFDs, Servo drives, industrial robots, SCADA systems, and advanced industrial communication protocols. Through this comprehensive PLC and SCADA training in Kochi Kerala, learners gain real-time exposure to automation architecture, programming logic, and system execution. Special emphasis is placed on system integration, troubleshooting techniques, technical documentation, safety standards, and real-world implementation practices followed in industrial environments. Participants develop confidence in designing, programming, testing, and commissioning automation systems. This program is ideal for students, graduates, and professionals seeking long-term career growth and job-ready automation skills in a competitive industry. Mode: Offline (Theory + Practical). Outcome: Job-ready skills in industrial automation, control panel design, robotics integration, advanced communication systems, and industry-focused PLC and SCADA training in Kochi Kerala.',
+    badge: 'Program 3',
+    image: acadamic4,
   },
   {
     id: 'program-1-week',
@@ -58,13 +54,17 @@ Outcome: Practical exposure to PLC fundamentals, control panel wiring, industria
     image: acadamic3,
   },
   {
-    id: 'program-3',
-    title: 'Advanced Industrial Automation Training Program (AIATP)',
-    shortName: 'Program 3',
-    duration: '3 Months (2 Weeks Classroom + 10 Weeks Project Work)',
-    eligibility: 'Who It\'s For: Students and professionals seeking long-term career growth',
-    description: 'This 3-month professional job-oriented program is designed to develop industry-ready automation engineers through a structured blend of classroom training and extensive hands-on project work. Recognized for delivering high-quality PLC and SCADA training in Kochi Kerala, the program ensures participants gain both strong theoretical foundations and practical industrial expertise. The course includes 2 weeks of intensive classroom sessions followed by 10 weeks of practical, project-based industrial training. Participants work on live projects involving control panels, PLCs, HMIs, VFDs, Servo drives, industrial robots, SCADA systems, and advanced industrial communication protocols. Through this comprehensive PLC and SCADA training in Kochi Kerala, learners gain real-time exposure to automation architecture, programming logic, and system execution. Special emphasis is placed on system integration, troubleshooting techniques, technical documentation, safety standards, and real-world implementation practices followed in industrial environments. Participants develop confidence in designing, programming, testing, and commissioning automation systems. This program is ideal for students, graduates, and professionals seeking long-term career growth and job-ready automation skills in a competitive industry. Mode: Offline (Theory + Practical). Outcome: Job-ready skills in industrial automation, control panel design, robotics integration, advanced communication systems, and industry-focused PLC and SCADA training in Kochi Kerala.',
-    badge: 'Program 3',
-    image: acadamic4,
-  }
+    id: 'program-1',
+    title: 'One-Day Industry Exposure (IV)',
+    shortName: 'Program 1',
+    duration: '1 Day',
+    eligibility: '',
+    description: `This 1-day industrial visit is designed to give participants a comprehensive introduction to the world of industrial automation, control systems, and career opportunities in the automation industry. The session combines theoretical insights with practical demonstrations, helping participants understand how modern industries operate using advanced automation technologies. Conducted in association with a leading Control panel manufacturer in Kerala and an experienced Panel Manufacturer in Kochi, the program offers direct exposure to real-time industrial environments and manufacturing practices.
+
+During the visit, participants will gain hands-on exposure to key automation components such as Programmable Logic Controllers (PLCs), Human Machine Interfaces (HMIs), Variable Frequency Drives (VFDs), and Servo drives. Live demonstrations will showcase how these systems work together to control, monitor, and optimize industrial processes. Participants will also explore how industrial control panels are designed, assembled, and tested to meet safety and performance standards.
+
+The program highlights real-world applications, industry use cases, and project discussions to help students and professionals connect classroom knowledge with practical industrial requirements. This visit is ideal for building foundational awareness and understanding career possibilities in automation, panel design, and system integration.`,
+    badge: 'Program 1',
+    image: acadamic1,
+  },
 ];

@@ -21,6 +21,9 @@ import jestin from "@/assets/team/jestin.jpeg";
 import joseph from "@/assets/team/joseph.jpeg";
 import saji from "@/assets/team/saji.jpg";
 import joe from "@/assets/team/joe.jpg";
+import isoLogo from "@/assets/iso-certified.png";
+import mitsubishiLogo from "@/assets/mitsubishi-partner.png";
+import msmeLogo from "@/assets/msme-certified.png";
 
 const whyChooseUs = [
   {
@@ -360,6 +363,36 @@ const Index = () => {
                     View All Blogs
                 </Link>
             </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Accreditations & Recognitions */}
+      <section className="py-12 bg-card border-t border-border/50">
+        <div className="container-custom mx-auto px-4 md:px-8">
+          <AnimatedSection>
+            <h3 className="text-2xl font-bold text-foreground mb-6 text-center">Accreditations & Recognitions</h3>
+            <StaggerContainer className="flex flex-wrap justify-center gap-10 md:gap-16 items-center py-4" staggerDelay={0.1}>
+              {[
+                { name: 'ISO Certified', logo: isoLogo, alt: 'ISO Certified' },
+                { name: 'Mitsubishi Electric Authorized Channel Partner', logo: mitsubishiLogo, alt: 'Mitsubishi Electric Authorized Channel Partner' },
+                { name: 'MSME Certified', logo: msmeLogo, alt: 'MSME Certified' },
+              ].map((item, index) => (
+                <StaggerItem key={index} animation="scale">
+                  <motion.div
+                    className="text-center flex flex-col items-center justify-center"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <img 
+                      src={item.logo} 
+                      alt={item.alt}
+                      className="h-24 md:h-32 object-contain max-w-[220px] md:max-w-[300px]"
+                    />
+                  </motion.div>
+                </StaggerItem>
+              ))}
+            </StaggerContainer>
           </AnimatedSection>
         </div>
       </section>

@@ -14,6 +14,9 @@ import christoImage from '@/assets/christo.jpg';
 import joeImage from '@/assets/joe.jpg';
 import jestin from "@/assets/team/jestin.jpeg";
 import joseph from "@/assets/team/joseph.jpeg";
+import isoLogo from "@/assets/iso-certified.png";
+import mitsubishiLogo from "@/assets/mitsubishi-partner.png";
+import msmeLogo from "@/assets/msme-certified.png";
 
 const leadership = [
   {
@@ -315,18 +318,23 @@ const About = () => {
               transition={{ duration: 0.3 }}
             >
               <h3 className="text-2xl font-bold text-foreground mb-6 text-center">Accreditations & Recognitions</h3>
-              <StaggerContainer className="flex flex-wrap justify-center gap-8 items-center" staggerDelay={0.1}>
-                {['ISO Certified', 'Mitsubishi Electric Authorized', 'MSME Certified'].map((item, index) => (
+              <StaggerContainer className="flex flex-wrap justify-center gap-10 md:gap-16 items-center py-4" staggerDelay={0.1}>
+                {[
+                  { name: 'ISO Certified', logo: isoLogo, alt: 'ISO Certified' },
+                  { name: 'Mitsubishi Electric Authorized Channel Partner', logo: mitsubishiLogo, alt: 'Mitsubishi Electric Authorized Channel Partner' },
+                  { name: 'MSME Certified', logo: msmeLogo, alt: 'MSME Certified' },
+                ].map((item, index) => (
                   <StaggerItem key={index} animation="scale">
                     <motion.div
-                      className="text-center"
-                      whileHover={{ scale: 1.1 }}
+                      className="text-center flex flex-col items-center justify-center"
+                      whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <div className={`w-20 h-20 ${index % 2 === 0 ? 'bg-primary/10' : 'bg-accent/10'} rounded-full flex items-center justify-center mx-auto mb-3`}>
-                        <Award className={`w-10 h-10 ${index % 2 === 0 ? 'text-primary' : 'text-accent'}`} />
-                      </div>
-                      <p className="text-sm font-medium text-foreground">{item}</p>
+                      <img 
+                        src={item.logo} 
+                        alt={item.alt}
+                        className="h-28 md:h-36 object-contain max-w-[240px] md:max-w-[320px]"
+                      />
                     </motion.div>
                   </StaggerItem>
                 ))}

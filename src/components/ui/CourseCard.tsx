@@ -13,18 +13,18 @@ interface CourseCardProps {
 
 const CourseCard = ({ title, duration, eligibility, description, image, badge }: CourseCardProps) => {
   return (
-    <motion.div 
+    <motion.div
       className="bg-card rounded-xl overflow-hidden shadow-card border border-border/50 group"
       whileHover={{ y: -8 }}
       transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
     >
       {/* Image */}
       <div className="relative h-48 overflow-hidden">
-        <motion.div 
+        <motion.div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: image 
-              ? `url(${image})` 
+            backgroundImage: image
+              ? `url(${image})`
               : 'linear-gradient(135deg, hsl(222 78% 15%) 0%, hsl(222 50% 25%) 100%)',
           }}
           whileHover={{ scale: 1.1 }}
@@ -32,7 +32,7 @@ const CourseCard = ({ title, duration, eligibility, description, image, badge }:
         />
         <div className="absolute inset-0 bg-primary/40 group-hover:bg-primary/30 transition-colors duration-300" />
         <div className="absolute bottom-4 left-4 right-4">
-          <motion.span 
+          <motion.span
             className="inline-block bg-accent text-accent-foreground text-sm font-medium px-3 py-1 rounded-full"
             whileHover={{ scale: 1.05 }}
           >
@@ -47,29 +47,23 @@ const CourseCard = ({ title, duration, eligibility, description, image, badge }:
           {title}
         </h3>
         <p className="text-muted-foreground text-sm mb-4 line-clamp-2">{description}</p>
-        
+
         <div className="space-y-2 mb-5">
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <Clock className="w-4 h-4 text-accent" />
             <span>Duration: {duration}</span>
           </div>
-          {eligibility && (
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <BookOpen className="w-4 h-4 text-accent" />
-              <span>Eligibility: {eligibility}</span>
-            </div>
-          )}
         </div>
 
-        <Link 
+        <Link
           to="/academics#courses"
           className="inline-flex items-center gap-2 text-primary font-medium hover:text-accent transition-colors group/link"
         >
           Learn More
-          <motion.svg 
-            className="w-4 h-4" 
-            fill="none" 
-            viewBox="0 0 24 24" 
+          <motion.svg
+            className="w-4 h-4"
+            fill="none"
+            viewBox="0 0 24 24"
             stroke="currentColor"
             whileHover={{ x: 4 }}
             transition={{ duration: 0.2 }}
