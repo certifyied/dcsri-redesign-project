@@ -87,7 +87,7 @@ const testimonials: Testimonial[] = [
     id: '7',
     name: 'Melvin P. Stanley',
     designation: 'Project Engineer',
-    company: 'Hanoch Automation Pvt. Ltd., Kottayam',
+    company: 'Hanoch Automation Pvt. Ltd., Kochi',
     text: 'Delivering automation projects with technical precision, supported by the best automation training in Kochi.',
     rating: 5,
     image: melvinImage,

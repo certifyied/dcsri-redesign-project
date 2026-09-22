@@ -2,7 +2,6 @@ import acadamic1 from "@/assets/acadamic/new.jpeg";
 import acadamic2 from "@/assets/acadamic/L4P3826Q.jpg";
 import acadamic3 from "@/assets/acadamic/acadamimage.jpeg";
 import acadamic4 from "@/assets/acadamic/acadamic.jpeg";
-import acadamic5 from "@/assets/acadamic/aHtmcFOz-Ofiice-Image-Alligator-Automations-India-Pvt-1200x903.jpg";
 
 export interface Course {
   id: string;
@@ -22,7 +21,7 @@ export const courses: Course[] = [
     title: 'One-Day Industry Exposure (IV)',
     shortName: 'Program 1',
     duration: '1 Day',
-    eligibility: 'Best For: Students and professionals seeking foundational awareness',
+    eligibility: '',
     description: `This 1-day industrial visit is designed to give participants a comprehensive introduction to the world of industrial automation, control systems, and career opportunities in the automation industry. The session combines theoretical insights with practical demonstrations, helping participants understand how modern industries operate using advanced automation technologies. Conducted in association with a leading Control panel manufacturer in Kerala and an experienced Panel Manufacturer in Kochi, the program offers direct exposure to real-time industrial environments and manufacturing practices.
 
 During the visit, participants will gain hands-on exposure to key automation components such as Programmable Logic Controllers (PLCs), Human Machine Interfaces (HMIs), Variable Frequency Drives (VFDs), and Servo drives. Live demonstrations will showcase how these systems work together to control, monitor, and optimize industrial processes. Participants will also explore how industrial control panels are designed, assembled, and tested to meet safety and performance standards.
@@ -67,15 +66,5 @@ Outcome: Practical exposure to PLC fundamentals, control panel wiring, industria
     description: 'This 3-month professional job-oriented program is designed to develop industry-ready automation engineers through a structured blend of classroom training and extensive hands-on project work. Recognized for delivering high-quality PLC and SCADA training in Kochi Kerala, the program ensures participants gain both strong theoretical foundations and practical industrial expertise. The course includes 2 weeks of intensive classroom sessions followed by 10 weeks of practical, project-based industrial training. Participants work on live projects involving control panels, PLCs, HMIs, VFDs, Servo drives, industrial robots, SCADA systems, and advanced industrial communication protocols. Through this comprehensive PLC and SCADA training in Kochi Kerala, learners gain real-time exposure to automation architecture, programming logic, and system execution. Special emphasis is placed on system integration, troubleshooting techniques, technical documentation, safety standards, and real-world implementation practices followed in industrial environments. Participants develop confidence in designing, programming, testing, and commissioning automation systems. This program is ideal for students, graduates, and professionals seeking long-term career growth and job-ready automation skills in a competitive industry. Mode: Offline (Theory + Practical). Outcome: Job-ready skills in industrial automation, control panel design, robotics integration, advanced communication systems, and industry-focused PLC and SCADA training in Kochi Kerala.',
     badge: 'Program 3',
     image: acadamic4,
-  },
-  {
-    id: 'program-online',
-    title: 'Online Training Session (Learn From Anywhere)',
-    shortName: 'Online',
-    duration: 'Flexible (Live sessions)',
-    eligibility: 'Who It\'s For: Students, beginners, and working professionals',
-    description: 'Online Training Session (Learn From Anywhere). Can\'t be on site? No problem. Our online sessions are interactive, easy to follow, and focused on helping you truly understand automation concepts right from your own space. Learn PLC fundamentals, HMI overview, VFD basics, and real-world applications. Best Automation Training in Kochi, Kerala.',
-    badge: 'Online',
-    image: acadamic5,
-  },
+  }
 ];

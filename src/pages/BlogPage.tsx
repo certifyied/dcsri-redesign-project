@@ -45,11 +45,6 @@ export default function BlogPage() {
 
             <div className={`min-h-screen ${!blogId ? "py-12" : "pt-24 pb-12"} px-6 bg-gray-50`}>
                 <div className="max-w-7xl mx-auto">
-                    {!blogId && (
-                        <h1 className="text-4xl md:text-5xl font-bold mb-12 text-center text-gray-900">
-                            Blog
-                        </h1>
-                    )}
 
                     {blogId ? (
                         /* Render Single Post (triggered when ?id= or slug is present) */

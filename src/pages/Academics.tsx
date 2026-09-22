@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BookOpen, Users, Award, Lightbulb } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -33,6 +33,51 @@ const academicApproach = [
     icon: Award,
   },
 ];
+
+const CourseCardItem = ({ course }: { course: typeof courses[0] }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  return (
+    <StaggerItem key={course.id}>
+      <motion.div 
+        className="bg-card rounded-xl p-6 shadow-card border border-border/50 flex flex-col h-full"
+        whileHover={{ y: -5, boxShadow: '0 20px 40px -12px rgba(10, 26, 68, 0.15)' }}
+        transition={{ duration: 0.3 }}
+      >
+        <div className="flex items-start gap-4 flex-1">
+          <motion.div 
+            className="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0"
+            whileHover={{ scale: 1.1, rotate: 5 }}
+            transition={{ duration: 0.3 }}
+          >
+            <BookOpen className="w-8 h-8 text-accent" />
+          </motion.div>
+          <div className="flex-1 flex flex-col h-full">
+            <h3 className="text-xl font-bold text-foreground mb-2">{course.title}</h3>
+            <p className={`text-muted-foreground text-sm mb-2 whitespace-pre-line ${!isExpanded ? 'line-clamp-4' : ''}`}>
+              {course.description}
+            </p>
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="text-xs font-semibold text-accent hover:underline mb-4 self-start focus:outline-none"
+            >
+              {isExpanded ? 'Read Less' : 'Read More'}
+            </button>
+            <div className="flex flex-wrap gap-4 text-sm mt-auto">
+              <span className="bg-primary/10 text-primary px-3 py-1 rounded-full">
+                Duration: {course.duration}
+              </span>
+              {course.eligibility && (
+                <span className="bg-accent/10 text-accent px-3 py-1 rounded-full">
+                  Eligibility: {course.eligibility}
+                </span>
+              )}
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </StaggerItem>
+  );
+};
 
 const Academics = () => {
   useEffect(() => {
@@ -126,35 +171,7 @@ const Academics = () => {
           </AnimatedSection>
           <StaggerContainer className="grid md:grid-cols-2 gap-8" staggerDelay={0.15}>
             {courses.map((course) => (
-              <StaggerItem key={course.id}>
-                <motion.div 
-                  className="bg-card rounded-xl p-6 shadow-card border border-border/50"
-                  whileHover={{ y: -5, boxShadow: '0 20px 40px -12px rgba(10, 26, 68, 0.15)' }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <div className="flex items-start gap-4">
-                    <motion.div 
-                      className="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0"
-                      whileHover={{ scale: 1.1, rotate: 5 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <BookOpen className="w-8 h-8 text-accent" />
-                    </motion.div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-foreground mb-2">{course.title}</h3>
-                      <p className="text-muted-foreground text-sm mb-4">{course.description}</p>
-                      <div className="flex flex-wrap gap-4 text-sm">
-                        <span className="bg-primary/10 text-primary px-3 py-1 rounded-full">
-                          Duration: {course.duration}
-                        </span>
-                        <span className="bg-accent/10 text-accent px-3 py-1 rounded-full">
-                          Eligibility: {course.eligibility}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              </StaggerItem>
+              <CourseCardItem key={course.id} course={course} />
             ))}
           </StaggerContainer>
         </div>

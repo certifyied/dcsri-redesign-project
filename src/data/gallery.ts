@@ -11,12 +11,18 @@ import img9 from '@/assets/c/c9.jpeg';
 import img10 from '@/assets/c/c10.jpeg';
 import img11 from '@/assets/c/c11.jpeg';
 import img12 from '@/assets/c/c12.jpeg';
-import img13 from '@/assets/c/c13.jpeg';
 import img14 from '@/assets/c/c14.jpeg';
 import img16 from '@/assets/c/c15.jpeg';
-import img17 from '@/assets/c/c16.jpeg';
 import img18 from '@/assets/c/c17.jpeg';
 import img19 from '@/assets/c/c18.jpeg';
+import img22 from '@/assets/c/c22.jpeg';
+import img23 from '@/assets/c/c23.jpeg';
+import img24 from '@/assets/c/c24.jpeg';
+import img25 from '@/assets/c/c25.jpeg';
+import img26 from '@/assets/c/c26.jpeg';
+import img27 from '@/assets/c/c27.jpeg';
+import img28 from '@/assets/c/c28.jpeg';
+import img29 from '@/assets/c/c29.jpeg';
 
 export interface GalleryImage {
   src: string;
@@ -31,14 +37,37 @@ export const galleryImages: GalleryImage[] = [
     category: 'Campus',
   },
   {
+    src: img24,
+    alt: 'Thrilled to have completed this training program and earned my certification',
+    category: 'Academics',
+  },
+  {
     src: img2,
     alt: 'Checking Current Laptop Circuit Board',
+    category: 'Academics',
+  },
+  {
+    src: img22,
+    alt: 'Successfully wrapped up an intensive and insightful hands-on workshop',
+    category: 'Academics',
+  }, {
+    src: img23,
+    alt: 'Robotics Lab Students Assembling Electronic Circuits',
     category: 'Academics',
   },
   {
     src: img3,
     alt: 'Electronics Technicians Team Working on Computer Parts',
     category: 'Facilities',
+  },
+  {
+    src: img25,
+    alt: 'Another milestone achieved: successfully concluded a high-impact learning session.',
+    category: 'Academics',
+  }, {
+    src: img26,
+    alt: 'Wrapped up with great insights, practical skills, and a solid learning experience.',
+    category: 'Academics',
   },
   {
     src: img4,
@@ -56,6 +85,11 @@ export const galleryImages: GalleryImage[] = [
     category: 'Activities',
   },
   {
+    src: img27,
+    alt: 'Robotics Lab Students Assembling Electronic Circuits',
+    category: 'Academics',
+  },
+  {
     src: img7,
     alt: 'Glowing Neon AI Chip Technology Background',
     category: 'Campus',
@@ -63,6 +97,15 @@ export const galleryImages: GalleryImage[] = [
   {
     src: img8,
     alt: 'Group of Young People Doing Experiments in Robotics Laboratory',
+    category: 'Academics',
+  },
+  {
+    src: img28,
+    alt: 'Stepping forward with new skills and practical know-how.',
+    category: 'Academics',
+  }, {
+    src: img29,
+    alt: 'Robotics Lab Students Assembling Electronic Circuits',
     category: 'Academics',
   },
   {
@@ -86,11 +129,6 @@ export const galleryImages: GalleryImage[] = [
     category: 'Campus',
   },
   {
-    src: img13,
-    alt: 'Portrait of Female Engineer Working',
-    category: 'Academics',
-  },
-  {
     src: img14,
     alt: 'Portrait of Group of Engineers and Corporate Managers at Factory',
     category: 'Events',
@@ -99,11 +137,6 @@ export const galleryImages: GalleryImage[] = [
     src: img16,
     alt: 'Portrait of Male Engineer Working in Field',
     category: 'Academics',
-  },
-  {
-    src: img17,
-    alt: 'Production of Electronic Components in High-Tech Factory',
-    category: 'Facilities',
   },
   {
     src: img18,
@@ -115,4 +148,5 @@ export const galleryImages: GalleryImage[] = [
     alt: 'Robotics Lab Students Assembling Electronic Circuits',
     category: 'Academics',
   },
+
 ];

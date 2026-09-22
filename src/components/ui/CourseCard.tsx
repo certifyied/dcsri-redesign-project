@@ -53,10 +53,12 @@ const CourseCard = ({ title, duration, eligibility, description, image, badge }:
             <Clock className="w-4 h-4 text-accent" />
             <span>Duration: {duration}</span>
           </div>
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <BookOpen className="w-4 h-4 text-accent" />
-            <span>Eligibility: {eligibility}</span>
-          </div>
+          {eligibility && (
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <BookOpen className="w-4 h-4 text-accent" />
+              <span>Eligibility: {eligibility}</span>
+            </div>
+          )}
         </div>
 
         <Link 

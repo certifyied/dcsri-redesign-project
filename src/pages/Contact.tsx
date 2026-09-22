@@ -35,30 +35,30 @@ const Contact = () => {
   useEffect(() => {
     // Update document title
     document.title = 'Contact DCSRI | Best Automation Training in Kochi | Support & Queries';
-    
+
     // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Get in touch with DCSRI for automation course details, career guidance, and support. Trusted for the Best Automation Training in Kochi with industry-focused learning.');
     }
-    
+
     // Update Open Graph tags
     const ogTitle = document.querySelector('meta[property="og:title"]');
     if (ogTitle) {
       ogTitle.setAttribute('content', 'Contact DCSRI | Best Automation Training in Kochi | Support & Queries');
     }
-    
+
     const ogDescription = document.querySelector('meta[property="og:description"]');
     if (ogDescription) {
       ogDescription.setAttribute('content', 'Get in touch with DCSRI for automation course details, career guidance, and support. Trusted for the Best Automation Training in Kochi with industry-focused learning.');
     }
-    
+
     // Update Twitter tags
     const twitterTitle = document.querySelector('meta[name="twitter:title"]');
     if (twitterTitle) {
       twitterTitle.setAttribute('content', 'Contact DCSRI | Best Automation Training in Kochi | Support & Queries');
     }
-    
+
     const twitterDescription = document.querySelector('meta[name="twitter:description"]');
     if (twitterDescription) {
       twitterDescription.setAttribute('content', 'Get in touch with DCSRI for automation course details, career guidance, and support. Trusted for the Best Automation Training in Kochi with industry-focused learning.');
@@ -80,13 +80,13 @@ const Contact = () => {
             <StaggerContainer className="lg:col-span-1 space-y-6" staggerDelay={0.1}>
               {contactInfo.map((info, index) => (
                 <StaggerItem key={index}>
-                  <motion.div 
+                  <motion.div
                     className="bg-card rounded-xl p-6 shadow-card border border-border/50"
                     whileHover={{ y: -5, boxShadow: '0 20px 40px -12px rgba(10, 26, 68, 0.15)' }}
                     transition={{ duration: 0.3 }}
                   >
                     <div className="flex items-start gap-4">
-                      <motion.div 
+                      <motion.div
                         className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0"
                         whileHover={{ scale: 1.1, rotate: 5 }}
                         transition={{ duration: 0.3 }}
@@ -100,10 +100,10 @@ const Contact = () => {
                           const isPhone = info.title === 'Phone';
                           const phoneNumber = detail.replace(/\s+/g, '');
                           const telLink = isPhone ? (phoneNumber.startsWith('+91') ? `tel:${phoneNumber}` : `tel:+91${phoneNumber}`) : null;
-                          
+
                           return isPhone && telLink ? (
-                            <a 
-                              key={idx} 
+                            <a
+                              key={idx}
                               href={telLink}
                               className="text-muted-foreground text-sm hover:text-accent transition-colors block"
                             >
@@ -124,7 +124,7 @@ const Contact = () => {
 
             {/* Contact Form */}
             <AnimatedSection animation="slideRight" delay={0.2} className="lg:col-span-2">
-              <motion.div 
+              <motion.div
                 className="bg-card rounded-2xl p-6 md:p-8 shadow-card border border-border/50"
                 whileHover={{ y: -3 }}
                 transition={{ duration: 0.3 }}
@@ -146,11 +146,11 @@ const Contact = () => {
           <AnimatedSection>
             <SectionHeading
               title="Find Us"
-              subtitle="Visit our campus and experience the DCSRI training environment — trusted for the Best Automation Training in Kochi."
+              subtitle="Visit our campus at Viale Monte Grappa, 3/5, 20124 Milano MI"
             />
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
-            <motion.div 
+            <motion.div
               className="rounded-2xl overflow-hidden shadow-card border border-border/50"
               whileHover={{ y: -3 }}
               transition={{ duration: 0.3 }}
