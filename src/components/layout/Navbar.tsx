@@ -65,16 +65,27 @@ const Navbar = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.05 }}
               >
-                <Link
-                  to={item.path}
-                  className={`px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200 ${
-                    location.pathname === item.path
-                      ? 'bg-primary text-primary-foreground'
-                      : 'text-foreground hover:bg-secondary hover:text-foreground'
-                  }`}
-                >
-                  {item.name}
-                </Link>
+                {item.externalUrl ? (
+                  <a
+                    href={item.externalUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200 text-foreground hover:bg-secondary hover:text-foreground"
+                  >
+                    {item.name}
+                  </a>
+                ) : (
+                  <Link
+                    to={item.path}
+                    className={`px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200 ${
+                      location.pathname === item.path
+                        ? 'bg-primary text-primary-foreground'
+                        : 'text-foreground hover:bg-secondary hover:text-foreground'
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                )}
               </motion.div>
             ))}
           </div>
@@ -149,16 +160,27 @@ const Navbar = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.05 }}
                   >
-                    <Link
-                      to={item.path}
-                      className={`block px-4 py-3 rounded-lg font-medium transition-all duration-200 ${
-                        location.pathname === item.path
-                          ? 'bg-primary text-accent shadow-sm'
-                          : 'text-accent hover:bg-secondary hover:text-accent'
-                      }`}
-                    >
-                      {item.name}
-                    </Link>
+                    {item.externalUrl ? (
+                      <a
+                        href={item.externalUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block px-4 py-3 rounded-lg font-medium transition-all duration-200 text-accent hover:bg-secondary hover:text-accent"
+                      >
+                        {item.name}
+                      </a>
+                    ) : (
+                      <Link
+                        to={item.path}
+                        className={`block px-4 py-3 rounded-lg font-medium transition-all duration-200 ${
+                          location.pathname === item.path
+                            ? 'bg-primary text-accent shadow-sm'
+                            : 'text-accent hover:bg-secondary hover:text-accent'
+                        }`}
+                      >
+                        {item.name}
+                      </Link>
+                    )}
                   </motion.div>
                 ))}
               </div>

@@ -184,59 +184,66 @@ const Testimonials = () => {
           <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" staggerDelay={0.1}>
             {testimonials.map((testimonial) => (
               <StaggerItem key={testimonial.id}>
-                <motion.div
-                  className="bg-card rounded-xl p-6 shadow-card border border-border/50 h-full flex flex-col group"
-                  whileHover={{ y: -5, boxShadow: '0 20px 40px -12px rgba(10, 26, 68, 0.15)' }}
-                  transition={{ duration: 0.3 }}
+                <a
+                  href="https://www.google.com/search?kgmid=/g/11hzhv29nb#lrd=0x3b08730a57710bd7:0xf0c2f13466853ca9,1,,,,"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block h-full"
                 >
-                  {/* Profile Image and Quote Icon */}
-                  <div className="flex items-start gap-4 mb-4">
-                    <motion.div
-                      className="relative flex-shrink-0"
-                      whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      <img
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        className="w-16 h-16 rounded-full object-cover border-2 border-accent/20 group-hover:border-accent transition-colors duration-300"
-                      />
-                      <div className="absolute -top-1 -right-1 bg-accent rounded-full p-1">
-                        <Quote className="w-3 h-3 text-accent-foreground" />
-                      </div>
-                    </motion.div>
-                    <div className="flex-1">
-                      <Quote className="w-8 h-8 text-accent/30 mb-2" />
-                      {/* Rating */}
-                      <div className="flex gap-1">
-                        {[...Array(testimonial.rating)].map((_, i) => (
-                          <Star
-                            key={i}
-                            className="w-4 h-4 fill-accent text-accent"
-                          />
-                        ))}
+                  <motion.div
+                    className="bg-card rounded-xl p-6 shadow-card border border-border/50 h-full flex flex-col group cursor-pointer"
+                    whileHover={{ y: -5, boxShadow: '0 20px 40px -12px rgba(10, 26, 68, 0.15)' }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    {/* Profile Image and Quote Icon */}
+                    <div className="flex items-start gap-4 mb-4">
+                      <motion.div
+                        className="relative flex-shrink-0"
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <img
+                          src={testimonial.image}
+                          alt={testimonial.name}
+                          className="w-16 h-16 rounded-full object-cover border-2 border-accent/20 group-hover:border-accent transition-colors duration-300"
+                        />
+                        <div className="absolute -top-1 -right-1 bg-accent rounded-full p-1">
+                          <Quote className="w-3 h-3 text-accent-foreground" />
+                        </div>
+                      </motion.div>
+                      <div className="flex-1">
+                        <Quote className="w-8 h-8 text-accent/30 mb-2" />
+                        {/* Rating */}
+                        <div className="flex gap-1">
+                          {[...Array(testimonial.rating)].map((_, i) => (
+                            <Star
+                              key={i}
+                              className="w-4 h-4 fill-accent text-accent"
+                            />
+                          ))}
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  {/* Testimonial Text */}
-                  <p className="text-muted-foreground mb-6 flex-grow leading-relaxed">
-                    "{testimonial.text}"
-                  </p>
-
-                  {/* Author Info */}
-                  <div className="border-t border-border/50 pt-4">
-                    <h4 className="text-lg font-semibold text-foreground mb-1">
-                      {testimonial.name}
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      {testimonial.designation}
-                      {testimonial.company && (
-                        <span className="text-accent"> • {testimonial.company}</span>
-                      )}
+                    {/* Testimonial Text */}
+                    <p className="text-muted-foreground mb-6 flex-grow leading-relaxed">
+                      "{testimonial.text}"
                     </p>
-                  </div>
-                </motion.div>
+
+                    {/* Author Info */}
+                    <div className="border-t border-border/50 pt-4">
+                      <h4 className="text-lg font-semibold text-foreground mb-1">
+                        {testimonial.name}
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        {testimonial.designation}
+                        {testimonial.company && (
+                          <span className="text-accent"> • {testimonial.company}</span>
+                        )}
+                      </p>
+                    </div>
+                  </motion.div>
+                </a>
               </StaggerItem>
             ))}
           </StaggerContainer>

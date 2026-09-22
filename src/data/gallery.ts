@@ -23,6 +23,10 @@ import img26 from '@/assets/c/c26.jpeg';
 import img27 from '@/assets/c/c27.jpeg';
 import img28 from '@/assets/c/c28.jpeg';
 import img29 from '@/assets/c/c29.jpeg';
+import img30 from '@/assets/c/pyaara.jpeg';
+import img31 from '@/assets/c/c30.png';
+import img32 from '@/assets/c/c31.png';
+import img33 from '@/assets/c/c32.png';
 
 export interface GalleryImage {
   src: string;
@@ -31,13 +35,22 @@ export interface GalleryImage {
 }
 
 export const galleryImages: GalleryImage[] = [
-  {
-    src: img1,
-    alt: 'Central Processor Chip Circuit Board Technology',
-    category: 'Campus',
-  },
+
   {
     src: img24,
+    alt: 'Thrilled to have completed this training program and earned my certification',
+    category: 'Academics',
+  },
+  {
+    src: img31,
+    alt: 'Thrilled to have completed this training program and earned my certification',
+    category: 'Academics',
+  }, {
+    src: img33,
+    alt: 'Thrilled to have completed this training program and earned my certification',
+    category: 'Academics',
+  }, {
+    src: img32,
     alt: 'Thrilled to have completed this training program and earned my certification',
     category: 'Academics',
   },
@@ -56,6 +69,11 @@ export const galleryImages: GalleryImage[] = [
     category: 'Academics',
   },
   {
+    src: img1,
+    alt: 'Central Processor Chip Circuit Board Technology',
+    category: 'Campus',
+  },
+  {
     src: img3,
     alt: 'Electronics Technicians Team Working on Computer Parts',
     category: 'Facilities',
@@ -63,10 +81,6 @@ export const galleryImages: GalleryImage[] = [
   {
     src: img25,
     alt: 'Another milestone achieved: successfully concluded a high-impact learning session.',
-    category: 'Academics',
-  }, {
-    src: img26,
-    alt: 'Wrapped up with great insights, practical skills, and a solid learning experience.',
     category: 'Academics',
   },
   {
@@ -109,11 +123,6 @@ export const galleryImages: GalleryImage[] = [
     category: 'Academics',
   },
   {
-    src: img9,
-    alt: 'Group of Young Teens Celebrating World Youth Day',
-    category: 'Events',
-  },
-  {
     src: img10,
     alt: 'Metal Worker Using Machinery in Industrial Workshop',
     category: 'Facilities',
@@ -134,6 +143,11 @@ export const galleryImages: GalleryImage[] = [
     category: 'Events',
   },
   {
+    src: img30,
+    alt: 'Portrait of Group of Engineers and Corporate Managers at Factory',
+    category: 'Events',
+  },
+  {
     src: img16,
     alt: 'Portrait of Male Engineer Working in Field',
     category: 'Academics',
@@ -147,6 +161,5 @@ export const galleryImages: GalleryImage[] = [
     src: img19,
     alt: 'Robotics Lab Students Assembling Electronic Circuits',
     category: 'Academics',
-  },
-
+  }
 ];
