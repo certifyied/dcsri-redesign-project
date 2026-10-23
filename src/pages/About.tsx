@@ -50,22 +50,22 @@ const leadership = [
   },
   {
     name: 'T A KURIYAKOSE',
-    role: 'Director',
+    role: '',
     image: kuriyakose,
   },
   {
     name: 'ROBIN JOYCE',
-    role: 'Director',
+    role: '',
     image: robin,
   },
   {
     name: 'BENNY CE',
-    role: 'Director',
+    role: '',
     image: benny,
   },
   {
     name: 'MINU ROBIN',
-    role: 'Director',
+    role: '',
     image: minu,
   },
 ];
@@ -304,7 +304,7 @@ const About = () => {
                   </div>
                   <div className="p-5">
                     <h3 className="text-lg font-semibold text-foreground">{person.name}</h3>
-                    <p className="text-accent text-sm">{person.role}</p>
+                    {person.role && <p className="text-accent text-sm mt-1">{person.role}</p>}
                   </div>
                 </motion.div>
               </StaggerItem>
