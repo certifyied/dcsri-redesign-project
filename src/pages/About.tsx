@@ -29,12 +29,12 @@ const leadership = [
     image: sajiImage,
   },
   {
-    name: 'CRISTO S KAYYALAKAM',
+    name: 'JOE',
     role: 'CEO',
     image: christoImage,
   },
   {
-    name: 'JOE',
+    name: 'CRISTO S KAYYALAKAM',
     role: 'CTO',
     image: joeImage,
   },
