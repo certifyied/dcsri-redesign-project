@@ -2,6 +2,7 @@ import acadamic1 from "@/assets/acadamic/new.jpeg";
 import acadamic2 from "@/assets/acadamic/L4P3826Q.jpg";
 import acadamic3 from "@/assets/acadamic/acadamimage.jpeg";
 import acadamic4 from "@/assets/acadamic/acadamic.jpeg";
+import acadamic5 from "@/assets/acadamic/aHtmcFOz-Ofiice-Image-Alligator-Automations-India-Pvt-1200x903.jpg";
 
 export interface Course {
   id: string;
@@ -16,6 +17,16 @@ export interface Course {
 }
 
 export const courses: Course[] = [
+  {
+    id: 'program-iaaia',
+    title: 'Integrated Applied Industrial Automation (IAAIA)',
+    shortName: 'Student Enrichment Program',
+    duration: 'Flexible / As per Program Schedule',
+    eligibility: 'Who It\'s For: Engineering students seeking industry-aligned training',
+    description: 'The Student Enrichment Program in Integrated Applied Industrial Automation, offered by Dynamic Control Systems (DCS), is designed to bridge the gap between academic learning and industrial requirements by providing students with a strong foundation in industrial automation technologies and practical, hands-on training. The program covers PLC programming, HMI designing, sensors and instrumentation, electrical wiring and switchgear, pneumatic and hydraulic systems, VFDs, servo drives, motion control, SCADA, industrial communication, robotics, IoT, AutoCAD, and project development. Through laboratory-based sessions, industrial application discussions, and project-oriented learning, students gain practical knowledge of automation systems used across manufacturing, pharmaceuticals, food and beverages, automotive, marine, water treatment, power, and other process industries. The program also aims to support students through industrial expert interactions, final-year project guidance, internship opportunities for selected candidates, and placement assistance, subject to eligibility and availability, helping them develop the technical skills and industry awareness required for successful engineering careers.',
+    badge: 'Student Enrichment',
+    image: acadamic5,
+  },
   {
     id: 'program-3',
     title: 'Advanced Industrial Automation Training Program (AIATP)',
