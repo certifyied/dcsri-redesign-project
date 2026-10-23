@@ -14,6 +14,9 @@ import christoImage from '@/assets/team/cristo.jpeg';
 import joeImage from '@/assets/team/joe.jpg';
 import jestin from "@/assets/team/jestin.jpeg";
 import joseph from "@/assets/team/joseph.jpeg";
+import kuriyakose from "@/assets/team/kuriyakose.jpeg";
+import robin from "@/assets/team/robin.jpeg";
+import benny from "@/assets/team/benny.jpeg";
 import isoLogo from "@/assets/iso-certified.png";
 import mitsubishiLogo from "@/assets/mitsubishi-partner.png";
 import msmeLogo from "@/assets/msme-certified.png";
@@ -41,8 +44,23 @@ const leadership = [
   },
   {
     name: 'JOSEPH K BABU',
-    role: 'project engineer',
+    role: 'Project Engineer',
     image: joseph,
+  },
+  {
+    name: 'T A KURIYAKOSE',
+    role: 'Director',
+    image: kuriyakose,
+  },
+  {
+    name: 'ROBIN JOYCE',
+    role: 'Director',
+    image: robin,
+  },
+  {
+    name: 'BENNY CE',
+    role: 'Director',
+    image: benny,
   },
 ];
 
