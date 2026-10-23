@@ -17,6 +17,7 @@ import joseph from "@/assets/team/joseph.jpeg";
 import kuriyakose from "@/assets/team/kuriyakose.jpeg";
 import robin from "@/assets/team/robin.jpeg";
 import benny from "@/assets/team/benny.jpeg";
+import minu from "@/assets/team/minu.jpeg";
 import isoLogo from "@/assets/iso-certified.png";
 import mitsubishiLogo from "@/assets/mitsubishi-partner.png";
 import msmeLogo from "@/assets/msme-certified.png";
@@ -61,6 +62,11 @@ const leadership = [
     name: 'BENNY CE',
     role: 'Director',
     image: benny,
+  },
+  {
+    name: 'MINU ROBIN',
+    role: 'Director',
+    image: minu,
   },
 ];
 
