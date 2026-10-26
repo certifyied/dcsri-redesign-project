@@ -27,6 +27,11 @@ import img30 from '@/assets/c/pyaara.jpeg';
 import img31 from '@/assets/c/c30.png';
 import img32 from '@/assets/c/c31.png';
 import img33 from '@/assets/c/c32.png';
+import img34 from '@/assets/c/c33.jpeg';
+import img35 from '@/assets/c/c34.jpeg';
+import img36 from '@/assets/c/c35.jpeg';
+import img37 from '@/assets/c/c36.jpeg';
+import img38 from '@/assets/c/c37.jpeg';
 
 export interface GalleryImage {
   src: string;
@@ -35,7 +40,31 @@ export interface GalleryImage {
 }
 
 export const galleryImages: GalleryImage[] = [
-
+  {
+    src: img34,
+    alt: 'Students engaged in industrial automation computer lab session',
+    category: 'Academics',
+  },
+  {
+    src: img35,
+    alt: 'Hands-on practical training with automation kit and interactive demonstration',
+    category: 'Academics',
+  },
+  {
+    src: img36,
+    alt: 'Interactive automation lecture and classroom session by faculty',
+    category: 'Academics',
+  },
+  {
+    src: img37,
+    alt: 'Close-up demonstration of automation hardware, wiring and control panel',
+    category: 'Academics',
+  },
+  {
+    src: img38,
+    alt: 'Live workshop on sensors, electrical wiring, and automation control panels',
+    category: 'Academics',
+  },
   {
     src: img24,
     alt: 'Thrilled to have completed this training program and earned my certification',
